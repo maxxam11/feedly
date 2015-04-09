@@ -1,0 +1,4246 @@
+<html>
+	<head>
+		<title>feedly. Read more, know more.</title>
+		<meta http-equiv="Content-Type"  content="text/html; charset=UTF-8"																										/>
+		<meta id="vp" name="viewport" 	 content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<style>
+			body
+			{
+				width						: 100%;
+				height						: 100%;
+				overflow					: hidden;
+			}
+		</style>
+	</head>
+
+	<body id="box" class="mobile">
+		<div id="reporter" style="display:none">
+			<div class="errorHolder">
+				<span id="errorMessage" class="errorMessage"></span> Please report this issue to care@feedly.com and restart the application.
+			</div>
+		</div>
+		<div id="offline" style="display:none; text-align:center" ontouchend="$feedly( 'offline refresh' ); if( mag != null ){ mag.refresh(); }else{ onUILoaded(); }">
+			No network. Tap here to reload.
+		</div>
+		<div id="popup" style="display:none"></div>
+		<div id="tooltip" style="display:none">
+			<div id="tooltipArrow"></div>
+			<div id="tooltipBody">
+				<div id="tooltipContent"></div>
+				<div id="tooltipOK">Got it!</div>
+			</div>
+		</div>
+		<div id="panel" style="display:none"></div>
+		<div id="app"></div>
+
+        <!-- bridge -->
+		<script type="text/javascript" charset="utf-8" src="bridge.js"></script>
+		<script>
+			var oauthTrigger = false;
+					
+			var devhdx = { utils:{} };
+
+			( function ()
+			{
+				var utils = devhdx.utils;
+
+				utils.SessionUtils = function()
+				{
+					var that = {};
+
+					// EK. We need to use session caching because the update of
+					// the session is asynchronous. This is a write through cache.
+					var isCached = false;
+					var cachedSession = null;
+
+					that.load = function()
+					{
+						if( isCached != true )
+						{
+							var s = LREAD( "session.cloud" );
+							if( s != null )
+							{
+								try
+								{
+									cachedSession = JSON.parse( s );
+								}
+								catch( e )
+								{
+									$feedly( "[io][sessino] failed to parse session:" + s );
+									cachedSession = null;
+								}
+							}
+							else
+							{
+								cachedSession = null;
+							}
+
+							isCached = true;
+						}
+
+						return cachedSession;
+					};
+
+					that.save = function( session )
+					{
+						try
+						{
+							if( session == null )
+							{
+								that.clear();
+								$B.core.application.setContext( "Authorization", null );
+							}
+							else
+							{
+								cachedSession = session;
+								isCached = true;
+
+								LWRITES( { "session.cloud": devhd.utils.JSONUtils.encode( session ) } );
+
+								$B.core.application.setContext( "Authorization", session.feedlyToken );
+							}
+						}
+						catch( e )
+						{
+
+						}
+					};
+
+					that.clear = function()
+					{
+						cachedSession = null;
+						isCached = false;
+						LREMOVES( [ "session.cloud", "session" ] );
+					};
+
+					return that;
+				}();
+
+			})();
+
+			// DEFAULT FEEDLY THEME
+			var feedly499Plus    = "499+";
+			var MODAL_ALPHA 	 = 0.5;
+
+			var FEEDLY_GREEN 	 = "#2BB24C"; // "#57AD68";
+			var FEEDLY_GREEN_HI  = "#239740"; // "#329017";
+			var FEEDLY_GOOGLE	 = "#218fd2";
+			//					blue       purple	  red        lime       pink       orange    ligh blue/explore
+			var PALETTE    = [ "#137ad8", "#8763a1", "#e5564d", "#8bc832", "#ee3681", "#ff8900", "#58cded" ];
+			var PALETTE_HI = [ "#074985", "#6b4e80", "#b6423b", "#6c9c24", "#a31849", "#c36600", "#4eb7d3" ];
+
+			var ESB	= {
+									
+				// POST GOOGLE READER DEATH
+				"scope.android"			: "oauth2:profile email",
+				"scope"					: "profile email",
+				
+				// RATING SERVICE
+				"rating.amazon"     	: "http://www.amazon.com/review/create-review/ref=cm_cr_pr_wr_but_top?ie=UTF8&nodeID=&asin=B0050DZN4K",
+				"rating.google"     	: "https://play.google.com/store/apps/details?id=com.devhd.feedly",
+				"rating.apple"      	: "https://itunes.apple.com/app/id396069556",
+				"rating.version"		: 13,
+				"rating.again.days"		: 45,
+				
+				// DEBUG SERVICE
+				"help.debug"			: false,
+				"nikon.debug"			: false,
+				"nikon.force"			: false,
+				"reader.debug"			: false,
+				"grid.debug"			: false, 
+				"meta.debug"			: false,
+				"flexible.debug"		: false,
+				"widget.debug"			: false,
+				"io.debug"				: false,
+				"session.debug"			: false,
+				"tracker.debug"			: false,
+				"activity.debug"		: false,
+
+				// IMAGE SERVICE
+				"images.debug"			: false,			// dev only. debug annotations
+				"images.inlinedResize"  : "ad1,ad2,ad4", 	// for which device sizes should we resize larger images in inline articles (ad1|ad2|ad4)?
+				"images.hd"				: "all", 		    // "all" , hd images mean very large images so off by default
+				"images.edgeResize" 	: true, 			// should we leverage the sizing capability of GAE edge and to local prepare?
+				"images.depth"			: 5,				// up to how many candidates per article should we try to resize
+				
+ 				"images.resize[0]"  	: "http://visuals0.feedly.com/v1/resize",
+ 				"images.resize[1]"  	: "http://visuals1.feedly.com/v1/resize",
+ 				"images.resize[2]"  	: "http://visuals2.feedly.com/v1/resize",
+  				"images.prepare"    	: "http://visuals4.feedly.com/v1/prepare"
+  			//  	"images.resize[0]"  	: "http://10.0.1.5:8080/v1/resize",
+ 				// "images.resize[1]"  	: "http://10.0.1.5:8080/v1/resize",
+ 				// "images.resize[2]"  	: "http://10.0.1.5:8080/v1/resize",
+  			// 	"images.prepare"    	: "http://10.0.1.5:8080/v1/prepare"
+			};
+
+			var THEME_WHITE = {};
+			var THEME_BLACK = {};
+
+			var feedlyMobile =
+			{
+				nikon:
+				{
+					factory: "devhd.mobile.createNikon"
+				},
+	
+				tracker:
+				{
+					factory: "devhd.mobile.createTracker",
+					dependencies: [ "reader" ]
+				},
+	
+				mag:
+				{
+					factory: "devhd.mobile.createMag",
+					dependencies: [ "reader", "nikon", "suggesto", "holmes", "tracker", "grid", "profile" ]
+				},
+	
+				grid:
+				{
+					factory: "devhd.mobile.createGrid",
+					dependencies: [ "mag" ]
+				},
+				
+				reader: 
+				{
+					factory			: "devhd.cloud.createReader",
+					dependencies	: [ "mag", "suggesto" ]
+				},
+	
+				
+			   	suggesto:
+				{
+					factory: "devhd.mobile.createSuggesto",
+					dependencies: [ "mag", "reader" ]
+				},
+
+			   	profile:
+				{
+					factory: "devhd.mobile.createProfile",
+					dependencies: []
+				},
+				
+				holmes:
+				[
+					{
+						environment:  "AD4",
+						factory: 	  "devhd.mobile.createHolmes",
+						dependencies: [ "mag" ]
+					}
+				]
+			}
+
+			function STYLE( selector )
+			{
+				if( selector == null )
+					return null;
+
+				selector = selector.toLowerCase();
+
+				for (var s = 0; s < document.styleSheets.length; s++)
+				{
+					if( document.styleSheets[s].rules )
+					{
+						for (var r = 0; r < document.styleSheets[s].rules.length; r++)
+						{
+							if (document.styleSheets[s].rules[r].selectorText == selector)
+							{
+								return document.styleSheets[s].rules[r];
+							}
+						}
+					}
+					else if(document.styleSheets[s].cssRules)
+					{
+						for( var r = 0; r < document.styleSheets[s].cssRules.length; r++ )
+						{
+							if( document.styleSheets[s].cssRules[r].selectorText == selector )
+								return document.styleSheets[s].cssRules[r];
+						}
+					}
+				}
+				return null;
+			}
+
+			////////////////////////////////////////////////////////////////////////
+			// REFLOW THE UI TO FIT THE SCREEN
+			////////////////////////////////////////////////////////////////////////
+
+			var feedlyTheme, feedlyFont;
+
+			var W, H, OFFSET_W, CARD_W, CARD_H, OFFSET_H, OUTER, INNER, FMT, PANEL_W, NAVIGATION_BAR, TOOLBAR_ICON, LIST_BAR, LOCATOR, SWIPE_SPEED, HOME_TOUCH_BAND, STORE_TOUCH_BAND;
+			var DIMENSIONS = { landscape: { width: 0, height: 0 }, portrait: { width: 0, height: 0 } };
+            var PAD 					= 12;
+			var LINE_HEIGHT 			= 20;
+			var VISUAL_BORDER 			= 0;
+			var VISUAL_PADDING_BOTTOM 	= 4;
+			var SPACER					= 3;
+			var ACTIVITY_TRANSITION_EFFECT = "slideup";
+			var CARD_BUFFER				= 6;
+			var MY_DEPTH				= 7;
+			var DEPTH					= 28;
+			var DEFAULT_VISUAL_FLEX 	= ( window.devicePixelRatio > 1 ? 0.80 : 0.60 );
+			var DEFAULT_TITLEONLY_OCCURENCE = 6;
+			var DEFAULT_LISTABLE_OCCURENCE = 5;
+			var DEFAULT_GRID_OCCURENCE 	= 4;
+			var DEFAULT_CARD_OCCURENCE  = 1;
+			var XH						= "M";
+			var DURATION_SAVE_SIGN		= 0.8;
+			var EOS_KEY					= "entryOverviewSize.mobile";
+			var LETTER_SPACING			= "-0.04em";
+			var storeCreated			= false;
+
+        	// DETERMINE THE AD
+			var AD;
+        	var AD4P = false;
+        	var SB = 25;
+        	var MODE = "mobile";
+
+     		function DETECT_AD()
+     		{
+     			LETTER_SPACING = ANDROID() ? "-0.03em" : "-0.04em";
+     			
+        		// For iOS, we get logical pixels out of the box
+        		if( SETTING( "screen_height" ) != null && SETTING( "display_height" ) != null )
+        		{
+        			SB = SETTING( "screen_height" ) - SETTING( "display_height" );
+        		}
+	       		// For android, we get absolute pixels and us the local pixel ratio to compute sizes
+	       		else if( SETTING( "screen_height_px" ) != null && SETTING( "display_height_px" ) != null )
+	       		{
+        			SB = DP( SETTING( "screen_height_px" ) - SETTING( "display_height_px" ) );
+	       		}
+
+				W = SETTING( "display_width"  ) || DP( SETTING( "display_width_px" ) )  || window.innerWidth;
+				H = SETTING( "display_height" ) || DP( SETTING( "display_height_px" ) ) || window.innerHeight;
+
+				$feedly( "[feedly][dimensions] W x H:" + W + " x " + H + " -- SB:" + SB  );
+				///D $feedly( "[feedly][session] " + JSON.stringify( SESSION() ) );
+
+				OFFSET_W = 0;
+    			CARD_W = W - 2 * OFFSET_W;
+
+    			DEFAULT_VISUAL_FLEX = ( window.devicePixelRatio > 1 ? 0.80 : 0.60 ) * ( H > 1100 || W > 1100 ? 0.75 : 1 );
+
+				// DETERMINE THE AD
+    			AD = 1;
+                AD4P = false;
+
+    			if( Math.min( W, H ) >= 700 )
+                 	AD = 4;
+    			else if( Math.min( W, H ) >= 500 )
+    				AD = 2;
+
+    			if( Math.max( W, H ) >= 1050 )
+                 	AD4P = true;
+    			
+    			switch( AD )
+    			{
+	    			case 4:
+	    			case 2:
+	    				EOS_KEY = "entryOverviewSize.mobile." + AD; 
+	    				break;
+	    			case 1:
+	    			default:
+	    				EOS_KEY = "entryOverviewSize.mobile"; 
+    			}
+    			
+    			
+    			// if( AD > 1 )
+    			// 		MODE = "tablet";
+
+    			// DETERMINE THE WIDTH AND HEIGHT OF THE WINDOW IN BOTH PORTRAIT AND LANDSCAPE
+    			currentOrientation = ORIENTATION();
+
+    			switch( currentOrientation )
+				{
+					case "portrait":
+						// We need to adjust the height of the height of the device with the size of the system bar.
+						// Note: we assume that the size of the system bar is the same in both orientations.
+						DIMENSIONS.portrait.width  = W - ( TABLET() ? 60 : 0 );
+						DIMENSIONS.portrait.height = H;
+
+						DIMENSIONS.landscape.width  = H + SB - ( TABLET() ? 60 : 0 );
+						DIMENSIONS.landscape.height = W - SB;
+						break;
+
+					case "landscape":
+					default:
+						DIMENSIONS.landscape.width  = W - ( TABLET() ? 60 : 0 );
+						DIMENSIONS.landscape.height = H;
+
+						DIMENSIONS.portrait.width  = H + SB - ( TABLET() ? 60 : 0 );
+						DIMENSIONS.portrait.height = W - SB;
+				}
+
+				DIMENSIONS.portrait.card_width = DIMENSIONS.portrait.width - 2 * OFFSET_W;
+				DIMENSIONS.landscape.card_width = DIMENSIONS.landscape.width - 2 * OFFSET_W;
+
+				// iPhone 6+ and Nexus 6
+				if( DIMENSIONS.portrait.height >= 659 )
+				{
+					XH = "XXL";
+					DEFAULT_TITLEONLY_OCCURENCE = 7;
+					DEFAULT_LISTABLE_OCCURENCE = 6;
+					DEFAULT_GRID_OCCURENCE = 6;
+					DEFAULT_CARD_OCCURENCE = 1;
+				}
+				else if( ANDROID() && DIMENSIONS.portrait.height > 600 )
+				{
+					XH = "XL";
+					DEFAULT_TITLEONLY_OCCURENCE = 6;
+					DEFAULT_LISTABLE_OCCURENCE = 6;
+					DEFAULT_GRID_OCCURENCE = 5;
+					DEFAULT_CARD_OCCURENCE = 1;
+				}
+				else if( DIMENSIONS.portrait.height >= 548 /* height of an iphone5 */ )
+				{
+					DEFAULT_TITLEONLY_OCCURENCE = 6;
+					DEFAULT_LISTABLE_OCCURENCE = 6;
+					DEFAULT_GRID_OCCURENCE = 5;
+					DEFAULT_CARD_OCCURENCE = 1;
+					XH = "L";
+				}
+				else
+				{
+					DEFAULT_TITLEONLY_OCCURENCE = 5;
+					DEFAULT_LISTABLE_OCCURENCE = 5;
+					DEFAULT_GRID_OCCURENCE = 4;
+					DEFAULT_CARD_OCCURENCE = 1;
+					XH = "M";
+				}
+
+    			$feedly( "[feedly][dimensions] DIMENSIONS:" +  JSON.stringify( DIMENSIONS ) );
+     		}
+
+        	function DP( px )
+        	{
+        		if( px == null )
+        			return null;
+        		else
+        			return Math.ceil( px / window.devicePixelRatio );
+        	}
+        	
+        	function TABLET() 
+        	{
+        		return MODE == "tablet";
+        	}
+
+     		function ORIENTATION()
+     		{
+				return W > H ? "landscape" : "portrait";
+     		}
+
+     		var currentLayout = null;
+     		var currentOrientation = null;
+			var appGenerated = false;
+
+			function SETUP_UI()
+			{
+
+				try
+        		{
+        			fFaces = {
+        				system			: templates.mobile.font.faces_system(),
+    					tall			: templates.mobile.font.faces_dinwebpro(),
+        				lora			: templates.mobile.font.faces_lora(),
+        				ptserif			: templates.mobile.font.faces_ptserif(),
+        				slabserif		: templates.mobile.font.faces_slabserif()
+        			}
+         		}
+        		catch( e )
+        		{
+        			$feedly( "ERR001 - failed to create fFaces because " + e.name + " -- " + e.message)
+					ERROR( "ERR001 - failed to create fFaces because " + e.name + " -- " + e.message );
+        		}
+
+           		try
+        		{
+    				THEME_WHITE	= {
+    						theme_name                  : "White Theme",
+    						theme_type                  : "light",
+    						ios_bar_background          : "#EDEDED",
+
+    						// Default Line Height
+    						accent						: FEEDLY_GREEN,
+    						links						: "#3498DB",
+    						engagement					: "#666666",
+    						hot							: "#FF960B",
+    						highlight					: "#DFDFDF",
+    						unread						: "#393938",
+    						read						: "#777777",
+    						copy	   					: "#393938",
+    						summary						: "#A0A0A0",
+    						meta	   					: "#A0A0A0",
+    						summary2					: "#909090",
+    						meta2	   					: "#909090",
+    						placeholder					: "#808080",
+    						showcased					: "#DDDDDD",
+    						touch_highlight				: "#c6f4a6",
+    						back						: "#FCFCFC",
+    						shelf_back_swipe			: "#FCFCFC",
+    						shelf_back_scroll			: "#FCFCFC",
+    						shelf_back_stack			: "#181818",
+    						teal						: "#777777",
+    						default_activity_back		: "#DADAD9",
+    						default_activity_text		: "#AAAAAA",
+    						etiquette					: "#0d86fe",
+    						announcement				: "#666666",
+    						oneNote						: "#7F3C79",
+    						evernote					: "#5CB52B",
+    						secondary					: "#CCCCCC",
+    						secondary_text				: "#777777",
+    						secondary_back				: "#EEEEEE",
+    						promoted					: "#2EA3EA",
+    						where						: "#303030",
+
+
+    						// LOCATION BAR
+    						lb_text						: IOS_7PLUS() ? "#707070" : "#9C9C9C",
+    						lb_border					: "#E2E2E2",
+    						lb_back						: "#EDEDED",
+    						lb_cursor					: "rgba( 0, 0, 0, 0.5 )",
+
+    						// SHARE BAR
+    						sb_back						: "#303030",
+    						sb_highlight				: "#181818",
+
+    						se_frame					: "#909090",
+    						se_color					: "#444444",
+    						se_hint						: "#808080",
+    						se_meta						: "#A0A0A0",
+    						se_bollow					: "#696969",
+    						se_back						: "#EFEFEF",
+    						se_block					: "#FFFFFF",
+    						se_header					: "#E2E2E2",
+    						se_object					: "#B2B2B0",
+    						se_border					: "#E7E7E7",
+    						se_highlight 				: "#E7E7E7",
+    						se_bold						: "#494949",
+    						se_cursor					: "rgba( 0, 0, 0, 0.25 )",
+    						se_empty					: "#AAAAAA",
+    						se_highlight_empty 			: "#777777",
+    						se_visual_back				: "#E2E2E2",
+    						se_searchbox_surrounding	: "#D4D4D4",
+    						se_searchbox_back			: "#FFFFFF",
+    						se_searchbox_color			: "#292929",
+    						se_searchbox_placeholder	: "#BBBBBB",
+
+
+    						// BUTTON
+    						bu_border					: "#AAAAAA",
+    						bu_color					: "#494949",
+    						bu_color_disabled			: "#999999",
+    						bu_back						: "#CACACA",
+    						bu_back_touched				: "#AAAAAA",
+
+    						// POP UP
+    						pu_back						: "#303030",
+    						pu_color					: "#F1F1F1",
+    						pu_separator				: "#3A3A3A",
+    						pu_separator_last			: "#5A5A5A",
+    						pu_highlight				: "#111111",
+    						pb_back						: "#303030",
+
+
+    						// Main
+    						ma_header					: "#494949",
+    						ma_text	   					: "#494949",
+    						ma_links					: "#1674c8",
+    						ma_visited  				: "#494949",
+    						ma_visual_back 				: "#F3F3F3",
+    						ma_visual_border 			: "#E8E8E8",
+    						ma_quote					: "#111111",
+    						ma_quote_bold				: "#000000",
+    						ma_separator				: "#FFFFFF",
+    						ma_link_decoration			: "#CCCCCC",
+
+    						sa_header   				: "#494949",
+    						sa_text						: "#666666",
+    						sa_links					: "#1674c8",
+
+    						// pull to close native view (hack)
+    						p2cv_backgroundColor        : "#FCFCFC",
+    						p2cv_circleColor            : "#909090",
+    						p2cv_crossColor             : "#FCFCFC",
+    						p2cv_textColor				: "#909090",
+    						
+    						// pull to refresh native view
+    						p2rv_arrowColor             : "#888888",
+    						p2rv_fillColor              : "#888888",
+    						p2rv_backgroundColor        : "#EFEFEF",
+    						p2rv_textColor				: "#898989",
+
+    						//library
+    						gap_bar 					: "F7F7F7"
+    				};
+
+    				THEME_BLACK	= {
+
+    						theme_name                   : "Black Theme",
+    						theme_type                   : "dark",
+    						ios_bar_background           : ANDROID() ? "#000000" : "#141414",
+    						
+    						// Default Line Height
+    						accent						: FEEDLY_GREEN,
+    						links						: "#3498DB",
+    						engagement					: "#808080",
+    						hot							: "#FF960B",
+    						highlight					: "#282828",
+    						unread						: ANDROID() ? "#909090" : "#999999",
+    						read						: ANDROID() ? "#595959" : "#606060",
+    						copy	   					: "#595959",
+    	    				summary						: "#505050",
+    						meta	   					: "#505050",
+    						summary2					: "#606060",
+    						meta2	   					: "#606060",
+    						placeholder					: "#333333",
+    						showcased					: ANDROID() ? "#000000" : "#111111",
+    						back						: ANDROID() ? "#000000" : "#141414",
+    						shelf_back_swipe			: ANDROID() ? "#000000" : "#111111",
+    						shelf_back_scroll			: ANDROID() ? "#000000" : "#111111",
+    						shelf_back_stack			: ANDROID() ? "#000000" : "#111111",
+    						teal						: "#777777",
+    						default_activity_back		: "#1F1F1F",
+    						default_activity_text		: "#444444",
+    						etiquette					: "#0d86fe",
+    						announcement				: "#222222",
+    						oneNote						: "#BB85B6",
+    						secondary					: "#555555",
+    						secondary_text				: "#777777",
+    						secondary_back				: "#282828",
+    						promoted					: "#2EA3EA",
+    						where						: "rgba(255,255,255,0.3)",
+
+    						// LOCATION BAR
+    						lb_text						: IOS_7PLUS() ? "#707070" : "#555555",
+    						lb_border					: ANDROID() ? "#111111" : "#1E1E1E",
+    						lb_cursor					: "rgba( 255, 255, 255, 0.5 )",
+    						lb_back						: ANDROID() ? "#000000" : "#141414",
+
+    						// SHARE BAR
+    						sb_back						: "#303030",
+    						sb_highlight				: ANDROID() ? "#000000" : "#111111",
+
+    						// Main
+    						ma_header					: "#C0C0C0",
+    						ma_text	   					: ANDROID() ? "#909090" : "#999999",
+    						ma_links					: "#1674c8",
+    						ma_visited  				: "#494949",
+    						ma_quote					: "#DDDDDD",
+    						ma_quote_bold				: "#EEEEEE",
+    						ma_separator				: ANDROID() ? "#262626" : "#2C2C2C",
+    	    				ma_link_decoration			: "#333333",
+
+
+    						ma_visual_back 				: ANDROID() ? "#080808" : "#181818",
+    	    				ma_visual_border 			: ANDROID() ? "#181818" : "#282828",
+    						sa_header   				: "#494949",
+    						sa_text						: "#666666",
+    						sa_links					: "#1674c8",
+
+    						// SELECTOR PANEL
+    						se_color					: "#A0A0A0",
+    						se_hint						: "#808080",
+    						se_meta						: "#585858",
+    						se_bollow					: "#808080",
+    						se_back						: "#1C1C1C",
+    						se_block					: "#181818",
+    						se_header					: "#262626",
+    						se_object					: "#484848",
+    						se_border					: "#282828",
+    						se_highlight 				: "#000000",
+    						se_bold						: "#EAEAEA",
+    						se_cursor					: "rgba( 255, 255, 255, 0.2 )",
+    						se_frame					: "#383838",
+    						se_empty					: "#333333",
+    						se_highlight_empty 			: "#111111",
+    						se_visual_back				: "#666666",
+    						se_searchbox_surrounding	: "#1C1C1C",
+    						se_searchbox_back			: "#262626",
+    						se_searchbox_color			: "#AAAAAA",
+    						se_searchbox_placeholder	: "#666666",
+
+    						// BUTTON
+    						bu_back						: "#252525",
+    						bu_back_touched				: "#111311",
+    						bu_border					: "#333333",
+    						bu_color					: "#BFBFBF",
+    						bu_color_disabled			: "#666666",
+
+    						// POP UP
+    						pu_back						: "#303030",
+    						pu_color					: "#F1F1F1",
+    						pu_separator				: "#3A3A3A",
+    						pu_separator_last			: "#5A5A5A",
+    						pu_highlight				: "#333332",
+
+    						// pull to close native view (hack)
+    						p2cv_backgroundColor        : ANDROID() ? "#000000" : "#111111",
+    						p2cv_circleColor            : "#404040" ,
+    						p2cv_crossColor             : ANDROID() ? "#000000" : "#111111",
+    						p2cv_textColor				: "#404040",
+
+    		                // pull to refresh native view
+    		                p2rv_arrowColor             : "#777777" ,
+    						p2rv_fillColor              : "#777777" ,
+    		                p2rv_backgroundColor        : ANDROID() ? "#000000" : "#111111",
+    		                p2rv_textColor              : "#787878",
+
+    						//library
+    						gap_bar 					: "#131313"
+    				};
+
+    				feedlyFont = {
+           				common:
+           				{
+	            			footer    			: "sans-serif",
+	            			header    			: "sans-serif",
+	            			body				: "sans-serif",
+                			tall    			: "DINWebPro-CondensedMedium, sans-serif",
+	    					regular				: "sans-serif",
+	   	            		nudge				: 0
+           				},
+           				system:
+           				{
+           				}
+	            	};
+
+         		}
+        		catch( e )
+        		{
+        			$feedly( "ERR001 - failed to create feedlyFont because " + e.name + " -- " + e.message)
+					ERROR( "ERR001 - failed to create feedlyFont because " + e.name + " -- " + e.message );
+        		}
+
+           		try
+        		{
+        			if( W == 0 || H == 0 )
+                   	{
+        				$feedly( "[feedly] asking core to reload on rehydrate because W or H is null" );
+						$B.core.application.setReloadOnRehydrate( true );
+						window.alert( "BUG: Could not detect the size of the display: " + W + "x" + H + ". Please restart." );
+                   		return;
+                   	}
+
+                   	// Adapt dimensions to the device form factor. Fixed.
+                	switch( AD )
+ 					{
+ 						case 4:
+ 							NAVIGATION_BAR 		= 60;
+ 		                 	OPANEL_W			= Math.min( DIMENSIONS.portrait.width, 540 );
+ 	        				OUTER 				= 24;
+ 	        				INNER				= OUTER;
+ 	        				PAD					= 16;
+ 	        				FMT					= NAVIGATION_BAR;
+ 	        				LIST_BAR			= 48;
+ 	        				TRANSITION_TRIGER 	= 24;
+ 	        				break;
+
+ 						case 2:
+ 		                 	OPANEL_W			= Math.min( DIMENSIONS.portrait.width, 520 );
+ 							NAVIGATION_BAR  	= 60;
+ 	        				OUTER 				= 20;
+        					INNER				= OUTER;
+ 	        				PAD					= 16;
+ 	        				LINE_HEIGHT 		= 24;
+	        				LIST_BAR	 		= 48;
+ 	        				FMT					= NAVIGATION_BAR;
+ 	        				TRANSITION_TRIGER 	= 24;
+ 	        				break;
+
+ 						default:
+ 							var p = 12;
+ 						
+							if( W > 600 || H > 600 )
+ 								p = 16;
+							else if( W > 560 || H > 560 )
+ 								p = 14;
+							else
+								p = 12;
+ 							
+ 		                 	OPANEL_W			= Math.min( DIMENSIONS.portrait.width, 360 );
+ 							NAVIGATION_BAR		= SETTING( "device_os" ) == "android" && SETTING( "screen_diagonal" ) >= 5 ? 60 : ( SETTING( "device_os" ) == "android" ? 48 : 44 );
+							LIST_BAR			= SETTING( "device_os" ) == "android" && SETTING( "screen_diagonal" ) >= 5 ? 48 : ( SETTING( "device_os" ) == "android" ? 48 : 44 );
+ 	        				OUTER 				= p;
+	 	                    INNER				= OUTER;
+ 	        				PAD					= OUTER;
+							FMT	 				= 0;
+ 	        				LINE_HEIGHT 		= 21;
+ 	        				TRANSITION_TRIGER 	= 24;
+ 					}
+
+                   	switch( ESB[ "images.hd" ] )
+                   	{
+                   		case "ios only":
+                   			DPR = ANDROID() ? 1 : window.devicePixelRatio;
+                   			break;
+                   			
+                   		case "no":
+                   			DPR = 1;
+                   			break;
+                   			
+                   		case "all":
+                   		default:
+                   			DPR =  ANDROID() ? Math.min( 2, window.devicePixelRatio ) : window.devicePixelRatio;
+                   	}
+
+					LOCATOR	= NAVIGATION() == "swipe" ? 5 : 0;
+        			OFFSET_H = 0;
+        			CARD_H = H - NAVIGATION_BAR;
+
+                   	if( NAVIGATION() == "stack" )
+                	{
+                		HOME_TOUCH_BAND = ANDROID() ? 26 : 15;
+                		STORE_TOUCH_BAND = ANDROID() ? 18 : 10;
+                	}
+                	else
+                	{
+                    	HOME_TOUCH_BAND = 0;
+                    	STORE_TOUCH_BAND = 0;
+                	}
+
+                   	TOOLBAR_ICON = 30;
+
+                   	SWIPE_SPEED = 1.3; // number of pixels per second during swipe operations
+
+                   	// we need the panel width to be an even number for our tile layout
+                 	PANEL_W = Math.min( Math.floor( DIMENSIONS.portrait.width * 0.875 ), 321 );
+                   	if( PANEL_W % 2 == 0 )
+                   		PANEL_W = PANEL_W - 1;
+                   	
+                   	OPANEL_W = PANEL_W;
+
+ 					// Generate the key element of the app
+ 					document.getElementById( "app" ).innerHTML = templates.mobile.app.layout();
+
+                	// Reflow the UI.
+                	//
+					FLEX_UI();
+                	
+                	try
+                	{
+    					createSelector();
+    					createArticleController();
+    					
+    					if( SESSION() == null )
+    						createStoreActivity();
+                	}
+					catch( e )
+					{
+						$feedly( "[mobile] failed to preload activities:" + e.name + " -- " + e.message );	
+					}
+					
+					var s = SESSION();
+					if( s != null && s.feedlyId != null )
+					{
+						PRESENTED = true;
+						$B.core.application.presentView( 0x11 );
+					}
+         		}
+        		catch( e )
+        		{
+        			$feedly( "ERR001 - failed to setup the UI because " + e.name + " -- " + e.message)
+					ERROR( "ERR001 - failed to setup the UI because " + e.name + " -- " + e.message );
+        		}
+            }
+			
+			function createSelector()
+			{
+				$B.core.wm.open(	"selector",
+									templates.mobile.activity( "selector", PANEL_W ),
+									{
+									},
+									{
+										effectName			: "slideright",
+					                    effectDuration		: 0.25,
+										gravity				: "top|left",
+			
+										width               : PANEL_W,
+			
+										// android: this way a keyboard can be shown
+										focusable          : true,
+										scrollsToTop       : true,
+										hideGestureEnabled : true,
+										longPressDisabled  : true,
+			
+										// scroll vertical or horizontal but not both
+										directionScrollEnabled : true,
+			
+										_android$hardwareAccelerated: true,
+								        modal 				: true,
+								        modalBackgroundColor: "#000000",
+								        modalAlpha  		: MODAL_ALPHA,
+								        modalTap 			: "hide",
+			
+								        bounces             : "vertical",
+								        topPullEnabled		: true,
+								        topPull             : {
+									        	type       : "refresh",
+									        	text       : "Pull to refresh",
+									        	armText    : "Release to refresh",
+									        	activeText : "Refreshing ..."
+										}
+									}
+									);
+			}
+
+			function createStoreActivity( message )
+			{
+				if( storeCreated == true )
+					return false;
+				
+				var searchBoxHeight = 54;
+				
+				$B.core.wm.create(	"store",
+									templates.mobile.activity( "store", PANEL_W ),
+									message || {},
+									{
+										effectName			: "none",
+										gravity				: "top",
+										marginTop			: searchBoxHeight,
+
+										// android: this way a keyboard can be shown
+										longPressDisabled	: true,
+										directionScrollEnabled : true,
+										scrollsToTop        : true
+									}
+									);
+
+				$B.core.wm.create(	"searchBox",
+									templates.mobile.activity( "searchBox", PANEL_W ),
+									{
+									},
+									{
+										effectName			: "none",
+										gravity				: "top",
+										height				: searchBoxHeight,
+										// android: this way a keyboard can be shown
+										focusable   		: true,
+									}
+									);
+
+		        $B.core.wm.group(	"storeGroup",
+		                			[ "store", "searchBox" ],
+						            {
+										effectName			: "slideleft",
+						                effectDuration		: 0.25,
+										gravity				: "bottom|right",
+										width               : PANEL_W,
+
+										hideGestureEnabled	: true,
+								        modal 				: true,
+								        modalBackgroundColor: "#000000",
+								        modalAlpha  		: MODAL_ALPHA,
+								        modalTap 			: "hide"
+						           }
+						       	   );
+			
+		        storeCreated = true;
+		        
+		        return true;
+			}
+			
+			function createArticleController()
+			{
+				var style = {
+					effectName				: "slider", // "slider",
+					effectDuration			: ANDROID() ? 0.3 : 0.4,
+					clips			 		: true,
+					width               	: "100%",
+					height              	: "100%",
+					gravity             	: "center|center",
+					backgroundColor			: feedlyTheme.back
+				};
+
+			    $B.core.wm.open(	"article",
+			    		        	"ctrl://article",
+			    		        	{
+			    						toolbar 			: templates.mobile.activity('toolbar'),
+			    						center  			: templates.mobile.activity('article', null, 5),
+			    						next  				: templates.mobile.activity('next', null, 5),
+			    						prev  				: templates.mobile.activity('prev', null, 5),
+			    		        	},
+			    		        	style
+			    					);
+			}
+
+			var PRESENTED = false;
+			
+			function FLEX_UI()
+			{
+        		try
+        		{
+ 					document.body.className = "mobile d" + AD + " " + ( SETTING( "device_os" ) || "" ) + " " + ORIENTATION() + ( TABLET() ? " tablet" : "" );
+
+					setupTheme();
+
+                	currentLayout = W + "x" + H;
+         		}
+        		catch( e )
+        		{
+        			$feedly( "ERR001 - failed to flow the UI because " + e.name + " -- " + e.message)
+					ERROR( "ERR001 - failed to flow the UI because " + e.name + " -- " + e.message );
+        		}
+            }
+
+			function updateTheme()
+			{
+				setupTheme();
+
+				var ps = document.getElementsByClassName( "visualPlaceholder" );
+				for( var i = 0; i < ps.length; i++ )
+				{
+					switch( THEME() )
+					{
+	 					case "black":
+	 						ps[ i ].src = ps[ i ].src.replace( "white", "black" );
+	 						break;
+
+	 					default:
+	 						ps[ i ].src = ps[ i ].src.replace( "black", "white" );
+					}
+				}
+			}
+
+			function setupTheme()
+			{
+				try
+				{
+					switch( THEME() )
+					{
+	 					case "black":
+	 						feedlyTheme = THEME_BLACK;
+	 						break;
+
+	 					default:
+	 						feedlyTheme = THEME_WHITE;
+					}
+
+					// The CSS can have dependencies on the colors of the theme and need to be regenerated.
+					devhd.utils.HTMLUtils.injectCSS( document, templates.mobile.css.base(), "lookAndFeed0" );
+					devhd.utils.HTMLUtils.injectCSS( document, templates.mobile[ "d" + AD ].css.base(), "lookAndFeed1" );
+
+                	// Given that the theme and dimensions might have changed, we need to adapt some dimensions
+                	// and positions of some elements.
+					adaptStyles();
+
+                	try
+                	{
+                    	$B.core.application.setTheme( feedlyTheme );
+                	}
+                	catch( ignore )
+                	{
+                		// Giving some time to Michal and Kireet to implement setTheme on Android
+                		//
+                	}
+				}
+				catch( e )
+				{
+					$feedly( "[feedly][theme] failed to setup theme for AD=" + AD + ", THEME=" + THEME() + ", FONT=" + FONT() + " -- because " + e.name + " -- " + e.message );
+					throw e;
+				}
+			}
+
+			function adaptStyles()
+			{
+				try
+				{
+					var bodyElem = document.body;
+					bodyElem.style.width = W + "px";
+					bodyElem.style.height = H + "px";
+
+	    			var shelfElem = document.getElementById( "shelf" );
+	    			shelfElem.style.width =  W + "px";
+	    			shelfElem.style.height = ( H - NAVIGATION_BAR )+ "px";
+
+	    			var cardClass = STYLE( ".card" );
+	    			cardClass.style.width  = ( CARD_W - OUTER ) + "px";
+	    			cardClass.style.height = ( H - OUTER - NAVIGATION_BAR ) + "px";
+
+	    			var footerElem = document.getElementById( "footer" );
+	    			footerElem.style.width = ( W ) + "px";
+
+	    			var reporterElem = document.getElementById( "reporter" );
+	    			reporterElem.style.paddingTop = Math.floor( H/2 - 54 ) + "px";
+
+	            	var initialSignElem = document.getElementById( "initialSign" );
+	            	if( initialSignElem != null )
+	            	{
+	                	initialSignElem.style.marginTop = ( ( SH() - 2 * 20 ) / 2 ) + "px";
+	                	initialSignElem.style.visibility = "visible";
+	            	}
+				}
+				catch( e )
+				{
+					$feedly( "[feedly][theme] failed to adapt style:" + AD + " -- because " + e.name + " -- " + e.message );
+					throw e;
+				}
+			}
+
+			function themable( res )
+			{
+				switch( THEME() )
+				{
+					case "black":
+						return res + "-black";
+
+					case "white":
+					default:
+						return res + "-white";
+				}
+			}
+
+			function image( id )
+			{
+				var parts = [ "images/", id ];
+
+				if( window.devicePixelRatio > 1 )
+					parts.push( "@2x" );
+
+				parts.push( ".png" );
+
+				return parts.join( "" );
+			}
+			
+			function svg( id )
+			{
+				if( IOS_7PLUS() )
+				{
+					var parts = [ "images/", id ];
+					parts.push( "~ios" );
+					parts.push( ".svg" );
+
+					return parts.join( "" );	
+				}
+				else if( ANDROID_SVG() )
+				{
+					var parts = [ "images/", id ];
+					parts.push( "~android" );
+					parts.push( ".svg" );
+
+					return parts.join( "" );	
+				}
+				else
+				{
+					return image( id );
+				}
+			}
+
+			function usvg( id )
+			{
+				if( SVG() )
+				{
+					var parts = [ "images/", id ];
+					parts.push( ".svg" );
+
+					return parts.join( "" );	
+				}
+				else
+				{
+					return image( id );
+				}
+			}
+			
+			function faces( name )
+			{
+				return fFaces[ name ];
+			}
+
+			function family( kind )
+			{
+				if( feedlyFont[ FONT() ][ kind ] != null )
+					return "font-family:" + feedlyFont[ FONT() ][ kind ] + ";";
+				else
+					return "font-family:" + feedlyFont[ "common" ][ kind ] + ";";
+			}
+
+			/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+			// GRID MANAGEMENT
+			/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+			// Landscape cell width
+			function LCW( i, t, innerSpace )
+			{
+				innerSpace = innerSpace || INNER;
+
+				var u = Math.floor( ( DIMENSIONS[ "landscape" ].card_width - ( 2 * OUTER + ( t - 1 ) * innerSpace ) ) / t );
+				return i * u + ( i - 1 ) * innerSpace;
+			}
+
+			// Landscape cell height
+			function LCH( i, t, header, innerSpace )
+			{
+				innerSpace = innerSpace || INNER;
+
+				var h = DIMENSIONS[ "landscape" ].height - NAVIGATION_BAR - LOCATOR - ( header || 0 );
+				var u = Math.floor( ( h - ( 2 * OUTER + ( t - 1 ) * innerSpace ) ) / t );
+
+				return i * u + ( i - 1 ) * innerSpace;
+			}
+
+			// Portrait cell width
+			function PCW( i, t, innerSpace )
+			{
+				innerSpace = innerSpace || INNER;
+
+				var u = Math.floor( ( DIMENSIONS[ "portrait" ].card_width - ( 2 * OUTER + ( t - 1 ) * innerSpace )  ) / t );
+				return i * u + ( i - 1 ) * innerSpace;
+			}
+
+			// Portrait cell height
+			function PCH( i, t, header, innerSpace )
+			{
+				innerSpace = innerSpace || INNER;
+
+				var h = DIMENSIONS[ "portrait" ].height - NAVIGATION_BAR - LOCATOR - ( header || 0 );
+				var u = Math.floor( ( h - ( 2 * OUTER + ( t - 1 ) * innerSpace ) ) / t );
+
+				return i * u + ( i - 1 ) * innerSpace;
+			}
+
+			// cell width
+			function CW( i, t, innerSpace )
+			{
+				innerSpace = innerSpace || INNER;
+
+				var u = Math.floor( ( CARD_W - ( 2 * OUTER + ( t - 1 ) * innerSpace ) ) / t );
+
+				return i * u + ( i - 1 ) * innerSpace;
+			}
+
+			// cell height
+			function CH( i, t, header, innerSpace )
+			{
+				innerSpace = innerSpace || INNER;
+
+				var h = SH() - ( header || 0 );
+				var u = Math.floor( ( h - ( 2 * OUTER + ( t - 1 ) * innerSpace ) ) / t );
+
+				return i * u + ( i - 1 ) * innerSpace;
+			}
+
+			// Shelf Height
+			function SH()
+			{
+				return H - NAVIGATION_BAR - LOCATOR;
+ 			}
+
+			function CARD( name )
+			{
+				if( devhd.cards[ "d" + AD ] != null && typeof devhd.cards[ "d" + AD ][ name ] != "undefined" )
+					return devhd.cards[ "d" + AD ][ name ]
+
+				if( typeof devhd.cards[ name ] != "undefined" )
+					return devhd.cards[ name ]
+
+				ERROR( "CARD001 - Could not find card:" + name );
+			}
+
+			function FAVICON( url )
+			{
+				if( url == null )
+					return "https://www.google.com/s2/favicons?domain=google.com";
+
+				if( url.indexOf( "twitter.com" ) > -1 )
+					return "http://twitter.com/favicon.ico"
+
+				return "https://www.google.com/s2/favicons?domain=" + url.split( "/" ).slice( 2, 3 ) + "&alt=feed";
+			}
+
+			var feedlyApplicationVersion = "1.0.0";
+			var feedlyApplicationType = "feedly.mobile";
+			var segment = 0;
+
+            var SETTINGS = {};
+            var REACHABILITY = {};
+            var STATE = "RUNNING";
+            var AUTOREFRESH = false;
+
+            var TOUCH_SLOP = 0;
+            var TRANSITION_TRIGGER = 40;
+            var TOUCH_HIGHLIGHT_DELAY = 75;
+
+            var startSetting = null;
+
+            var __michal = 1;
+            
+			function ONAPPEVENT( request )
+			{
+               	/// $feedly( "ONAPPEVENT: " + JSON.stringify(request)  + " received ...");
+
+				try
+				{
+		            var response = null;
+					switch( request.type )
+	                {
+						case "park" :
+							$feedly("parking ...");
+							if (mag != null) {
+								mag.park();
+							}
+							break;
+
+						case "backgroundFetch" :
+							/*
+							$feedly("backgroundFetch triggered");
+							//
+							// do something ...
+							//
+							__michal = __michal % 3;
+							switch (__michal) {
+								case 0 :
+									$B.core.application.setBadgeNumber(0);
+									break;
+								case 1 :
+									$B.core.application.setNotification("Notification from Feedly!", "read feedly", __michal);
+									break;
+								case 2 :
+									$B.core.application.setBadgeNumber(__michal);
+									break;
+							}
+							__michal++;
+							*/
+							
+							break;
+	            		case "dehydrate":
+	            			
+							// EK. This is a bug. I am not sure why we are getting this dehydrate event 
+							// after the application is restarted. Let's filter it out for now.
+							if( request[ "reload-on-rehydrate" ] == 1 )
+	            				return;
+	            			
+		            		incSegment();
+
+	        			    if( mag == null )
+		            		{
+		            			// we are being dehydrated in the middle of an http request. ask the core to reload
+		            			// us at the next rehydration point so that we are not left in a zombie state
+		            			$feedly( "[feedly] asking to be reloaed because dehydrate+mag is null" );
+		            			$B.core.application.setReloadOnRehydrate( true );
+		            		}
+	        			    else
+	        			    {
+		            		    mag.dehydrate();
+	        			    }
+
+	        			    if( SETTING( "device_os" ) == "android" )
+	        			    {
+	        			    	// In the case of android, the application can continue to run even if it is not active so
+	        			    	// there is no need to define invocation segments or change the state of the application.
+	        			    	// This will prevent the application from having to auto-reload as soon as another activity
+	        			    	// (mail, preferences, etc.. ) is invoked.
+	        			    	STATE = "RUNNING.PAUSED";
+	        			    }
+	        			    else
+	        			    {
+	        			    	STATE = "DEHYDRATED";
+	        			    }
+		            		break;
+
+	            		case "rehydrate":
+	            			
+	        			    if( ESB[ "widget.debug" ] )
+	            				$feedly( "[widget] rehydrating with context:" + request.resourceId + " -- " + request.url + " -- " + request.streamId );
+	            			
+							var entryId = null;
+							var url = null;
+
+							// NEW DEEP LINKING MECHANISM
+	    					if( request.location != null )
+	    					{
+	    						// see - https://basecamp.com/2126204/projects/3875226-warp/todos/73861707-mobile-17-5
+	    						//
+	    						if( request.location.indexOf( "feedly://e/" ) == 0 )
+	    						{
+	    							entryId = decodeURIComponent( request.location.slice( "feedly://e/".length ) );
+	    						}
+	    						else if( request.location.indexOf( "feedly://f/" ) == 0 )
+	    						{
+	    							url = "list://" + decodeURIComponent( request.location.slice( "feedly://f/".length ) );
+	    						}
+	    					}
+	    					else
+	    					{
+	    						url = request.url;
+	    						entryId = request.resourceId;
+	    						
+	    						if( request.intentFeedId != null )
+		            				url = "list://feed/" + request.intentFeedId;
+
+		            			if( entryId != null && ( url == "feedly.today" || url == "feedly.saved" || url == "feedly.home" || url == "my" ) && request.streamId != null )
+									url = request.streamId;
+	    					}
+		            			
+	            			STATE = "RUNNING";
+		            		incSegment();
+		        			IO_COUNT = 0;
+
+		        			if( currentOrientation != ORIENTATION() )
+		        				rotateLayout( ORIENTATION() );
+
+							var reload = ( request.forceReload == true ) || ( startSetting != ( SETTING( "feedly_start" ) || "my" ) );
+
+							startSetting = SETTING( "feedly_start" ) || "my"
+
+							if( entryId != null )
+								reload = false;
+
+		        			if( mag != null )
+								mag.rehydrate( reload, buildURL( url ), entryId );
+
+		            		break;
+
+	                    case "userSettings":
+
+	            			var currPocket = SETTING( "feedly_pocket_user" ) != null && SETTING( "feedly_pocket_user" ).length > 0;
+	                    	
+	                    	// update on user settings.
+	                        var currNavigation = NAVIGATION();
+	                        var currTheme = SETTING( "feedly_theme" ) || "white";
+	                        var currStoreLanguage = SETTING( "feedly_store_language" ) || "detect";
+
+	                        SETTINGS = request;
+
+	                        TOUCH_SLOP = SETTING( "device_scaledTouchSlop" ) || 12;
+
+	                        // In the case of the kindle, we need to adjust the display_height and substract the height of the
+	                        // Amazon Home Bar which is 60px
+	                        if( KINDLE_OLD() && ( SETTINGS[ "display_height" ] == 1024 - 40 || SETTINGS[ "display_height" ] == 600 - 40 ) )
+	                        	SETTINGS[ "display_height" ] = SETTINGS[ "display_height" ] - 60;
+
+	                        feedlyApplicationVersion = SETTING( "feedly_app_version" );
+
+	                        var targetNavigation = NAVIGATION();
+	                        var targetTheme = SETTING( "feedly_theme" ) || "white";
+	                        var targetStoreLanguage = SETTING( "feedly_store_language" ) || "detect";
+	            			var targetPocket = SETTING( "feedly_pocket_user" ) != null && SETTING( "feedly_pocket_user" ).length > 0;
+
+	            			if( typeof devhd != "undefined")
+	            			{
+	            				devhd.i18n.setLocale(SETTINGS["device_locale"]);
+
+	   	         				if( targetTheme != currTheme )
+	                        	{
+	   	         					updateTheme();
+	                        	}
+	            			}
+								            			
+	                       	if( currStoreLanguage != targetStoreLanguage && mag != null)
+	                        {
+	                        	mag.askUpdateStore();
+	                        }
+
+	                       	if( currNavigation != targetNavigation && mag != null )
+	                       	{
+                       			FLEX_UI();
+                       			mag.setupNavigation();
+								mag.loadURL( "welcome" );
+	                       	}
+
+	                        break;
+
+	                    case "reachability":
+	                        // how are we reachable ?
+	                        REACHABILITY = request;
+	                        break;
+	                        
+	                    case "facebook.login.error":
+	                   		TRACK_CONFIG( "prompt.error.facebook." +  request.code );			
+           					$feedly( "[feedly] native login failed:" + JSON.stringify( request ) );
+
+                			// Ask for start info so that post login activity is cleard.
+           					LOGGED_START_INFO();
+           					LOGGED_ACTION();
+ 
+           					var pwElement = document.getElementById( "personalizeWithFacebook" );
+           					if( pwElement != null )
+           						pwElement.innerHTML = "Personalize with Facebook";
+           					
+							break;
+							
+	                    case "twitter.login.error":
+                    		TRACK_CONFIG( "prompt.error.twitter." +  request.code );			
+
+                			// Ask for start info so that post login activity is cleard.
+           					LOGGED_START_INFO();
+           					LOGGED_ACTION();
+ 
+           					var pwElement = document.getElementById( "personalizeWithTwitter" );
+           					if( pwElement != null )
+           						pwElement.innerHTML = "Personalize with Twitter";
+          					
+							break;
+							
+	                    case "twitter.login.full":
+
+	                    	if( request.auth == null )
+	                    	{
+	                    		TRACK_CONFIG( "prompt.cancelled" );			
+
+	                			// Ask for start info so that post login activity is cleard.
+            					LOGGED_START_INFO();
+            					LOGGED_ACTION();
+
+               					var pwElement = document.getElementById( "personalizeWithTwitter" );
+               					if( pwElement != null )
+               						pwElement.innerHTML = "Personalize with Twitter";
+               					
+               					SIGN( "Ooops: No access token" );
+    							break;
+	                    	}
+
+	                    	// An error happened in the Android Native Authentication layer
+	                    	if( request.message != null && request.auth == null )
+	                    	{
+	                    		TRACK_CONFIG( "prompt.failed" );			
+
+	                			// Ask for start info so that post login activity is cleard.
+            					LOGGED_START_INFO();
+            					LOGGED_ACTION();
+
+								mag.logout();
+								FAILED( request.message, request.code );
+	                    		return;
+	                    	}
+
+            				if( mag != null )
+            					mag.clearGallery( "home", feedlyTerms.my );
+                    		
+            				try
+            				{
+            					if( tracker != null )
+            						tracker.setCustomVar( 4, "userType", "twitter" );
+           					}
+            				catch( e )
+            				{
+             				}
+ 
+	                    	request.provider = "Twitter";
+	                    	request.created = new Date().getTime();
+	                    	request.updated = new Date().getTime();
+	    					request.expirationTime = new Date().getTime() + 24 * 3600 * 1000;
+
+		                    doCompleteTwitterLogin( request );
+	                        break;
+            				
+	                    case "facebook.login.full":
+                    		// An error happened in the Android Native Authentication layer
+	                    	if( request.auth == null )
+	                    	{
+	                    		TRACK_CONFIG( "prompt.cancelled" );			
+
+	                			// Ask for start info so that post login activity is cleard.
+            					LOGGED_START_INFO();
+            					LOGGED_ACTION();
+
+               					var pwElement = document.getElementById( "personalizeWithFacebook" );
+               					if( pwElement != null )
+               						pwElement.innerHTML = "Personalize with Facebook";
+               					
+               					SIGN( "Ooops: No access token" );
+    							break;
+	                    	}
+
+                    		if( request.message != null && request.auth == null )
+	                    	{
+	                    		TRACK_CONFIG( "prompt.failed" );			
+
+	                			// Ask for start info so that post login activity is cleard.
+            					LOGGED_START_INFO();
+            					LOGGED_ACTION();
+
+								mag.logout();
+								FAILED( request.message, request.code );
+	                    		return;
+	                    	}
+
+            				if( mag != null )
+            					mag.clearGallery( "home", feedlyTerms.my );
+                    		
+            				try
+            				{
+            					if( tracker != null )
+            						tracker.setCustomVar( 4, "userType", "facebook" );
+           					}
+            				catch( e )
+            				{
+            					$feedly( "[feedly] failed to set userType to facebook:" + e.name + " -- " + e.message );
+             				}
+ 
+	                    	request.provider = "Facebook";
+	                    	request.created = new Date().getTime();
+	                    	request.updated = new Date().getTime();
+	    					request.expirationTime = new Date().getTime() + 24 * 3600 * 1000;
+
+		                    doCompleteFacebookLogin( request );
+	                        break;
+	                        
+	                   	// Callback from the native Android login
+	                   	//
+	                    case "googlePlus.login.full":
+	                    case "googlePlus.login.limited":
+	                    	  
+	                    	// The user has just cancelled the login
+	                    	//
+	                    	if( request.message == "Not logged in." && request.auth == null )
+	                    	{
+	                			// Ask for start info so that post login activity is cleard.
+            					LOGGED_START_INFO();
+            					LOGGED_ACTION();
+	                    		return;
+	                    	}
+
+	                    	// An error happened in the Android Native Authentication layer
+	                    	if( request.message != null && request.auth == null )
+	                    	{
+	                    		TRACK_CONFIG( "prompt.failed" );			
+
+	                			// Ask for start info so that post login activity is cleard.
+            					LOGGED_START_INFO();
+            					LOGGED_ACTION();
+
+								mag.logout();
+								FAILED( request.message, request.code );
+	                    		return;
+	                    	}
+
+            				if( mag != null )
+            					mag.clearGallery( "home", feedlyTerms.my );
+                    		
+            				try
+            				{
+            					tracker.setCustomVar( 4, "userType", "google" );		
+           					}
+            				catch( e )
+            				{
+             				}
+ 
+	                    	request.provider = "GooglePlus";
+	                    	request.created = new Date().getTime();
+	                    	request.updated = new Date().getTime();
+	    					request.expirationTime = new Date().getTime() + 24 * 3600 * 1000;
+
+		                    doCompleteGoogleLogin( request );
+	                        break;
+	                    	
+	                    case "oauth2":
+	                    	mag.endActivity( false, false );
+	                    		                    	
+	                    	// We received a callback for a OneNote authentication
+	                    	//
+	                    	if( request.provider == "OneNote" )
+	                    	{
+	                    		mag.completeOneNoteOAuth();
+	                    		return;
+	                    	}
+	                    	else if( request.provider == "EvernoteSave" )
+	                    	{
+	                    		mag.completeEvernoteSaveOAuth();
+	                    		return;
+	                    	}
+	                    	else if( request.provider == "WindowsLive" || request.provider == "Evernote" || request.provider == "GooglePlus" || request.provider == "Twitter" || request.provider == "Facebook" )
+	                    	{
+	                    		try
+	                    		{
+	                    			if( request.data == null || request.data.code == null )
+	                    			{
+	    	                    		TRACK_CONFIG( "prompt.cancelled" );			
+	                    				SIGN( "Cancelled" );
+	                    				return;
+	                    			}
+		            				
+	                    			if( mag != null )
+		            					mag.clearGallery( "home", feedlyTerms.my, false );
+	
+		            				var input = { 
+		            						"code" 			: request.data.code, 
+		            						"client_id" 	: "feedly",
+		            						"client_secret" : "0XP4XQ07VVMDWBKUHTJM4WUQ",
+		            						"redirect_uri"  : "https://www.feedly.com/feedly.html",
+		            						"grant_type"    : "authorization_code"
+		            					};
+
+		            				
+		            				POST( 	"!{cloud}/v3/auth/token?ct=feedly.desktop&cv=" + feedlyApplicationVersion + new Date().getTime(),
+		            						WEBFORM( input ),
+		            						function( response )
+		            						{
+		            							try
+		            							{
+		            								var sess = devhd.utils.JSONUtils.decode( response );
+            					   					
+            					   					if( sess != null )
+            					   					{
+            						   					sess.feedlyId = sess.id;
+            						   					sess.feedlyRefreshToken = sess.refresh_token;
+            						   					sess.feedlyToken = sess.access_token;
+            						   					sess.feedlyExpiresIn = sess.expires_in;
+            						   					sess.feedlyExpirationTime = new Date().getTime() + sess.expires_in * 1000 - 10000;
+            						   					sess.plan = sess.plan || "standard";
+            						   					sess.provider = request.provider;
+            						   					
+            											delete( sess.access_token );
+            						   					delete( sess.expires_in );
+            						   					delete( sess.id_token );
+            						   					delete( sess.token_type );
+            						   					delete( sess.refresh_token );
+            					   					}
+            					   						
+            										// Save the enriched session for that we have the google reader user id.
+            										devhdx.utils.SessionUtils.save( sess );
+            										
+            										$B.core.application.setSession( sess );
+            										
+            					    				var si = LOGGED_START_INFO();
+            										mag.loadURL( si.url, true, si.label );
+		            							}
+		            							catch( e )
+		            							{
+		            		           				ERROR( "ERR009 - failed to login because " + e.name + " -- " + e.message );
+		            		           			}
+		            						},
+		            						function( errCode, errMessage )
+		            						{
+		            							SIGN( "ERROR:" + errCode );
+		            						},
+		            						{
+		            							"Content-Type" : "application/x-www-form-urlencoded"
+		            						}
+		            						);
+	                    		}
+	                    		catch( e )
+	                    		{
+                    				SIGN( "ERROR:" + e.name );	    
+	                    		}
+	                    	}
+	                    	else
+	                    	{
+		            			try
+		            			{
+		            				// User did not grant permission.
+		            				//
+		            				if( request.data == null || request.data.code == null )
+		            				{
+			                			TRACK_CONFIG( "prompt.failed" );			
+	
+			                			// Ask for start info so that post login activity is cleard.
+		            					LOGGED_START_INFO();
+		            					LOGGED_ACTION();
+		            					return;
+		            				}
+		
+		            				if( mag != null )
+		            					mag.clearGallery( "home", feedlyTerms.my, false );
+	
+		                			var input = 	{
+		            									code : request.data.code,
+		            									client_id: "707616448940.apps.googleusercontent.com" ,
+		            									client_secret: "B4gJ5F5kYznTvxZWtch9RCXi",
+		            									redirect_uri: "http://www.feedly.com/google.html",
+		            									grant_type: "authorization_code"
+		            								};
+	
+		            				TPOST( 	"https://accounts.google.com/o/oauth2/token?ck=" + new Date().getTime(),
+		            						WEBFORM( input ),
+		            						function( response )
+		            						{
+		            							try
+		            							{
+		            								var sess = devhd.utils.JSONUtils.decode( response );
+	
+		            			   					if( sess != null )
+		            			   					{
+		            				   					sess.auth = sess.access_token;
+		            				   					delete( sess.access_token );
+	
+		            				   					if( sess.expires_in != null )
+		          										{
+		            				   						sess.expirationTime = new Date().getTime() + sess.expires_in * 1000 - 10000;
+		            				   						delete( sess.expires_in );
+		            				   					}
+	
+		            				   					sess.created = new Date().getTime();
+		            				   					sess.updated = new Date().getTime();
+		            				   					sess.provider = "oauth2";
+		            			   					}
+	
+		            			   					doCompleteGoogleLogin( sess );
+		            							}
+		            							catch( e )
+		            							{
+		            		           				ERROR( "ERR009 - failed to login because " + e.name + " -- " + e.message );
+		            		           			}
+		            						},
+		            						function( errCode, errMessage )
+		            						{
+		            							doCompleteGoogleLogin( {} );
+		            						},
+		            						{
+		            							"Content-Type" : "application/x-www-form-urlencoded"
+		            						}
+		            						);
+		            			}
+		            			catch( e )
+		            			{
+		            				ERROR( "ERR009 - failed to authenticate because " + e.name + " -- " + e.message );
+		            			}
+	                		}
+	                        break;
+
+	                    case "orientationChange":
+	                    	// For iOS, we are getting logic pixels directly. For Android, we are getting absolute
+	                    	// pixel because the native side and the webview can use a different window pixel density.
+	        				var newW = request[ "width" ] || DP( request[ "width_px" ]  ) || window.innerWidth;
+	        				var newH = request[ "height" ] || DP( request[ "height_px" ] ) || window.innerHeight;
+
+	                    	rotateLayout( request.orientation, newW, newH );
+	                        break;
+
+	                    case "motionShake":
+	                    	if( THEME() == "black" )
+	                    	{
+	                    		$B.core.application.setUserSetting( "feedly_theme", "white" );
+	                    	}
+	                    	else
+	                    	{
+	                    		$B.core.application.setUserSetting( "feedly_theme", "black" );
+	                    	}
+	                        break;
+
+	                    case "button":
+	                    	switch( request.id )
+	                    	{
+	                    		case "back":
+	                        		try
+	                        		{
+		                    			if( mag == null )
+		                    				return;
+	                            		mag.handleBack()
+	                        		}
+	                        		catch( e )
+	                        		{
+	                        			$feedly( "[error] failed to handle back. " + e.name + " -- " + e.message );
+	                        		}
+	                    			break;
+
+	                    		case "menu":
+	                        		try
+	                        		{
+		                    			if( mag == null )
+		                    				return;
+		                    			
+		                    			var currentActivity = mag.getCurrentActivity();
+		                    			if( currentActivity == "selector" )
+		                    			{
+		                    				mag.endActivity();
+		                    			}
+		                    			else if( currentActivity == null )
+		                    			{
+		                    				mag.showSelector();
+		                    			}
+	                        		}
+	                        		catch( e )
+	                        		{
+	                        			$feedly( "[error] failed to handle menu. " + e.name + " -- " + e.message );
+	                        		}
+									break;
+
+	                    		case "search":
+	                        		try
+	                        		{
+		                    			if( mag == null )
+		                    				return;
+		                    			
+		                    			if( mag.getCurrentActivity() == "store" )
+		                    				mag.endActivity();
+		                    			else
+											mag.showStore();
+	                        		}
+	                        		catch( e )
+	                        		{
+	                        			$feedly( "[error] failed to handle search. " + e.name + " -- " + e.message );
+	                        		}
+	                    			break;
+
+	                    		default:
+
+	                    	}
+	                     	break;
+
+	                    case "wmbeforehide" :
+	                    	try
+	                    	{
+		                     	if( request.gesture == "hide" || request.gesture == "close" || request.gesture == true ) {
+		                    		mag.endActivity( true, true );
+		                     	}
+	                    	}
+	                    	catch( e )
+	                    	{
+				                $feedly( "[mag][onappevent]: failed to wmbeforehide " + e.name + " -- " + e.message );
+	                    	}
+	                    	break;
+
+	                    case "onstatusbartap" :
+	                    	if (mag != null) {
+	                    		mag.backToFirst();
+	                    	}
+	                    	break;
+
+						default:
+			                /// $feedly( "ONAPPEVENT: " + JSON.stringify(request)  + " received, but NOT handled");
+						    break;
+	                }
+				}
+				catch( e )
+				{
+    				ERROR( "ERR009 - failed to process app event:" + request.type + " because "  + e.name + " -- " + e.message );
+				}
+			}
+
+			var futureRotation = null;
+			function rotateLayout( newOrientation, width, height )
+			{
+				if( currentLayout == null )
+				{
+					futureRotation = { newOrientation: newOrientation, width: width, height: height };
+					return;
+				}
+
+				// EK. Sometimes, on Android, the way we forcast dimensions, we end up being off in our forcast because
+				// of the window decorations. This is a hook to fix things.
+				var adjust = false;
+				if( width != null && height != null && ( DIMENSIONS[ newOrientation ].width != width || DIMENSIONS[ newOrientation ].height != height ) )
+				{
+					DIMENSIONS[ newOrientation ].width = width;
+					DIMENSIONS[ newOrientation ].height = height;
+					DIMENSIONS[ newOrientation ].card_width = DIMENSIONS[ newOrientation ].width - 2 * OFFSET_W ;
+					adjust = true;
+				}
+
+				currentOrientation = newOrientation;
+
+				W = DIMENSIONS[ currentOrientation ].width;
+				H = DIMENSIONS[ currentOrientation ].height;
+
+    			CARD_W = W - 2 * OFFSET_W;
+    			CARD_H = H - NAVIGATION_BAR;
+
+            	FLEX_UI();
+
+				if( mag != null )
+            		mag.onOrientationChanged( adjust );
+			}
+
+			///// LOGIN /////////////////////////////////////////////////////////////////////////
+			function LOGGED_START_INFO()
+			{
+				var loggedStart = LREAD( "logged.start" );
+				if( loggedStart != null )
+				{
+					LREMOVE( "logged.start" );
+					return JSON.parse( loggedStart );
+				}
+				else
+				{
+					return START_INFO();
+				}
+			}
+
+			function LOGGED_ACTION()
+			{
+				var loggedAction = LREAD( "logged.action" );
+				if( loggedAction != null )
+				{
+					LREMOVE( "logged.action" );
+					return JSON.parse( loggedAction );
+				}
+				else
+				{
+					return null;
+				}
+			}
+
+			function IOS()
+			{
+				return SETTING( "device_os" ).indexOf( " ios" ) > -1 || SETTING( "device_os" ).indexOf( "iphone" ) > -1 || SETTING( "device_os" ).indexOf( "ipad" ) > -1;
+			}
+
+			function SVG()
+			{
+				return IOS_7PLUS() || ANDROID_SVG();
+			}
+			
+			function IOS_7PLUS()
+			{
+				return IOS() && parseFloat( SETTING( "device_os_version" ) ) >= 7;
+			}
+
+			function IOS_8PLUS()
+			{
+				return IOS() && parseFloat( SETTING( "device_os_version" ) ) >= 8;
+			}
+
+			function ANDROID()
+			{
+				return SETTING( "device_os" ) == "android";
+			}
+
+			function ANDROID_SVG()
+			{
+				return ANDROID() && parseFloat( SETTING( "device_os_level" ) ) >= 19;
+			}
+
+			function ANDROID_44PLUS()
+			{
+				return SETTING( "device_os" ) == "android" && parseFloat( SETTING( "device_os_level" ) ) >= 19;
+			}
+
+			function ANDROID_MED()
+			{
+				return ANDROID() && parseFloat( SETTING( "device_os_level" ) ) < 18;
+			}
+
+			function ANDROID_MED()
+			{
+				return ANDROID() && parseFloat( SETTING( "device_os_level" ) ) < 18;
+			}
+
+			function ANDROID_LOW()
+			{
+				return ANDROID() && parseFloat( SETTING( "device_os_level" ) ) < 16;
+			}
+
+			function ANDROID_TWO()
+			{
+				return ANDROID() && parseFloat( SETTING( "device_os_level" ) ) < 14;
+			}
+
+			function KINDLE()
+			{
+				return ( navigator.userAgent.indexOf( "KFTT" ) > -1 || navigator.userAgent.indexOf( "Kindle Fire") > -1 );
+			}
+
+			function KINDLE_LOW()
+			{
+				return KINDLE()
+					   && parseFloat( SETTING( "device_os_version" ) ) < 4.1;
+			}
+
+			function KINDLE_OLD()
+			{
+				return navigator.userAgent.indexOf( "Kindle Fire") > -1;
+			}
+
+			function FONT()
+			{
+				return "system";
+			}
+
+			function NAVIGATION()
+			{
+				return SETTING( "feedly_navigation" ) || "stack";
+			}
+
+			function THEME()
+			{
+				return SETTING( "feedly_theme" ) || "white";
+			}
+
+			function SETTING( name )
+			{
+				return SETTINGS[ name ];
+			}
+
+			function CLOUD()
+			{
+				return streets.getMode() == "cloud";
+			}
+			
+			function UPDATE_SETTING( name, value )
+			{
+				// UPDATE THE LOCAL CACHE
+				SETTINGS[ name ] = value;
+
+				// PERSIST CHANGES
+				$B.core.application.setUserSetting( name, value );
+			}
+
+			function START_INFO( forced )
+			{
+				var su = forced || SETTING( "feedly_start" ) || "my";
+				if( su == null || su.length == 0 )
+					su = "my";
+
+				// The user user is trying to load a feed directly - shortcut example
+				if( su.indexOf( "feed/" ) == 0 )
+					return { url: "list://" + su };
+
+				if( su.indexOf( "list://" ) == 0 )
+					return { url: su };
+
+				if( su.indexOf( "mix://" ) == 0 )
+					return { url: su };
+
+				if( su.indexOf( "user/" ) == 0 )
+					return { url: "list://" + su };
+					
+				switch( su.toLowerCase() )
+				{
+					case "explore":
+					case "discover":
+					case "explore":
+						return clone ( { url: "explore", label: "explore" } );
+
+					case "today":
+					case "home":
+					case "feedly.today":
+					case "feedly.home":
+					case "my":
+						return clone ( { url: "my", label: feedlyTerms.my } );
+
+					case "latest":
+						return clone ( { url: "list://user/-/category/global.all", label: "latest" } );
+
+					case "feedly.favorites":
+					case "global.must":
+						// User is requesting his must read category
+						return clone ( { url: "list://user/-/category/global.must", label: "must reads" } );
+
+					case "saved":
+					case "feedly.saved":
+						return clone ( { url: "list://user/-/tag/global.saved", label: "saved for later" } );
+						
+						
+					default:
+						return clone ( { url:  "list://user/-/category/" + su, label: su } );
+				}
+			}
+
+			function buildURL( input )
+			{
+				if( input == null )
+					return null;
+
+				// The user user is trying to load a feed directly - shortcut example
+				if( input.indexOf( "feed/" ) == 0 )
+					return "list://" + input;
+
+				if( input.indexOf( "user/" ) == 0 )
+					return "list://" + input;
+
+				if( input.indexOf( "list://" ) == 0 )
+					return input;
+
+				if( input.indexOf( "mix://" ) == 0 )
+					return input;
+
+				switch( input.toLowerCase() )
+				{
+					case "essentials":
+						return "welcome";
+
+					case "explore":
+					case "discover":
+						return "explore";
+
+					case "today":
+					case "home":
+					case "feedly.today":
+					case "feedly.home":
+					case "my":
+						return "my";
+
+					case "saved":
+					case "feedly.saved":
+						return "list://user/-/tag/global.saved";
+
+					case "latest":
+						return "list://user/-/state/com.google/reading-list";
+
+					case "global.must":
+						return "category://global.must";
+
+					default:
+						return "list://user/-/category/" + input;
+				}
+			}
+
+			function clone( hash )
+			{
+				var cl = {};
+				for( var k in hash )
+					cl[ k ] = hash[ k ];
+				return cl;
+			}
+
+            function OPENURL( url )
+			{
+				$B.core.application.openURL(url);
+			};
+
+			function VIEW( json, wmjson )
+			{
+                $B.core.viewer[json.type] ( json, wmjson );
+			};
+
+			function OPEN( url )
+			{
+				if( url.indexOf( "getap.ps" ) > -1 )
+				{
+					OPENURL( url );
+				}
+				else if( url.indexOf( "http" ) == 0 )
+				{
+					VIEW ( { type: "browser", href: url } );
+				}
+				else
+				{
+					OPENURL( url );
+				}
+			};
+
+			function WARN( html, displayDuration )
+            {
+            	// Only show signs when the application is running. This is important in the case of
+            	// android where we do not want the SIGNs to show when the app is in the background.
+				if( STATE != "RUNNING" )
+					return;
+
+               	// You can change any of these below ....
+                var wmjson = {
+                		enterArgs: {
+                    		alphaEnd: 0.8
+                    	},
+                    	exitArgs: {
+                    		alphaStart: 0.8
+                    	}
+               	}
+            	$B.core.wm.sign(html, displayDuration, wmjson);
+            }
+
+			function HINT( hint )
+			{
+				if( hint == null )
+					return;
+				
+				SIGN( "[Hint] " + hint );
+			}
+
+			function TRACK_CONFIG( step )
+			{
+				$B.core.tracker.trackPageView( step );
+				$B.core.tracker.dispatch();
+			}
+			
+            function SIGN (html, displayDuration, opacity )
+            {
+            	if( html == null )
+            		return;
+            	
+            	// Only show signs when the application is running. This is important in the case of
+            	// android where we do not want the SIGNs to show when the app is in the background.
+            	// example: network timeout signs.
+				if( STATE != "RUNNING" )
+					return;
+
+                var wmjson = {
+                    width: Math.min( 400, W - 4 * PAD )
+                };
+
+            	$B.core.wm.sign( html, displayDuration, wmjson);
+            }
+
+ 			function ONEVENT( request )
+			{
+ 				// fixing bugs in the core layer
+ 				if( request.action != null && request.type == null )
+ 					request.type = "action";
+
+				switch( request.type )
+				{
+					case "setting":
+						$B.core.application.setUserSetting( request.name, request.value );
+						break;
+
+					case "navigation":
+						mag.endAllActivities();
+						mag.selectSection( request.url, request.hint, { title: request.hint, tags: request.tags, partial: request.partial, view: request.view, promoted: request.promoted } );
+						break;
+
+					case "navigate" :
+						mag.navigate(request);
+						break;
+						
+					case "email":
+						mag.email( request );
+						break;
+
+					case "endActivity":
+						mag.endActivity();
+						break;
+
+					case "analytics":
+						mag.trackEvent( request.category, request.action, request.label, request.value );
+						break;
+
+					case "activity":
+						mag.startActivity( request.activity, request.activityLabel );
+						break;
+
+					case "action":
+						mag.processAction( request.action, request.resourceId, request.url, request.title, request.message );
+						break;
+
+					case "onNewArticleShown" :
+						mag.onNewArticleShown( request );
+						break;
+						
+					case "onArticleHidden" :
+						mag.onArticleHidden( request );
+						break;						
+
+					case "transition" :
+						mag.askTransition( request );
+						break;
+	
+					case "startSignup":
+						mag.startSignup( request.signupType );
+						break;
+
+					case "startSignin":
+						mag.startSignin( request.signinType );
+						break;
+						
+					case "callback":
+						mag[ request.operation ].call( mag, request.input );
+						break;
+
+					case "mag":
+						try
+						{
+							if( mag == null )
+								return;
+							
+							if( request.endActivity == true )
+								mag.endActivity();
+
+							mag[ request.action ].call( mag, request.input, request.option );
+						}
+						catch( e )
+						{
+							$feedly( "[feedly] on mag action failed:" + e.name + " -- " + e.message );
+						}
+						break;
+
+					default:
+						///D $feedly( "mobile.ONEVENT:" + JSON.stringify( request ) );
+				}
+			}
+ 			
+ 			function PRO()
+ 			{
+ 				var s = SESSION();
+ 				
+ 				if( s == null )
+ 					return false;
+ 				
+ 				return SESSION().feedlyPlan == "pro" || SESSION().feedlyPlan == "business";
+ 			}
+
+			function SESSION()
+			{
+				var info = devhdx.utils.SessionUtils.load();
+
+				if( info != null )
+				{
+					// we make a copy of the session information to make sure that it does not get overwritten by mistake.
+					var copy = {};
+					for( var k in info )
+						copy[ k ] = info[ k ];
+
+					return copy;
+				}
+				else
+				{
+					return null;
+				}
+			}
+
+    		function doCompleteFacebookLogin( session )
+    		{
+    			try
+    			{
+            		// For some reason, we are not able to login successfully. We logout and clear things
+    				// out so that the user can retry.
+    				if( session == null || session.auth == null )
+    				{
+    					$feedly( "[mag] do complete login failed because invalid session:" + JSON.stringify( session ) );
+    					SIGN( "Cancelled", 1.5 );
+    					mag.logout();
+    					return;
+    				}
+
+    				// if no expiration time is specified, set it to one hour
+    				if( session.expirationTime == null )
+    					session.expirationTime = new Date().getTime() + 24 * 3600 * 1000;
+
+    				// Save the partial session information so that we can use the auth token when trying to enrich the session
+    				devhdx.utils.SessionUtils.save( session );
+ 
+    				var request = {
+    				  		"provider"			: "Facebook",
+    				  		"token"				: session.auth,
+    				  		"applicationName"	: "Feedly"
+   					};
+    							
+   	    			POST( 	"!{cloud}/v3/auth/fastline?ck=" + new Date().getTime() + "&ct=" + feedlyApplicationType + "&cv=" + feedlyApplicationVersion,
+   							devhd.utils.JSONUtils.encode( request ),
+   							function( responseText )
+   							{
+   								try
+   								{
+   					    			var p = devhd.utils.JSONUtils.decode( responseText );
+
+   									var session = SESSION();
+   									
+   									session.feedlyId = p.id;
+   									session.feedlyToken = p.access_token;
+   									session.feedlyPlan = p.plan;
+   									session.feedlyRefreshToken = p.refresh_token;
+   									session.feedlyExpirationTime = new Date().getTime() + p.expires_in * 1000 - 10000;
+   									
+   									devhdx.utils.SessionUtils.save( session );
+   									
+   									$B.core.application.setSession( session );
+   				    				var si = LOGGED_START_INFO();   				    				
+   									mag.loadURL( si.url, true, si.label, null, null, null, null, true );
+   								}
+   								catch( e )
+   								{
+   									$feedly( "[fastline] facebook callback processing failed:" + e.name + " -- " + e.message );
+   									// In the case this is happening when the app starts, the mag component might not be ready.
+   									if( mag != null )
+   										mag.logout();
+   									else 
+   										CLEAR_SESSION();
+   								}
+   							},
+   							function( status, statusText )
+   							{
+   								$feedly( "[fastline] facebook call failed:" + status + " -- " + statusText );
+   								SIGN( "Login failed:" + status );
+   								// In the case this is happening when the app starts, the mag component might not be ready.
+   								if( mag != null )
+   									mag.logout();
+   								else 
+   									CLEAR_SESSION();
+   							},
+   							{
+   								"Content-Type": "application/json"
+   							}
+   							);
+     			}
+    			catch( e )
+    			{
+					if( mag != null )
+						mag.logout();
+					else 
+						CLEAR_SESSION();
+
+					$feedly( "[mag] failed to complete facebook session login because:" + e.name + " -- " + e.message );
+    				ERROR( "ERR009 - failed to complete facebook login because " + e.name + " -- " + e.message );
+    			}
+    		}
+
+			
+    		function doCompleteTwitterLogin( session )
+    		{
+    			try
+    			{
+            		// For some reason, we are not able to login successfully. We logout and clear things
+    				// out so that the user can retry.
+    				if( session == null || session.auth == null )
+    				{
+    					$feedly( "[mag] do complete login failed because invalid session:" + JSON.stringify( session ) );
+    					SIGN( "Cancelled", 1.5 );
+    					mag.logout();
+    					return;
+    				}
+
+    				// if no expiration time is specified, set it to one hour
+    				if( session.expirationTime == null )
+    					session.expirationTime = new Date().getTime() + 24 * 3600 * 1000;
+
+    				// Save the partial session information so that we can use the auth token when trying to enrich the session
+    				devhdx.utils.SessionUtils.save( session );
+ 
+    				var request = {
+    				  		"provider"			: "Twitter",
+    				  		"secret"			: session.secret,
+    				  		"token"				: session.auth,
+    				  		"applicationName"	: "Feedly",
+    				  		"twitterId"			: session.twitterId,
+    				  		"screenName"		: session.screenName
+   					};
+    							
+   	    			POST( 	"!{cloud}/v3/auth/fastline?ck=" + new Date().getTime() + "&ct=" + feedlyApplicationType + "&cv=" + feedlyApplicationVersion,
+   							devhd.utils.JSONUtils.encode( request ),
+   							function( responseText )
+   							{
+   								try
+   								{
+   					    			var p = devhd.utils.JSONUtils.decode( responseText );
+
+   									var session = SESSION();
+   									
+   									session.feedlyId = p.id;
+   									session.feedlyToken = p.access_token;
+   									session.feedlyPlan = p.plan;
+   									session.feedlyRefreshToken = p.refresh_token;
+   									session.feedlyExpirationTime = new Date().getTime() + p.expires_in * 1000 - 10000;
+   									
+  									devhdx.utils.SessionUtils.save( session );
+   									
+   									$B.core.application.setSession( session );
+   									
+   				    				var si = LOGGED_START_INFO();   				    				
+   									mag.loadURL( si.url, true, si.label, null, null, null, null, true );
+   								}
+   								catch( e )
+   								{
+   									$feedly( "[fastline] twitter callback processing failed:" + e.name + " -- " + e.message );
+   									// In the case this is happening when the app starts, the mag component might not be ready.
+   									if( mag != null )
+   										mag.logout();
+   									else 
+   										CLEAR_SESSION();
+   								}
+   							},
+   							function( status, statusText )
+   							{
+   								$feedly( "[fastline] twitter call failed:" + status + " -- " + statusText );
+   								SIGN( "Login failed:" + status );
+   								// In the case this is happening when the app starts, the mag component might not be ready.
+   								if( mag != null )
+   									mag.logout();
+   								else 
+   									CLEAR_SESSION();
+   							},
+   							{
+   								"Content-Type": "application/json"
+   							}
+   							);
+     			}
+    			catch( e )
+    			{
+					if( mag != null )
+						mag.logout();
+					else 
+						CLEAR_SESSION();
+
+					$feedly( "[mag] failed to complete twitter session login because:" + e.name + " -- " + e.message );
+    				ERROR( "ERR009 - failed to complete twitter login because " + e.name + " -- " + e.message );
+    			}
+    		}
+	
+    		function doCompleteGoogleLogin( session )
+    		{
+    			try
+    			{
+            		// For some reason, we are not able to login successfully. We logout and clear things
+    				// out so that the user can retry.
+    				if( session == null || session.auth == null )
+    				{
+    					$feedly( "[mag] do complete login failed because invalid session:" + JSON.stringify( session ) );
+    					SIGN( "Cancelled", 1.5 );
+    					mag.logout();
+    					return;
+    				}
+
+    				// if no expiration time is specified, set it to one hour
+    				if( session.expirationTime == null )
+    					session.expirationTime = new Date().getTime() + 24 * 3600 * 1000;
+    				
+    				// Save the partial session information so that we can use the auth token when trying to enrich the session
+    				devhdx.utils.SessionUtils.save( session );
+    				    				
+    				askResolveGoogleId( function(){
+    					
+    					var temp = SESSION();
+    					if( temp != null && temp.auth != null && temp.googleId == null )
+    					{
+    						// Access to Google seems to have been revoked by the user.
+    						//
+        					SIGN( "Google Access Revoked", 1.5 );
+        					mag.logout();
+        					return;
+    					}
+    					
+        				askFastline( function(){
+
+	          				session = SESSION();
+
+							try
+							{
+				   				// Save the enriched session for that we have the google reader user id.
+								devhdx.utils.SessionUtils.save( session );
+								
+								$B.core.application.setSession( session );
+								
+			    				var si = LOGGED_START_INFO();
+			    				
+								mag.loadURL( si.url, true, si.label, null, null, null, null, true );
+							}
+							catch( e )
+							{
+								ERROR( "ERR009 - enrich session failed because " + e.name + " -- " + e.message );
+							};
+        				});
+    				});
+    			}
+    			catch( e )
+    			{
+    				$feedly( "[mag] failed to complete session because:" + e.name + " -- " + e.message );
+    				ERROR( "ERR009 - failed to complete login because " + e.name + " -- " + e.message );
+    			}
+    		}
+    		
+    		function askResolveGoogleId( onComplete )
+    		{
+				var session = SESSION();
+
+				if( session == null || session.auth == null )
+					return devhd.fn.callback( onComplete );
+
+				// In the case of the full google+ integration, we get the google+ id back
+				// as part of the callback.
+				if( session.googleId != null )
+					return devhd.fn.callback( onComplete );
+				
+				TGET( 	"https://www.googleapis.com/oauth2/v1/tokeninfo?access_token=" + session.auth,
+						function( tokenInfo )
+						{
+							try
+							{
+								var session = SESSION();
+
+								var p = devhd.utils.JSONUtils.decode( tokenInfo );
+								
+								session.googleId = p.user_id;
+								session.expiresIn = p.expires_in;
+								session.expirationTime = new Date().getTime() + p.expires_in * 1000 - 10000;
+
+								$feedly( "[mobile] googleId obtained:" + session.googleId );
+								devhdx.utils.SessionUtils.save( session );
+
+			   					devhd.fn.callback( onComplete );
+							}
+							catch( e )
+							{
+								$feedly( "exception during resolution of google id:" + e.name + " -- " + e.message );
+			   					devhd.fn.callback( onComplete );
+							}
+						},
+						function( status, statusText )
+						{
+							$feedly( "failed to resolve google id:" + status + " -- " + statusText );
+		   					devhd.fn.callback( onComplete );
+						},
+						{
+							"Content-Type": "application/json"
+						}
+						);
+    		}
+    		
+    		function askFastline( onComplete )
+    		{
+    			var session = SESSION();
+    		    			
+    			if( session != null && session.feedlyRefreshToken != null )
+    			{
+      				return onComplete()
+    			}
+  
+    			if( session == null || session.googleId == null || session.auth == null )
+    			{
+    				$feedly( "[mobile] warning invalid session for fastline" );
+    				return onComplete();
+    			}
+     			   			
+				var request = {
+			  		"provider"			: "GooglePlus",
+			  		"googleId"			: session.googleId,
+			  		"token"				: session.auth,
+			  		"applicationName"	: "Feedly"
+				};
+						
+    			POST( 	"!{cloud}/v3/auth/fastline?ck=" + new Date().getTime() + "&ct=" + feedlyApplicationType + "&cv=" + feedlyApplicationVersion,
+						devhd.utils.JSONUtils.encode( request ),
+						function( responseText )
+						{
+							try
+							{
+				    			var p = devhd.utils.JSONUtils.decode( responseText );
+
+								var session = SESSION();
+								
+								session.feedlyId = p.id;
+								session.feedlyToken = p.access_token;
+								session.feedlyPlan = p.plan;
+								session.feedlyRefreshToken = p.refresh_token;
+								session.feedlyExpirationTime = new Date().getTime() + p.expires_in * 1000 - 10000;
+								
+								devhdx.utils.SessionUtils.save( session );
+								
+								devhd.fn.callback( onComplete );
+							}
+							catch( e )
+							{
+								$feedly( "[fastline] callback processing failed:" + e.name + " -- " + e.message );
+								devhd.fn.callback( onComplete );
+							}
+						},
+						function( status, statusText )
+						{
+							$feedly( "[fastline] call failed:" + status + " -- " + statusText + " -- " + JSON.stringify( request ) );
+							devhd.fn.callback( onComplete );
+						},
+						{
+							"Content-Type": "application/json"
+						}
+						);
+    		}
+    		    		
+            function CLEAR_SESSION()
+    		{
+    			try
+    			{
+    				devhdx.utils.SessionUtils.clear();
+
+					RECENTLY_RENEWED = {};
+					PAUSED = {};
+
+					CLEAR_QUEUES();
+					
+					// make sure that the native side has the same session
+					// as the app.
+					$B.core.application.clearSession();
+    			}
+    			catch( e )
+    			{
+    				ERROR( "ERR009 - failed to logout " + e.name + " -- " + e.message );
+    			}
+    		}
+
+			function JGET( url, onComplete, onError, headers, timeout )
+			{
+				GET( 	url,
+						function( response, processing )
+						{
+							// A lot of times, invalid JSON parsing is due to the connection dropping
+							// so we should should a disconnected message
+							try
+							{
+								var jsonResponse = JSON.parse( response );
+							}
+							catch( e )
+							{
+								var prettyURL = url.split( "?" )[ 0 ].split( "/" ).slice( 3, 7 ).join( "/" )
+								DISCONNECTED( prettyURL, "JGET timed out." );
+								return;
+							}
+
+							try
+							{
+								onComplete( jsonResponse, processing );
+							}
+							catch( e )
+							{
+								onError( 901, "JGET Invalid JSON response or failed callback" + e.name + " -- " + e.message );
+							}
+						},
+						onError,
+						headers,
+						timeout
+						);
+			}
+
+			function TJGET( url, onComplete, onError, headers, timeout )
+			{
+				TGET( 	url,
+						function( response, processing )
+						{
+							var jsonResponse = null;
+							try
+							{
+								var jsonResponse = JSON.parse( response );
+							}
+							catch( e )
+							{
+								onError( 902, "TJGET Invalid JSON response or failed callback" + e.name + " -- " + e.message );
+								return;
+							}
+
+							try
+							{
+								onComplete( jsonResponse, processing );
+							}
+							catch( e )
+							{
+								onError( 901, "TJGET Invalid JSON response or failed callback" + e.name + " -- " + e.message );
+							}
+						},
+						onError,
+						headers,
+						timeout
+						);
+			}
+
+			function getSegment()
+			{
+				return segment;
+			}
+
+			function incSegment()
+			{
+				if( SETTING( "device_os" ) == "android" )
+				{
+					// In Android, the app can receive callbacks even if the application has been dehydrated so
+					// there is no need in defining the concept of segments.
+					segment = 0;
+				}
+				else
+				{
+					segment = segment + 1;
+				}
+			}
+
+			function TGET( url, onComplete, onError, headers, timeout, retry )
+			{
+				IO( {
+					method		: "GET",
+					url			: url,
+					onComplete	: onComplete,
+					onError		: onError,
+					headers		: headers,
+					timeout		: timeout,
+					mandatory	: false
+				});
+			}
+
+			function GET( url, onComplete, onError, headers, timeout, retry )
+			{
+				IO( {
+					method		: "GET",
+					url			: url,
+					onComplete	: onComplete,
+					onError		: onError,
+					headers		: headers,
+					timeout		: timeout,
+					mandatory	: true
+				});
+			}
+
+			function TPUT( url, body, onComplete, onError, headers, timeout )
+			{
+				IO( {
+					method		: "PUT",
+					url			: url,
+					body		: body,
+					onComplete	: onComplete,
+					onError		: onError,
+					headers		: headers,
+					timeout		: timeout,
+					mandatory	: false
+				});
+			}
+
+			function PUT( url, body, onComplete, onError, headers, timeout )
+			{
+				IO( {
+						method		: "PUT",
+						url			: url,
+						body		: body,
+						onComplete	: onComplete,
+						onError		: onError,
+						headers		: headers,
+						timeout		: timeout,
+						mandatory	: true
+					});
+			}
+
+			function TPOST( url, body, onComplete, onError, headers, timeout )
+			{
+				IO( {
+					method		: "POST",
+					url			: url,
+					body		: body,
+					onComplete	: onComplete,
+					onError		: onError,
+					headers		: headers,
+					timeout		: timeout,
+					mandatory	: false
+				});
+			}
+
+			function POST( url, body, onComplete, onError, headers, timeout )
+			{
+				IO( {
+						method		: "POST",
+						url			: url,
+						body		: body,
+						onComplete	: onComplete,
+						onError		: onError,
+						headers		: headers,
+						timeout		: timeout,
+						mandatory	: true
+					});
+			}
+
+			function TPATCH( url, body, onComplete, onError, headers, timeout )
+			{
+				IO( {
+						method		: "PATCH",
+						url			: url,
+						body		: body,
+						onComplete	: onComplete,
+						onError		: onError,
+						headers		: headers,
+						timeout		: timeout,
+						mandatory	: false
+					});
+			}
+
+			function PATCH( url, body, onComplete, onError, headers, timeout )
+			{
+				IO( {
+						method		: "PATCH",
+						url			: url,
+						body		: body,
+						onComplete	: onComplete,
+						onError		: onError,
+						headers		: headers,
+						timeout		: timeout,
+						mandatory	: true
+					});
+			}
+
+			function DEL( url, onComplete, onError, headers, timeout, retry )
+			{
+				IO( {
+					method		: "DELETE",
+					url			: url,
+					onComplete	: onComplete,
+					onError		: onError,
+					headers		: headers,
+					timeout		: timeout,
+					mandatory	: true
+				});
+			}
+
+			function REQUIRES( token, headers )
+			{
+				switch( token )
+				{
+					case "FeedlyAuth":
+						return headers[ "$Authorization.feedly" ] != null;
+						
+					default:
+						return false;
+				}
+			}
+
+			function WEBFORM( formData ){
+				var a = []
+				for(var k in formData) {
+					a.push(k)
+					a.push("=")
+					a.push( encodeURIComponent(formData[k]) )
+					a.push("&")
+				}
+				a.pop() // last &
+				return a.join("")
+			}
+
+			var IO_COUNT = 0;
+			var IO_STATS = {};
+			var RETRIES    = [ 1000, 2000, 4000, 8000, 16000, 32000, 64000 ];
+			var RETRIES401 = [ 2000, 4000, 8000, 16000,32000, 64000, 128000 ];
+			
+			function IO( input, retry )
+			{
+				try
+				{
+					if( retry == null )
+						retry = 0;
+
+					if( input.headers == null )
+						input.headers = {};
+
+					if( input.onComplete == null )
+						input.onComplete = function(){};
+
+					if( input.onError == null )
+						input.onError = function(){};
+
+					if( input.url == null )
+					{
+						$feedly( "[feedly][io] failed to process request. Invalid IO input. Missing url: " + JSON.stringify( input ) );
+						return;
+					}
+
+					// substitute URLS
+					input.url = input.url.replace( "!{cloud}", "http://feedly.com" );
+
+					///////////////////////////////////////////////////////////////////////////////////////////////////////////
+					// SESSION MANAGEMENT
+					///////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+					var session = SESSION();
+
+					if( input.headers != null && input.headers[ "$Authorization.feedly" ] != null && PAUSED[ "FeedlyAuth" ] == true )
+					{
+						if( ESB[ "io.debug" ] == true )
+							$feedly( "[io] paused in FeedlyAuth line: " + JSON.stringify( session ) + " -- " + PAUSED[ "FeedlyAuth" ] );
+
+						QUEUE( "FeedlyAuth", input );
+						return;
+					}
+
+					// DO WE HAVE THE TOKENS NEEDED FOR THIS REQUEST
+					//
+					var needsRenewing = ( session == null || ( session.expirationTime != null && session.expirationTime < new Date().getTime() ) );
+					var renewReason = "";
+
+					// DO WE HAVE THE TOKENS NEEDED FOR THIS REQUEST
+					//
+					var needsFeedlyRenewing = ( session == null || session.feedlyToken == null || ( session.feedlyExpirationTime != null && session.feedlyExpirationTime < new Date().getTime() ) );
+					var renewFeedlyReason = "";
+					if( needsFeedlyRenewing )
+					{
+						if( session == null )
+							renewReason = "no session";
+						else if( session.feedlyToken == null )
+							renewReason = "session feedly token is null";
+						else
+							renewReason = "session feedly token has expired";
+					}
+
+					if( input.headers[ "$Authorization.feedly" ] != null && needsFeedlyRenewing == true )
+					{
+						if( ESB[ "io.debug" ] == true )
+							$feedly( "[io] need to review feedly token:" + input.method + " " + input.url + " -- " + JSON.stringify( session ) + ". Reason:" + renewReason );
+
+						PAUSE( "FeedlyAuth" )
+						QUEUE( "FeedlyAuth", input );
+						RENEW( "FeedlyAuth" );
+						return;
+					}
+
+					///////////////////////////////////////////////////////////////////////////////////////////////////////////
+					// HEADER AND REQUEST ENRICHEMENT
+					///////////////////////////////////////////////////////////////////////////////////////////////////////////
+					var timeout = input.timeout || 90000;
+					var url = input.url;
+					
+					if( input.headers[ "$Authorization.feedly" ] != null )
+					{
+						input.headers[ "Authorization" ] = "OAuth " + session.feedlyToken;
+					}
+
+					if( ESB[ "io.debug" ] == true )
+						$feedly( "[io] initiating " + input.method + " " + url + " " + JSON.stringify( input.headers ) );
+
+					///////////////////////////////////////////////////////////////////////////////////////////////////////////
+					// REQUEST PROCESSING
+					///////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+					var t0 = new Date().getTime();
+					var sId = getSegment();
+
+					var req = new XMLHttpRequest();
+					
+					req.timeout = timeout;
+					
+					req.onreadystatechange = function()
+					{
+						try
+						{
+							// this HTTP request was perform in a different segment...ignore timeout.
+							if( STATE == "DEHYDRATED" ) // ( sId != getSegment()
+							{
+								$feedly( "[feedly][io] cancelling cross segment invocation. Hint:" + url + " -- " + sId + "--" + getSegment() + "-- STATE:" + STATE + " -- EQ:" + ( sId != getSegment() ) );
+								return;
+							}
+
+							/*
+							if( ESB[ "io.debug" ] == true )
+								$feedly( "[io][" + ( new Date().getTime() - t0 ) +  "ms] state:" + req.readyState + " response " + input.method + " " + url );
+							*/
+
+							if( req.readyState == 4 )
+							{
+								IO_COUNT--;
+
+								if( ESB[ "io.debug" ] == true )
+									$feedly( "[io][" + ( new Date().getTime() - t0 ) +  "ms] response " + input.method + " " + url + " --> " + req.status );
+
+								var statPrefix = url.split( "?" )[ 0 ].split( "/" ).slice( 3, 7 ).join( "/" );
+								if( IO_STATS[ statPrefix ] == null )
+									IO_STATS[ statPrefix ] = [];
+
+								IO_STATS[ statPrefix ].push( ( new Date().getTime() - t0 ) );
+
+								if( req.status == 200 || req.status == 201 )
+								{
+									if( ESB[ "io.debug" ] == true )
+										$feedly( "[io][" + ( new Date().getTime() - t0 ) +  "ms] successfully completed " + input.method + " " + url + " --> " + req.readyState );
+
+									try
+									{
+										if( input.onComplete != null )
+											input.onComplete( req.responseText );
+									}
+									catch( e )
+									{
+										ERROR( "JS-002 feedly bug" + e.message + " -- " + e.name + " -- " + url + " -- " + req.responseText );
+										return;
+									}
+								}
+								else if( req.status == 401  && REQUIRES( "FeedlyAuth", input.headers ) == true && retry < 2 )
+								{
+									if( ESB[ "io.debug" ] == true )
+										$feedly( "[io][" + ( new Date().getTime() - t0 ) +  "ms] retrying 401 " + input.method + " " + url + " --> " + retry + 1 );
+
+									try
+									{
+										window.setTimeout( function(){
+											IO( input, retry + 1 )
+										},
+										RETRIES401[ retry ]
+										);
+									}
+									catch( e )
+									{
+										ERROR( "JS-003 feedly bug" + e.message + " -- " + e.name + " -- " + url + " -- " + req.status );
+										return;
+									}
+								}
+								else if( ( req.status == 0 || req.status == 408 || req.status >= 500 ) && retry < 3 )
+								{
+									if( ESB[ "io.debug" ] == true )
+										$feedly( "[io][" + ( new Date().getTime() - t0 ) +  "ms] retrying " + input.method + " " + url + " --> " + retry + 1 );
+
+									try
+									{
+										window.setTimeout( function(){
+											IO( input, retry + 1 )
+										},
+										RETRIES[ retry ]
+										);
+									}
+									catch( e )
+									{
+										ERROR( "JS-003 feedly bug" + e.message + " -- " + e.name + " -- " + url + " -- " + req.status );
+										return;
+									}
+								}
+								else if( req.status == 0 || req.status == 408 || req.status == 504 || req.status == 404 )
+								{
+									if( input.mandatory == false )
+									{
+										if( ESB[ "io.debug" ] == true )
+											$feedly( "[io] timeout error " + input.method + " " + url );
+
+										try
+										{
+											if( input.onError != null )
+												input.onError( 0 );
+										}
+										catch( e )
+										{
+											ERROR( "JS-004 feedly bug" + e.message + " -- " + e.name + " -- " + url + " -- " + req.status );
+											return;
+										}
+									}
+									else
+									{
+										if( ESB[ "io.debug" ] == true )
+											$feedly( "[io] disconnected " + input.method + " " + url );
+
+										try
+										{
+											var prettyURL = input.url.split( "?" )[ 0 ].split( "/" ).slice( 3, 7 ).join( "/" )
+											DISCONNECTED( prettyURL, input.method + " timed out." );
+										}
+										catch( e )
+										{
+											ERROR( "JS-005 feedly bug" + e.message + " -- " + e.name + " -- " + url + " -- " + req.status );
+											return;
+										}
+									}
+								}
+								else if( req.status == 401 && REQUIRES( "FeedlyAuth", input.headers ) == true && RECENTLY( "FeedlyAuth" ) == false )
+								{
+									if( ESB[ "io.debug" ] == true )
+										$feedly( "[io] authentication has expired:" + req.status + " -- " + JSON.stringify( input ) );
+									try
+									{
+										// The Google Authentication has expired!
+										PAUSE( "FeedlyAuth" )
+										QUEUE( "FeedlyAuth", input );
+										RENEW( "FeedlyAuth" );
+									}
+									catch( e )
+									{
+										ERROR( "JS-006 feedly bug" + e.message + " -- " + e.name + " -- " + url + " -- " + req.status );
+										return;
+									}									
+								}
+								else if( req.status == 400 )
+								{
+									// The client is issuing a bad HTTP request which is not related to acquiring a command token
+									$feedly( "[io][" + ( new Date().getTime() - t0 ) +  "ms] error " + input.method + " " + url + " " + input.body +  " --> " + req.status );
+
+									try
+									{
+										if( input.onError != null )
+											input.onError( req.status );
+									}
+									catch( e )
+									{
+										ERROR( "JS-008 feedly bug" + e.message + " -- " + e.name + " -- " + url + " -- " + req.status );
+										return;
+									}									
+								}
+								else if( input.mandatory == true && url.indexOf( "feedly.com" ) > -1 )
+								{
+									if( ESB[ "io.debug" ] == true )
+										$feedly( "[io][" + ( new Date().getTime() - t0 ) +  "ms] failed " + input.method + " " + url + " --> " + req.status + " -- " + JSON.stringify( input ) + " -- " + JSON.stringify( SESSION() ) );
+
+									try
+									{
+										var prettyURL = input.url.split( "?" )[ 0 ].split( "/" ).slice( 3, 7 ).join( "/" )
+										FAILED( prettyURL, req.status );
+									}
+									catch( e )
+									{
+										ERROR( "JS-009 feedly bug" + e.message + " -- " + e.name + " -- " + url + " -- " + req.status );
+										return;
+									}									
+								}
+								else
+								{
+									if( ESB[ "io.debug" ] == true )
+										$feedly( "[io][" + ( new Date().getTime() - t0 ) +  "ms] error " + input.method + " " + url + " --> " + req.status );
+
+									try
+									{
+										if( input.onError != null )
+											input.onError( req.status );
+									}
+									catch( e )
+									{
+										ERROR( "JS-010 feedly bug" + e.message + " -- " + e.name + " -- " + url + " -- " + req.status );
+										return;
+									}									
+								}
+				    		}
+						}
+						catch( e )
+						{
+							$feedly( "[io] exception during ready state change:" + e.name + " -- " + e.message );
+							ERROR( "ERROR-IO001 " + e.name + "-" + e.message + " -- " + url );
+						}
+					};
+
+					req.ontimeout = function()
+									{
+										// this HTTP request was perform in a different segment...ignore timeout.
+										if( sId != getSegment() )
+											return;
+				
+										// older timeout being triggered after the application has been re-activated. ignore
+										if( new Date().getTime() - t0 > 1.1 * timeout )
+											return;
+				
+										if( input.mandatory == false )
+										{
+											if( ESB[ "io.debug" ] == true )
+												$feedly( "[io] timeout error " + input.method + " " + url );
+				
+											if( input.onError != null )
+												input.onError( 0 );
+										}
+										else
+										{
+											if( ESB[ "io.debug" ] == true )
+												$feedly( "[io] disconnected " + input.method + " " + url );
+				
+											DISCONNECTED( url, input.method + " " + url + " timed out after " + timeout + "ms - status 0" );
+										}
+				
+									};
+
+					IO_COUNT++;
+
+					req.open( input.method, url, true );
+
+					for( var name in input.headers )
+						if( name.indexOf( "$" ) != 0 )
+			      			req.setRequestHeader( name, input.headers[name] );
+
+					if( input.headers[ "Content-Type" ] == null )
+						req.setRequestHeader( "Content-Type", "application/x-www-form-urlencoded; charset=UTF-8")
+
+					req.send( input.body || "" );
+				}
+				catch( e )
+				{
+					ERROR( "ERR001 - IO javascript bug " + e.name + " -- " + e.message + ". Input:" + JSON.stringify( input ) );
+				}
+			}
+
+			var QUEUES = { "FeedlyAuth":[] };
+
+			function QUEUE( tokenType, request )
+			{
+				try
+				{
+					if( ESB[ "io.debug" ] == true )
+						$feedly( "[io] queued " + request.method + " " + request.url + " into " + tokenType + " line." );
+				}
+				catch( ignore )
+				{
+					
+				}
+
+				QUEUES[ tokenType ].push( request );
+			}
+			
+			function CLEAR_QUEUES()
+			{
+				QUEUES = { "FeedlyAuth":[] };
+			}
+
+			function RESUME( tokenType )
+			{
+				if( ESB[ "io.debug" ] == true )
+					$feedly( "[io][resume] token type=" + tokenType + ". queue size=" + QUEUES[ tokenType ].length );
+
+				PAUSED[ tokenType ] = false;
+
+				var copy = [];
+
+				for( var i = 0; i < QUEUES[ tokenType ].length; i++ )
+					copy.push( QUEUES[ tokenType ][ i ] );
+
+				QUEUES[ tokenType ] = [];
+
+				for( var i = 0; i < copy.length; i++ )
+				{
+					try
+					{
+						IO( copy[ i ] );
+					}
+					catch( e )
+					{
+						$feedly( "[io][queue processing] failed to process " + JSON.stringify( copy[ i ] ) + " because " + e.name + " -- " + e.message );
+					}
+				}
+			}
+
+			var PAUSED = {};
+
+			function PAUSE( tokenType )
+			{
+				$feedly( "[io][pause] token type=" + tokenType );
+				PAUSED[ tokenType ] = true;
+			}
+
+			// Using a recently renewed context to make sure that we do not end up for some reason in an infinite loop.
+			//
+			var RECENTLY_RENEWED = {};
+
+			function RECENTLY( tokenType )
+			{
+				return RECENTLY_RENEWED[ tokenType ] != null && ( new Date().getTime() - RECENTLY_RENEWED[ tokenType ] < 10000 )
+			}
+			
+			function RECENTLY_UPDATED( session )
+			{
+				if( session == null || session.updated == null )
+					return false;
+				
+				if( new Date().getTime() - session.updated < 10000 )
+					return true;
+				
+				return false;
+			}
+			
+
+			function RENEW( tokenType )
+			{
+				try
+				{
+					if( ESB[ "io.debug" ] == true )
+						$feedly( "[io][renew] " + tokenType + " -- last renew: " + ( RECENTLY_RENEWED[ tokenType ] != null ? RECENTLY_RENEWED[ tokenType ] : "none" ) );
+				}
+				catch( ignore )
+				{
+					
+				}
+
+				if( RECENTLY( tokenType ) )
+				{
+					$feedly( "[io][renew] loop detected for " + tokenType );
+
+					// this token just got renewed. There is something wrong. Simply expire instead and let the user re-login
+					EXPIRED( "renew loop:" + tokenType );
+					return;
+				}
+
+				RECENTLY_RENEWED[ tokenType ] = null;
+
+				switch( tokenType )
+				{
+					case "FeedlyAuth":
+						askRenewFeedlyAuth( 		function()
+												 	{
+														RECENTLY_RENEWED[ tokenType ] = new Date();
+														RESUME( "FeedlyAuth" );
+												 	},
+												 	function( code )
+												 	{
+												 		// Expired and can not be renews
+														RECENTLY_RENEWED[ tokenType ] = new Date();
+												 		EXPIRED( "Please re-login" );
+												 	},
+												 	function()
+												 	{
+														RECENTLY_RENEWED[ tokenType ] = new Date();
+														FAILED( "Login failed", -1 );
+												 	},
+												 	function( u )
+												 	{
+														DISCONNECTED( u, "No network access" );
+												 	}
+												 	);
+						break;
+
+					default:
+						$feedly( "[io] failed to renew " + tokenType );
+				}
+			}
+
+			var ioSimulateFailure = false;
+
+			function webForm( formData ) {
+				var a = []
+				for(var k in formData) {
+					a.push(k)
+					a.push("=")
+					a.push( encodeURIComponent(formData[k]) )
+					a.push("&")
+				}
+				a.pop() // last &
+				return a.join("")
+			}
+
+			function askRenewFeedlyAuth( onSuccess, onExpired, onError, onNoNetwork )
+			{
+				var session = SESSION();
+				if( session == null || session.feedlyRefreshToken == null )
+				{
+					return onExpired();
+				}
+				
+				var request = {
+					"refresh_token" : session.feedlyRefreshToken,
+					"client_id" 	: "feedly",
+					"client_secret" : "0XP4XQ07VVMDWBKUHTJM4WUQ",
+					"grant_type" 	: "refresh_token"
+				};
+							
+				POST( 	"!{cloud}/v3/auth/token?ck=" + new Date().getTime() + "&ct=" + feedlyApplicationType + "&cv=" + feedlyApplicationVersion,
+						webForm( request ),
+						function( responseText )
+						{
+							try
+							{
+								var p = JSON.parse( responseText );
+								
+								if( p.expires_in < 0 )
+									p.expires_in = 86400;
+																						
+								session.feedlyToken = p.access_token;
+								session.feedlyPlan = p.plan;
+								session.feedlyExpirationTime = new Date().getTime() + p.expires_in * 1000 - 10000;
+								
+			   					devhdx.utils.SessionUtils.save( session );
+
+								onSuccess();
+							}
+							catch( e )
+							{
+								$feedly( "[mobile] failed to obtain a feedly token:" + e.name + " -- " + e.message );
+								onExpired( 901, "failed to obtain feedly token: " + e.name + " -- " + e.message );
+							};
+						},
+						function( status, statusText )
+						{
+							$feedly( "[mobile] failed to obtain a feedly token:" + status + " -- " + statusText + " -- " + devhd.utils.JSONUtils.encode( request ) );
+	 						if( status == 0 )
+	 						{
+								onNoNetwork( "/v3/auth/token" );
+	 						}
+	 						else if( status == 401 )
+	 						{
+	 							onExpired();
+	 						}
+	 						else
+	 						{
+								onError( status, statusText );
+	 						}
+						},
+		   				{
+		   					"Content-Type" : "application/x-www-form-urlencoded"
+		   				}
+						);
+			}
+			
+			/*****
+			 * ERROR means that we ran into a code exception. A bug. Something unexpected. We need to show a sign to the user
+			 * and restart ask them to restart the app.
+			 */
+			var errored = false;
+			function ERROR( msg )
+			{
+				$feedly( "[feedly][ERROR]" + msg );
+				try
+				{
+					if( errored )
+						return;
+
+					errored = true;
+
+					var errorMessageElem = document.getElementById( "errorMessage" );
+					errorMessageElem.innerHTML = msg;
+
+					var reporterElem = document.getElementById( "reporter" );
+					reporterElem.style.display = "block";
+
+					// SEND NOTIFICATION TO MICHAL THAT WE ARE IN A BAD STATE AND SHOULD NOT BE DEHYDRATED
+					//
+					$feedly( "[feedly] asking core to reload on rehydrate because:" + errored );
+					$B.core.application.setReloadOnRehydrate( errored );
+				}
+				catch( e )
+				{
+					$feedly( "[feedly][ERROR] failed because " + e.name + " -- " + e.message );
+				}
+			}
+
+			/*****
+			 * EXPIRED means that the session we have is no longer good. In theory, this should not happen, when it
+			 * happens, we want to clear logout and restart from scratch.
+			 */
+			function EXPIRED( msg )
+			{
+				try
+				{
+					$feedly( "[io] session expired because " + msg );
+
+					SIGN( "Session expired. " + msg, 10 );
+
+					// In the case this is happening when the app starts, the mag component might not be ready.
+					if( mag != null )
+					{
+						mag.logout();
+					}
+					else
+					{
+						// Try to clean up the native side in case it is caching something
+						// bad.
+						try
+						{
+							var session = SESSION();
+							if( session != null && session.provider == "GooglePlus" )
+								$B.core.application.askGooglePlusLogout();
+						}
+						catch( e )
+						{
+							$feedly( "[expiration] failed to askGooglePlusLogout:" + e.name + " -- " + e.message );
+						}
+						
+						CLEAR_SESSION();
+					}
+				}
+				catch( e )
+				{
+					CLEAR_SESSION();
+					$feedly( "[feedly][EXPIRED] failed because " + e.name + " -- " + e.message );
+				}
+			}
+
+			/*****
+			 * FAILED means I have access to the network but one of the services which are mandatory are returning
+			 * an error message I do not understand :-(. We do not want to lock the user. We should just load a card
+		     * telling the user that something bad has happened and that they can try to reload things or logout and
+		     * log back in.
+			 */
+			function FAILED( msg, status )
+			{
+		    	var message = msg;
+
+		    	if( status != null )
+		    		message = status + " - " + msg;
+
+				$feedly( "[feedly][FAILED]" + message + " -- mag ready:= " + ( mag != null ) );
+				try
+				{
+					// SEND NOTIFICATION TO MICHAL THAT WE ARE IN A BAD STATE AND SHOULD BE RELOADED NEXT TIME THE
+					// APP IS SUPPOSED TO RE-HYDRATE
+					//
+					// $B.core.application.setReloadOnRehydrate( true );
+
+					// LOAD THE FAILED PAGE
+					//
+					if( mag != null )
+					{
+						mag.loadURL( "failed://" + message );
+					}
+					else
+					{
+						requestedURL = "failed://" + message;
+						checkEverythingReady();
+					}
+				}
+				catch( e )
+				{
+					$feedly( "[feedly][FAILED] failed because " + e.name + " -- " + e.message );
+				}
+			}
+
+			function CLEAR()
+			{
+				try
+				{
+					errored = false;
+
+					var errorMessageElem = document.getElementById( "errorMessage" );
+					errorMessageElem.innerHTML = "";
+
+					var reporterElem = document.getElementById( "reporter" );
+					reporterElem.style.display = "none";
+				}
+				catch( e )
+				{
+					$feedly( "[feedly][CLEAR_ERROR] failed because " + e.name + " -- " + e.message );
+				}
+			}
+
+			/*****
+			 * DISCONNECTED means I have trouble connecting to the network. This could be temporary so we do not want
+			 * to kill the context unless we are on the loading page.
+			 */
+			function DISCONNECTED( url, msg )
+			{
+				$feedly( "[feedly][disconnected]" + url + " -- " + msg   );
+
+				var indicatorElem = document.getElementById( "indicator" );
+				if( indicatorElem != null )
+					indicatorElem.innerHTML = "<div style='margin-top:-110px; font-size:60px; line-height:85px; font-weight:bold'>:-(</div>" +  url + " not accessible.<br/>Error:" + msg + "<br/><br/>Are you connected to the internet?";
+
+				var initialSignElem = document.getElementById( "initialSign" );
+				if( initialSignElem != null )
+					initialSignElem.innerHTML = "<div style='margin-top:-110px; font-size:60px; line-height:85px; font-weight:bold'>:-(</div> " +  url + " not accessible.<br/>Error:" + msg + "<br/><br/>Are you connected to the internet?";
+								
+				var offlineElem = document.getElementById( "offline" );
+				if( offlineElem != null )
+				{
+					offlineElem.style.webkitTransform  = "translate3d( 0px, 60px, 0px )"; // non-i18n
+					offlineElem.style.display = "block";
+
+					window.setTimeout( function(){
+						offlineElem.style.webkitTransform  = "translate3d( 0px, 0px, 0px )"; // non-i18n
+					},
+					20
+					);
+				}
+			}
+
+			function IGNORE()
+			{
+				var offlineElem = document.getElementById( "offline" );
+				if( offlineElem.style.display == "none" )
+					return;
+
+				window.setTimeout( function(){
+					offlineElem.style.webkitTransform  = "translate3d( 0px, 60px, 0px )"; // non-i18n
+
+					window.setTimeout( function(){
+						offlineElem.style.display = "none";
+						offlineElem.style.webkitTransform  = "translate3d( 0px, 0px, 0px )"; // non-i18n
+					},
+					700
+					);
+				},
+				2000
+				)
+			}
+
+			// SESSION MANAGEMENT
+			//
+			function LREAD( key )
+			{
+				try
+				{
+					return SETTING( "feedly_local_" + key );
+				}
+				catch( e )
+				{
+					$feedly( "[LREAD] failed because " + e.name + " -- " + e.message );
+					return null;
+				}
+			}
+
+			function LWRITE( key, value )
+			{
+				try
+				{
+					var map = {};
+					map[ key ] = value;
+
+					LWRITES( map );
+				}
+				catch( e )
+				{
+					$feedly( "[LWRITE] failed because " + e.name + " -- " + e.message );
+				}
+			}
+
+			function LWRITES( map )
+			{
+				try
+				{
+					var keyedMap = {};
+
+					for( var k in map )
+					{
+						var key = "feedly_local_" + k;
+						keyedMap[ key ] = SETTINGS[ key ] = map[ k ];
+					}
+
+					// second argument needs to be false to prevent a reverse broadcast.
+					$B.core.application.updateUserSettings( keyedMap, true );
+				}
+				catch( e )
+				{
+					$feedly( "[LWRITES] failed because " + e.name + " -- " + e.message );
+				}
+			}
+
+			function LREMOVE( key )
+			{
+				LREMOVES( [ key ] );
+			}
+
+			function LREMOVES( keys )
+			{
+				try
+				{
+					var map = {};
+
+					for( var i = 0; i < keys.length; i++  )
+					{
+						map[ keys[ i ] ] = null;
+					}
+
+					LWRITES( map );
+				}
+				catch( e )
+				{
+					$feedly( "[LREMOVES] failed because " + e.name + " -- " + e.message );
+				}
+			}
+
+			function SWRITE( key, value )
+			{
+				try
+				{
+					$B.core.sharedStorage.store({key: key, value: value});
+				}
+				catch( e )
+				{
+					$feedly( "[SWRITE] failed because " + e.name + " -- " + e.message );
+				}
+			}
+
+			function $command (cmd,dict) {
+				var q = [], arg,i,url;
+				var url = "feedly://" + cmd + "/";
+				if (dict) {
+					for (var name in dict) {
+						if (typeof(name) != 'string')
+						   continue;
+						q.push(encodeURIComponent(name) + "=" + encodeURIComponent(dict[name]));
+					}
+					if (q.length > 0) {
+					    url += "?" + q.join("&");
+					}
+				}
+				document.location = url;
+			}
+
+			function $feedly ( msg, hint )
+			{
+				if ( ! $feedly.log) {
+				   if (typeof window != "undefined") {
+					    $feedly.log = window.nslog || window.debug || window.console.log;
+				   } else {
+				        $feedly.log = function (msg) {}
+				   }
+				}
+				$feedly.log( msg );
+			}
+
+			var implementation = null;
+			function include( partialURI )
+			{
+				implementation = partialURI;
+			}
+
+			function loadImplementation()
+			{
+				if( implementation == null )
+					return;
+
+				try
+				{
+					var t0 = new Date().getTime();
+					var req = new XMLHttpRequest();
+
+					req.open( 'GET', implementation, false );
+					req.send( null );
+
+					var t1 = new Date().getTime();
+
+					if( req.responseText != null & req.responseText.length > 0 )
+					{
+						var files = loadScripts( req.responseText.split( "XOXOXO" ), 0 );
+					}
+				}
+				catch( e )
+				{
+					ERROR( "ERR001 - failed to load feedly because " + e.name + " -- " + e.message );
+					$feedly( "[mag] include failed for: " + implementation + " because " + e.name + " -- " + e.message );
+					throw e;
+				}
+			}
+
+			function loadScripts( files, i, onComplete )
+			{
+				window.setTimeout( function(){
+
+					try {
+					   	window.eval.call( window, files[ i ] );
+                    }
+					catch( e )
+					{
+                    	$feedly( "error: failed to load script# " + i + " -- " + files[ i ] );
+                    	return
+					}
+
+                    if( i == 13 )
+                    	onGoogleLoaded();
+
+					if( i < files.length - 1 )
+					{
+						loadScripts( files, i+1, onComplete );
+					}
+					else
+					{
+						$feedly( "[feedly] finished loading " + files.length + " scripts." );
+						onCodeLoaded();
+					}
+				},
+				1
+				);
+			}
+
+			// Listening to progress made on loading/evaling code fragments
+			function onFeedlyFileIncluded( fileName )
+			{
+			}
+
+            function DETECT_IMPL()
+            {
+            	switch( AD )
+            	{
+            		case 4:
+
+	include ( "js/10101_mobile_all_ad4_2114.js");
+
+  	 			    	break;
+
+            		case 2:
+
+	include ( "js/10101_mobile_all_ad2_2114.js");
+
+ 	 			    	break;
+
+     	 			default:
+
+	include ( "js/10101_mobile_all_ad1_2114.js");
+	   		    }
+            }
+
+			// document.documentElement.style.webkitTouchCallout = "none";
+			// document.documentElement.style.webkitTapHighlightColor = "rgba(0,0,0,0)";
+
+			var mag = null;
+			var tracker = null;
+			var userId = null;
+			var availableProfile = null;
+			var streets = null;
+			var codeReady = false;
+
+			function onCodeLoaded()
+			{
+				codeReady = true;
+				
+				checkEverythingReady();
+			}
+			
+			function checkEverythingReady()
+			{
+				if( codeReady == false )
+					return;
+				
+				if( availableProfile == null )
+					return;
+				
+				onEverythingReady();
+			}
+			
+			function onEverythingReady()
+			{
+				devhd.i18n.setLocale( SETTINGS["device_locale"] );
+
+				try
+				{
+					streets = devhd.streets.create();
+					streets.setEnvironment( "AD" + AD );
+					streets.attachDocument( document );
+
+					streets.load( feedlyMobile );
+					
+					// determine based on the session if we should be running feedly in a cloud
+					// mode or a google reader mode.
+					var session = SESSION();
+					
+					///D $feedly( "START:" + JSON.stringify( session ) );
+					
+					streets.setMode( "cloud" );
+					
+					streets.start();
+
+					mag = streets.service( "mag" );
+					tracker = streets.service( "tracker" );
+					
+					if( mag != null )
+						askLoadRequested( false, { skipFeature: true, profile : availableProfile } );
+				}
+				catch( e )
+				{
+					$feedly( "[mag] failed to load because " + e.name + " -- " + e.message );
+					ERROR( "ERR003 - failed to load because " + e.name + " -- " + e.message );
+				}
+			}
+			
+			function restart()
+			{
+				if( streets != null )
+				{
+					streets.stop();
+					streets = null;
+					mag = null;
+					tracker = null;
+				}
+				
+				streets = devhd.streets.create();
+				streets.setEnvironment( "AD" + AD );
+				streets.attachDocument( document );
+
+				streets.load( feedlyMobile );
+				
+				// determine based on the session if we should be running feedly in a cloud
+				// mode or a google reader mode.
+				streets.setMode( "cloud" );
+				streets.start();
+
+				mag = streets.service( "mag" );
+				tracker = streets.service( "tracker" );
+			}
+
+			// The URL we are expected to loaded.
+			var requestedURL = null;
+			var requestedEntryId = null;
+
+			function MAIN( options )
+			{
+				try
+				{
+					STATE = "RUNNING";
+															
+					// NEW DEEP LINKING MECHANISM
+					if( options.location != null )
+					{
+						// see - https://basecamp.com/2126204/projects/3875226-warp/todos/73861707-mobile-17-5
+						//
+						if( options.location.indexOf( "feedly://e/" ) == 0 )
+						{
+							requestedEntryId = decodeURIComponent( options.location.slice( "feedly://e/".length ) );
+						}
+						else if( options.location.indexOf( "feedly://f/" ) == 0 )
+						{
+							requestedURL = "list://" + decodeURIComponent( options.location.slice( "feedly://f/".length ) );
+						}
+					}
+					else
+					{
+						/*
+						resourceId:[entryId]
+						streamId: [feed id]
+						url: e.g. category://politics#84dc0e817055b302 - today = feedly.today, home = feedly.home
+						({"source":"watch","type":"main","intentAction":"android.intent.action.MAIN","url":"feedly.saved"})
+						*/
+
+						// OLD DEEP LINKING MECHANISM
+						if( options.intentFeedId != null )
+							options.url = "list://feed/" + options.intentFeedId;
+						
+						requestedEntryId = options.resourceId;
+						requestedURL = options.url;
+
+						if( requestedEntryId != null && ( requestedURL == "feedly.today" || requestedURL == "feedly.saved" || requestedURL == "saved" || requestedURL == "feedly.home" || requestedURL == "my" ) && options.streamId != null )
+							requestedURL = options.streamId;
+					}
+					
+
+
+        			if( ESB[ "widget.debug" ] )
+						$feedly( "[widget] main with context: entryId=" + requestedEntryId +  ", url=" + requestedURL );
+
+					window.setTimeout( function(){
+						
+						DETECT_AD();
+
+						DETECT_IMPL();
+
+						feedlyApplicationType = "feedly.mobile." + ( ANDROID() ? "android" : "ios" ) + "." + AD;
+						
+						startSetting = SETTING( "feedly_start" ) || "my";
+
+						//overlayServices();
+
+						switch( AD )
+						{
+							case 1:
+								MY_DEPTH = 1 + DEFAULT_GRID_OCCURENCE;
+								break;
+							case 2:
+								MY_DEPTH = 4 + 6;
+								break;
+							default:
+								MY_DEPTH = 4 + 6;
+						}
+						
+						tryCacheFirstCard();
+
+						loadImplementation();
+						
+						// make sure that the native side has the same session
+						// as the app.
+						var sess = SESSION();
+						if( sess != null && sess.feedlyToken != null)
+						{
+							$B.core.application.setContext( "Authorization", sess.feedlyToken );
+							$B.core.application.setSession( sess );
+						}
+						else 
+						{
+							$B.core.application.setContext( "Authorization", null );
+						}
+					},
+					10
+					);
+				}
+				catch( e )
+				{
+					$feedly( "[feedly] MAIN failed. " + e.name + " -- " + e.message )
+					ERROR( "ERR002 - failed to load because " + e.name + " -- " + e.message );
+				}
+			}
+
+			function askLoadRequested( refresh, optimizations )
+			{
+				if( requestedEntryId != null )
+				{
+					mag.loadEntry( requestedEntryId, START_INFO( requestedURL ).url, optimizations );
+				}
+				else if( requestedURL != null )
+				{
+					mag.loadURL( START_INFO( requestedURL ).url, refresh, null, optimizations );
+				}
+				else
+				{
+					mag.loadDefault( refresh, optimizations );
+				}
+
+				// clear context
+				requestedURL = null;
+				requestedEntryId = null;
+			}
+
+			var ACCELERATOR = {};
+
+			function tryCacheFirstCard()
+			{
+				if( startSetting != "my" )
+					return;
+
+				var s = SESSION();
+				if( s == null || s.feedlyId == null )
+					return;
+				
+				var firstCategory = LREAD( "firstCategory" );
+				if( firstCategory == null )
+					return;
+
+				try
+				{
+					var flsId = "user/" + s.feedlyId + "/category/" + firstCategory ;
+
+					var u = "!{cloud}/v3/mixes/contents?streamId=" + encodeURIComponent( flsId ) + "&count=" + MY_DEPTH + "&unreadOnly=true&ck=" + new Date().getTime() + "&backfill=true&boostMustRead=true&hours=" + new Date().getHours() + "&ct=" + feedlyApplicationType + "&cv=" + feedlyApplicationVersion;
+					
+					$feedly( "[reader@cloud] trying to accelerate:" + u );
+
+					TJGET( 	u,
+							function( feed )
+							{
+								// if( ESB[ "reader.debug" ] == true )
+								$feedly( "[reader@cloud] adding feed to accelerator:" + flsId + " -- " + feed.length );
+								
+								ACCELERATOR[ flsId ] = feed;
+							},
+							function( err )
+							{
+								// if( ESB[ "reader.debug" ] == true )
+								$feedly( "[reader@cloud] failed to add feed to accelerator:" + err );
+							},
+							{
+								"$Authorization.feedly":"$FeedlyAuth"
+							}
+							);
+				}
+				catch( e )
+				{
+					$feedly( "[accelerator] failed because " + e.name + " -- " + e.message );
+				}
+			}
+
+			function overlayServices()
+			{
+				try
+				{
+					TJGET(	"http://www.feedly.com/config-overlay.v5.json?ck=" + new Date().getTime(),
+							function( map )
+							{
+								if( map == null )
+									return;
+
+								for( var k in map )
+								{
+									$feedly( "[esb] overlaying " + k + ":=" + map[ k ] );
+									ESB[ k ] = map[ k ];
+								}
+							},
+							function( code, message )
+							{
+								$feedly( "[esb] failed to find overlay information" );
+							}
+							);
+				}
+				catch( e )
+				{
+					$feedly( "[warning] failed to overlay service information" );
+				}
+			}
+
+			function onGoogleLoaded()
+			{
+				try
+				{
+					SETUP_UI();
+					
+					if( futureRotation != null )
+					{
+						rotateLayout( futureRotation.newOrientation, futureRotation.width, futureRotation.height );
+						futureRotation = null;
+					}
+					
+					onUILoaded()
+				}
+				catch( e )
+				{
+					$feedly( "[feedly] failed to process onGoogleLoaded because:" + e.name + " -- " + e.message );
+				}
+			}
+			
+			function onUILoaded()
+			{
+				try
+				{
+					$feedly( "[feedly] start to ask profile" );
+					
+					devhd.utils.GoogleUtils.askProfile(	function( aProfile )
+														{
+															// if the mag is not already loaded then we queue the session and let the default
+															// be loaded later
+															availableProfile = aProfile;
+															checkEverythingReady();
+														},
+														function( code )
+														{
+															availableProfile = {};
+															checkEverythingReady();
+														},
+														function( msg, status )
+														{
+															availableProfile = {};
+															FAILED( msg, status );
+														}
+														);
+				}
+				catch( e )
+				{
+					$feedly( "[feedly] failed to process onGoogleLoaded because:" + e.name + " -- " + e.message );
+				}
+				
+			}
+
+			window.onload = function()
+			{
+				$B.core.wm.markAsReady();
+				$B.core.wm.registerTopics( [ "%gestures" ] );
+			}
+
+			window.unload = function()
+			{
+			}
+		</script>
+
+	</body>
+</html>

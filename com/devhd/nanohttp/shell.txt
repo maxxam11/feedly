@@ -1,0 +1,12 @@
+You are accessing: %1$s
+
+A few tips:
+
+1) type "/foo<ENTER>" (SLASH, view name,ENTER) to switch the view
+to which the JS commands will be sent. The prompt should also
+change to "js-foo>".
+3) type "/<ENTER>" to show remote "views"
+2) type "%%<ENTER>" to show history
+3) type "%%<number>" to recall history item AND re-send it
+4) type "%%%%" to recall LAST item AND re-send it
+5) type "%%C" to clear history

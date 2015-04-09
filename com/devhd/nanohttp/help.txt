@@ -1,0 +1,21 @@
+Usage: %1$s args ...
+
+A tiny server/client used to remotely execute JavaScript in various "views"
+
+   %1$s server [port]  // server (this will be run in the embedded application)
+   %1$s host   [port]  // connect to host (the port is 8011 by default)   
+
+At the prompt
+  js-main>
+you can type any js expression. It will be sent to the remote js "view" identified in the prompt.     
+In the above "prompt" the remote view is "main" (this is the default).
+
+A few things:
+1) type "/foo<ENTER>" (SLASH, view name,ENTER) to switch the view to which the JS commands will
+be sent. The prompt should also change to:
+  js-foo>
+3) type "/<ENTER>" to show remote "views"
+2) type "%%<ENTER>" to show history
+3) type "%%<number>" to recall history item AND re-send it
+4) type "%%%%" to recall LAST item AND re-send it
+5) type "%%C" to clear history

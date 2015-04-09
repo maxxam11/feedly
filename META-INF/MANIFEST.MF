@@ -1,0 +1,3688 @@
+Manifest-Version: 1.0
+Created-By: 1.0 (Android)
+
+Name: assets/www/images/mobile-icon-toolbar-pinterest~ios.svg
+SHA1-Digest: 9pnoffTBUrZkCMi4wpcs/xlQ4CU=
+
+Name: assets/www/images/mobile-icon-toolbar-pinterest.png
+SHA1-Digest: USzAOoETXdlRMuJun/B7GK2UUy8=
+
+Name: assets/www/images/mobile-icon-toolbar-tag-white~ios.svg
+SHA1-Digest: t7QWGHLD7QzdLshb8BHutJ4iynM=
+
+Name: assets/www/images/mobile-selector-latest-white.png
+SHA1-Digest: lJpcehYD9pS0na7+QzK9qRfiK40=
+
+Name: assets/www/images/mobile-icon-toolbar-url-white~android.svg
+SHA1-Digest: DhdMyd/GiMEZdaNgCTFzxDKrGZU=
+
+Name: res/drawable/com_facebook_picker_list_longpressed.9.png
+SHA1-Digest: /uU9+qqC9MjC0cwR3L+DskCy9xM=
+
+Name: assets/www/images/mobile-icon-clear-white~ios.svg
+SHA1-Digest: c/tbmTqfzaR8Dt3SvC2Ny/tSwps=
+
+Name: assets/www/images/mobile-icon-toolbar-pocket.png
+SHA1-Digest: L13xzsdIDELXRTmQkftKMvt3dyo=
+
+Name: res/drawable/appwidget_promo_button_back.xml
+SHA1-Digest: vb62nAfdoyJei0cvScBV8f1x7aY=
+
+Name: res/drawable-ldpi/shortcut_feed.png
+SHA1-Digest: 4kXxpcVdXFYr/ub0Be7Lbo0FxF4=
+
+Name: assets/www/mobile/activity.selector.js
+SHA1-Digest: rz74LVtF5bM2OeRaEfVM1vvnV8g=
+
+Name: assets/www/images/mobile-login-facebook@2x.png
+SHA1-Digest: Wms6dXamSf06WxdL11pGwULcFFw=
+
+Name: assets/www/fonts/GuardianTextEgyp-Bold-Web.ttf
+SHA1-Digest: UkjQRmMSjaTyOQf0rOE4bglnsEw=
+
+Name: res/drawable-mdpi/common_signin_btn_icon_disabled_light.9.png
+SHA1-Digest: UUeGKfmWgJl/rutroPXP57LpkoU=
+
+Name: assets/www/images/mobile-selector-tag-white.png
+SHA1-Digest: xFWANmLvEzOBbOQ1Nbpjpm0GGWc=
+
+Name: res/drawable-xxhdpi/common_signin_btn_text_disabled_light.9.png
+SHA1-Digest: dAIabshO7sf8DA0quqZILhJ5V4A=
+
+Name: assets/www/images/mobile-icon-toolbar-buffer-black~android.svg
+SHA1-Digest: 0793jStAIL/YFISf/+pUGu4cRt0=
+
+Name: assets/www/images/mobile-action-remove.png
+SHA1-Digest: HY7GRNzBntniOvncyf5Htu9vnpw=
+
+Name: assets/www/images/mobile-loading-102-black-ios.gif
+SHA1-Digest: YX+z/1JKjAWg+WeIRk1iU+nXuXo=
+
+Name: assets/www/fonts/d462dd9d-2d97-4f6e-b2d7-9c7934488957.ttf
+SHA1-Digest: zc1jG8TSqG1GmLJTVT1rM3ArpPI=
+
+Name: res/drawable-xhdpi/common_signin_btn_text_pressed_dark.9.png
+SHA1-Digest: bENWi8ZugwD88Ech+3ZELNcC/Kw=
+
+Name: assets/www/images/mobile-icon-toolbar-close-white~android.svg
+SHA1-Digest: fI3QEaKjFw/mSvf28SjkdYDVWjg=
+
+Name: res/drawable-mdpi/common_signin_btn_icon_disabled_dark.9.png
+SHA1-Digest: UUeGKfmWgJl/rutroPXP57LpkoU=
+
+Name: assets/www/images/mobile-icon-toolbar-email-white~ios.svg
+SHA1-Digest: xGS4+viX+RXI8wBArxcCg/UwVWI=
+
+Name: assets/www/images/mobile-icon-toolbar-back-black~ios.svg
+SHA1-Digest: KhJHMX54h6qCoGG2fCjhOXnsJT8=
+
+Name: assets/www/images/mobile-icon-toolbar-overflow-black~android.svg
+SHA1-Digest: ycpo/HLHpXEbQLRCiw4JK+1Sdss=
+
+Name: assets/www/images/mobile-icon-toolbar-instapaper-white.png
+SHA1-Digest: jXKGplFQaqdchXHGEsqKTCCmgdg=
+
+Name: assets/www/images/mobile-icon-toolbar-share-android-black.svg
+SHA1-Digest: 5RTCt9mEyeVKaZOzhQkEMd90CrE=
+
+Name: res/layout/appwidget_article_image_4_1_exit.xml
+SHA1-Digest: v/O6ObBNW+aSfZSixNnlv3VMXuQ=
+
+Name: res/anim/widget_fadeout.xml
+SHA1-Digest: fNjBJ70E09TZ4i/3s+YAO3G73UY=
+
+Name: res/anim/clockwise_180.xml
+SHA1-Digest: 4P5w1ACmfae+ehjrT033DsjMeQc=
+
+Name: assets/www/images/mobile-selector-right-white~android.svg
+SHA1-Digest: /1C1Z63Z9adhAL0ZVtv1r+EtPVM=
+
+Name: assets/www/images/mobile-icon-toolbar-evernote~android.svg
+SHA1-Digest: 4jl73sueRa65hBskoxERsRKsSmg=
+
+Name: res/drawable-xxhdpi/ic_plusone_small_off_client.png
+SHA1-Digest: QITJ8CHL6O6NtaNSW5zIXy1Z3PY=
+
+Name: assets/www/images/mobile-action-mark-as-read.png
+SHA1-Digest: qHJoaLV7556aek3XsRNaD7lhb28=
+
+Name: assets/www/images/mobile-monster-feednotfound@2x.png
+SHA1-Digest: OGge6Cp5wmxLBx2duu/tnek0YKc=
+
+Name: assets/www/images/mobile-icon-toolbar-tag@2x.png
+SHA1-Digest: yfprsgZRZvbnwlBvQIaDZ93qhjE=
+
+Name: res/drawable-xxhdpi/common_signin_btn_text_disabled_focus_light.
+ 9.png
+SHA1-Digest: AhN8QSMQGVEiuDPw+ArDAL+kX1o=
+
+Name: res/drawable-hdpi/com_facebook_button_blue_pressed.9.png
+SHA1-Digest: s11gcQnxG2CBh+07EhR73hIWugc=
+
+Name: res/drawable-xxhdpi/common_signin_btn_icon_normal_light.9.png
+SHA1-Digest: ox+dpz35Obt4x0bfiE1AVRokddo=
+
+Name: assets/www/images/mobile-icon-toolbar-tag~android.svg
+SHA1-Digest: aVtLce2j9lpdiWGjw+He2z/fGZk=
+
+Name: assets/www/images/mobile-icon-toolbar-pinterest-black~android.sv
+ g
+SHA1-Digest: K5utbAgC+JSvc3lfLkqp29nC9/4=
+
+Name: assets/www/images/mobile-action-mark-as-read@2x.png
+SHA1-Digest: SJEEtXemuSfbNq1IDO+HboJtcWw=
+
+Name: assets/www/images/mobile-rate@2x.png
+SHA1-Digest: HnQiyYa6RT15nB/qDvKyYqEdT4M=
+
+Name: assets/www/images/mobile-selector-saved-black@2x.png
+SHA1-Digest: /htJbRxRgSSjeKgcwv2u2H544eY=
+
+Name: res/layout-large/twitter_auth.xml
+SHA1-Digest: FCvBigcpAYXigxuS7t1XPqlVByQ=
+
+Name: res/drawable-mdpi/common_signin_btn_icon_normal_dark.9.png
+SHA1-Digest: 5yTFZLZtCPpeiVFtQvpG2K4xDdE=
+
+Name: assets/www/images/mobile-icon-toolbar-buffer@2x.png
+SHA1-Digest: o7F24GWjn/jJBUjaxLf4jobDV/Y=
+
+Name: assets/www/images/mobile-selector-feedly-black@2x.png
+SHA1-Digest: SRdchFWbRD9Bn/trY9pXmK6PoOI=
+
+Name: assets/www/images/mobile-library-banner-feedlyicon.svg
+SHA1-Digest: taSC5/dh9yfIjr9/nYjmQomp7dw=
+
+Name: assets/www/mobile/activity.prev.js
+SHA1-Digest: 5taUJLeEIvjZ+5OLzoLqcLpM95A=
+
+Name: assets/www/images/mobile-icon-tooltip-arrow@2x.png
+SHA1-Digest: 3q+VoBhZ9pE8mr4Jc34p/c+gkQE=
+
+Name: assets/www/images/mobile-action-mosaic~android.svg
+SHA1-Digest: evK8J1zeoq7OQJdyjolXk1SHWPY=
+
+Name: assets/www/images/mobile-icon-toolbar-twitter-white~ios.svg
+SHA1-Digest: MTSq9vWrbBmikl1acEulP7XEkL8=
+
+Name: assets/www/images/mobile-selector-right-arrow-white~android.svg
+SHA1-Digest: /1C1Z63Z9adhAL0ZVtv1r+EtPVM=
+
+Name: assets/www/images/mobile-selector-saved-white@2x.png
+SHA1-Digest: zlsSZyw+tN19dgQf4rJjzcEf2Ag=
+
+Name: assets/www/fonts/3fd2c21d-af8b-45be-a1e2-4e7182b7639e.eot
+SHA1-Digest: zvf6hm2ZX517r0JTgep+7K2NIrE=
+
+Name: res/drawable-hdpi/powered_by_google_light.png
+SHA1-Digest: 1p8HkYSQc6asTjUOCQeAiFfr8oU=
+
+Name: res/layout/appwidget_article_noimage_long.xml
+SHA1-Digest: ktCyQP7Vd9hbJKgFr6+4vMaSqfs=
+
+Name: res/drawable/com_facebook_picker_list_pressed.9.png
+SHA1-Digest: ughAWBlhb5fxIgHli8NgEiGGjGY=
+
+Name: com/devhd/nanohttp/mime.properties
+SHA1-Digest: yo9yue1jYnW92ekQTRUZudbE8vU=
+
+Name: res/drawable/com_facebook_button_check_on.png
+SHA1-Digest: ObcSDxnphDDTROHTniwThtnJVWk=
+
+Name: assets/www/images/mobile-icon-toolbar-pinterest-white~android.sv
+ g
+SHA1-Digest: pBOysoo52fjcmhtkWa7W70zppVY=
+
+Name: res/drawable-xxhdpi/ic_plusone_medium_off_client.png
+SHA1-Digest: 5jta9QUYJ9k9tMHwzhYqoefVy+o=
+
+Name: assets/www/images/mobile-selector-latest-black~ios.svg
+SHA1-Digest: VbhkT3iPsgqZGaDW+RMoNPXSQcs=
+
+Name: assets/www/images/mobile-icon-tooltip-arrow.svg
+SHA1-Digest: ofEeOIi0RLbS9h8M2oqtR6DoK80=
+
+Name: assets/www/images/mobile-icon-saved-h10-vignette.png
+SHA1-Digest: nByYlza95gQAcW1e9vEcHI+LQds=
+
+Name: res/drawable-xxhdpi/ic_plusone_standard_off_client.png
+SHA1-Digest: GsuPJv1dNcolfrnKEL4GX2NHRmk=
+
+Name: assets/www/images/mobile-icon-toolbar-feedly.saved-black@2x.png
+SHA1-Digest: 5anX8ivK4/R+8+ePU+BoUdUSmqg=
+
+Name: res/drawable-hdpi/common_signin_btn_icon_focus_light.9.png
+SHA1-Digest: oslddavjaxT0f8U4Mn8PG9Z+jNM=
+
+Name: assets/www/images/mobile-icon-store-black@2x.png
+SHA1-Digest: SYhyln6ukH/wI9GN2B3LkrSwFUI=
+
+Name: assets/www/images/mobile-icon-toolbar-feedly-white~ios.svg
+SHA1-Digest: /2YNM7ndsoGkdnOL2E1MkX2hbH8=
+
+Name: assets/www/images/mobile-icon-toolbar-pocket~android.svg
+SHA1-Digest: a+9x3gIJh2IlUZjlheFmsx3Ay+0=
+
+Name: res/layout/com_facebook_usersettingsfragment.xml
+SHA1-Digest: OGT/B7yOXcInbU9cSp3Qrh7gEfA=
+
+Name: assets/www/images/mobile-action-unread.png
+SHA1-Digest: UDMG9wsoWYKISSGVLWaiCnrLw7I=
+
+Name: assets/www/fonts/GuardianTextEgypApp-RegIt.ttf
+SHA1-Digest: JZsDvrbbd6DODASoJsQjdCIk2Qw=
+
+Name: assets/www/images/mobile-icon-toolbar-sms-white~android.svg
+SHA1-Digest: 108eH2VBQ7wuDIGdlg6l/ISfnGA=
+
+Name: assets/www/images/mobile-checkbox-checked-black.png
+SHA1-Digest: vIiMvuYgaazuajfggj1BtBcTyDc=
+
+Name: assets/www/images/mobile-icon-toolbar-url-black.png
+SHA1-Digest: uJDF+OgjTFtwlFRuhTu0SZX3DyU=
+
+Name: res/anim/anti_clockwise_180.xml
+SHA1-Digest: s/t/bgrO6ZDZNEf7N3C8u3P04zg=
+
+Name: assets/www/images/mobile-icon-toolbar-buffer.png
+SHA1-Digest: ypL25jO+UtFc9EaqlZb8CcGE00c=
+
+Name: assets/www/images/mobile-icon-toolbar-feedly.saved-white.png
+SHA1-Digest: qxgFKWsaX9REtdBjrrCOct5oRt0=
+
+Name: assets/www/images/mobile-login-google@2x.png
+SHA1-Digest: YMzcg8l8+Mel5gYZ/uTb9oGvCWA=
+
+Name: res/drawable-xhdpi/com_facebook_button_grey_pressed.9.png
+SHA1-Digest: CKFnDef2GfRTaRgjuT6+/5YzUk4=
+
+Name: assets/www/images/mobile-checkbox-unchecked-white~ios.svg
+SHA1-Digest: 9isKVihg7rFk3NHMbuGvEUje7oY=
+
+Name: assets/www/images/mobile-loading-102.gif
+SHA1-Digest: cRxcBgZRdWOM+PbiwyEp/RKlQVg=
+
+Name: assets/www/images/mobile-icon-toolbar-buffer-white.png
+SHA1-Digest: h8TsA7CT3Z2rcsQRw8+qnLlOlk8=
+
+Name: assets/www/images/mobile-icon-toolbar-onenote~ios.svg
+SHA1-Digest: 3uafUxvooEknGap/8YOul4M7T/0=
+
+Name: assets/www/images/mobile-monster-markasread-white.svg
+SHA1-Digest: DIVhfUpufwWQQehcLt2DaC8td/4=
+
+Name: res/layout/com_facebook_picker_checkbox.xml
+SHA1-Digest: Bac7Zo7tafI8CMTi59zlXfOu1mo=
+
+Name: assets/www/images/mobile-login-facebook.svg
+SHA1-Digest: jF+tNe4Rsa40JskTPnv37hz4mhE=
+
+Name: assets/www/images/mobile-illustration-desktop@2x.png
+SHA1-Digest: mjY1w7GlC1XUV2iP+08Ha2jkuR8=
+
+Name: assets/www/images/mobile-icon-toolbar-pocket-black@2x.png
+SHA1-Digest: ptXJoJq5lEKetKmu+u4+vVhpGqM=
+
+Name: res/anim/widget_fadein.xml
+SHA1-Digest: Mg68zzFjNKx7iy4W/CdtfQpUO6A=
+
+Name: assets/www/images/mobile-login-google.png
+SHA1-Digest: TzMvOGT/L7VUO6ZMtcdw0hBY1pw=
+
+Name: assets/www/images/mobile-checkbox-checked-white@2x.png
+SHA1-Digest: LAczE1bF42Gt2DisVM8GuVxc2ew=
+
+Name: assets/www/images/mobile-icon-toolbar-pocket-black~android.svg
+SHA1-Digest: a+9x3gIJh2IlUZjlheFmsx3Ay+0=
+
+Name: res/drawable-mdpi/progressbar.9.png
+SHA1-Digest: jJUj4psbcX4ANLr9ctcztLt4DAQ=
+
+Name: assets/www/images/mobile-icon-toolbar-feedly-black.png
+SHA1-Digest: Gk6d/kZGCgu+bhrqZJtIcleWtgQ=
+
+Name: assets/www/images/mobile-icon-toolbar-previous-black.png
+SHA1-Digest: moQj8OTDyMoV5L0ThQTssWlYThE=
+
+Name: assets/www/images/mobile-action-magazine~android.svg
+SHA1-Digest: Gjg/y9P/3Cowj3G5u0W2hqdgPTg=
+
+Name: assets/www/images/mobile-logo.svg
+SHA1-Digest: RN0P11dETk4H2+MedSAtelG8NOI=
+
+Name: assets/www/images/mobile-selector-saved-white~android.svg
+SHA1-Digest: PuF67yTR8Zqk3uFj9aJkt5Eyyl0=
+
+Name: assets/www/images/mobile-checkbox-checked-white.png
+SHA1-Digest: 1XAssqekizYzZidmEubyfPXF238=
+
+Name: assets/www/images/mobile-login-feedly-logo.png
+SHA1-Digest: lY2zlYScibpB4d1BaZral6xLVaU=
+
+Name: res/layout/appwidget_promo_4_3.xml
+SHA1-Digest: aPDXlm9VpH4erq9/ptQRX41kkVw=
+
+Name: assets/www/images/mobile-monster-markasread-black.svg
+SHA1-Digest: ATiygEWPnEeVDxEZIiXIbdiKAW4=
+
+Name: assets/www/images/mobile-checkbox-unchecked-white.png
+SHA1-Digest: DAgxiZp32eHijRJuYGBwx0EOhoc=
+
+Name: assets/www/images/mobile-icon-toolbar-onenote-white~ios.svg
+SHA1-Digest: NUWmTIZLPQ0g5Sz7T/t+cEewpo0=
+
+Name: assets/www/fonts/bc987e6c-6c80-4290-9512-b7468c7ec581.ttf
+SHA1-Digest: YL+On2g05OIxmzd6UJA6CLGSgxE=
+
+Name: res/drawable-xxhdpi/common_signin_btn_text_disabled_focus_dark.9
+ .png
+SHA1-Digest: AhN8QSMQGVEiuDPw+ArDAL+kX1o=
+
+Name: res/layout/com_facebook_placepickerfragment.xml
+SHA1-Digest: eaOixjBe5ZwYiQ97AtMrwBs0Pr8=
+
+Name: assets/www/images/mobile-icon-store-white.png
+SHA1-Digest: WrilipqTfUTIbjsu1UW878A51eo=
+
+Name: assets/www/images/mobile-icon-toolbar-pocket-black~ios.svg
+SHA1-Digest: 0KWUr6c5Xm9+VAzE5753kTnUPWE=
+
+Name: assets/www/images/mobile-icon-toolbar-buffer-white~ios.svg
+SHA1-Digest: 0l+wfCWvC8vlGoJk6MZLE0P+Eo4=
+
+Name: assets/www/images/mobile-checkbox-checked-white~ios.svg
+SHA1-Digest: 0LXS5/5vyrqUkcst44zo3Z2wWCs=
+
+Name: assets/www/images/mobile-icon-toolbar-messenger-white.png
+SHA1-Digest: jpddbj8XZTte3zQxzNxPmBtnT80=
+
+Name: assets/www/images/mobile-icon-toolbar-pinterest@2x.png
+SHA1-Digest: 2aivW7wiSZ5zA3IdqEoqLPwNLO0=
+
+Name: res/layout/home_widget_configure.xml
+SHA1-Digest: K5yVQqh6SL39pAbHIgM7QwKYNCc=
+
+Name: res/drawable/com_facebook_button_blue_normal.9.png
+SHA1-Digest: plzlqLb7elFLaBIIHG8jVWFUnfU=
+
+Name: res/drawable/common_signin_btn_icon_dark.xml
+SHA1-Digest: vcwRsQMt5KcijRN96+KvPrJwP20=
+
+Name: assets/www/images/mobile-icon-toolbar-buffer-black@2x.png
+SHA1-Digest: GiKpzZGokY3TDfn32h0DwK2W3J0=
+
+Name: assets/www/images/mobile-icon-clear-white~android.svg
+SHA1-Digest: /O79Xa7kmaGtJj0ytH8YWaN78bc=
+
+Name: assets/www/images/mobile-icon-clear@2x.png
+SHA1-Digest: z74Kt92UmCes+LtjaCcjypR3uWk=
+
+Name: assets/www/images/mobile-icon-toolbar-pocket-white@2x.png
+SHA1-Digest: JjwpaEJhrQ1otI3mKVkYPceo1e8=
+
+Name: assets/www/images/mobile-rate.png
+SHA1-Digest: +TZmcdlEE1/MrYKidtrrfELHJVQ=
+
+Name: assets/www/images/mobile-icon-toolbar-gplus-black@2x.png
+SHA1-Digest: Y8pYn2UMMHkqxupUxEqZhxSviek=
+
+Name: res/anim/appwidget_fadeout_animation.xml
+SHA1-Digest: QGqyMnzKzrOLVrD5YRw2T3M8oFo=
+
+Name: assets/www/images/mobile-icon-evernote-business.png
+SHA1-Digest: s4NOvWj0u5EJFqz3TXRml7G41nU=
+
+Name: assets/www/images/mobile-icon-toolbar-onenote-white@2x.png
+SHA1-Digest: mPt1Q7EngR6Fjqa00BRhiF/fNX0=
+
+Name: assets/www/images/mobile-selector-saved-black.png
+SHA1-Digest: L8qvhVhaC/t8p22zWYNRxHzwYRA=
+
+Name: res/drawable-xhdpi/com_facebook_tooltip_black_background.9.png
+SHA1-Digest: zlRSiwmXotImS1tHry75E3Nl2D4=
+
+Name: assets/www/images/mobile-visual-search-white.svg
+SHA1-Digest: PkM6LR0kuZzuednC6u7xr4V+S3I=
+
+Name: assets/www/images/mobile-rating-5out10.png
+SHA1-Digest: FUHU6/rXqC3AHi2Ta89RRiDiYsg=
+
+Name: assets/www/js/10101_mobile_all_ad2_2114.js
+SHA1-Digest: UD+ntAUpFTymQqn1yD/ca3SnxfY=
+
+Name: res/layout/appwidget_article_image_exit.xml
+SHA1-Digest: 4Mwv9ka0KHfew1DlomYtbtugQwo=
+
+Name: assets/www/images/mobile-icon-toolbar-sms~android.svg
+SHA1-Digest: peyvt5DazXaaFa+m+pGK/XFIQDw=
+
+Name: res/anim/appwidget_stackenter.xml
+SHA1-Digest: ePYOemodMGXtjlnD1f3fFO3kjns=
+
+Name: assets/www/images/mobile-icon-toolbar-safari-black~ios.svg
+SHA1-Digest: 7d8ACMpA69DnJyB5Lst1O9kOK78=
+
+Name: assets/www/images/mobile-icon-library-collection-white.svg
+SHA1-Digest: VYL/nIIM9Pf5WMm6XKZ8c3bkmVM=
+
+Name: assets/www/images/mobile-monster-markasread-black@2x.png
+SHA1-Digest: f9hXiDnS7X7A3ZZtuhZfMk4Cb+8=
+
+Name: assets/www/images/mobile-icon-toolbar-gplus-black~ios.svg
+SHA1-Digest: RKUBhlPRi1nSyPjdEbFpEcwQ3FY=
+
+Name: res/drawable-xhdpi/common_signin_btn_text_focus_dark.9.png
+SHA1-Digest: +YXDOKcowsglHKYLvgWRriKCdQI=
+
+Name: res/drawable-xxhdpi/common_signin_btn_icon_pressed_dark.9.png
+SHA1-Digest: EJ6Vqirv8VvnXRyLmOrbw9Y/8Oc=
+
+Name: assets/www/images/mobile-action-unread@2x.png
+SHA1-Digest: 1cBgLBzoRETQNkLGTU43KwBLzJU=
+
+Name: assets/www/images/mobile-login-feedly-logo@2x.png
+SHA1-Digest: jGLcZ+YWtJ/bkPYTC6xWoqgN48g=
+
+Name: res/layout/appwidget_promo_4_1_enter.xml
+SHA1-Digest: j5unASZSa8npLXMF6+zDawykvt8=
+
+Name: assets/www/images/mobile-selector-tag-black@2x.png
+SHA1-Digest: KcAccLECEjJhPzMRUCz5WIrIRtw=
+
+Name: assets/www/images/mobile-logo@2x.png
+SHA1-Digest: 95IPpmILWYjs0YzL3FgIyGb9seI=
+
+Name: res/drawable/action_close.png
+SHA1-Digest: 2hlHACTxaKA5GdZ3d24UGtqEICU=
+
+Name: assets/www/images/mobile-icon-toolbar-instapaper-black~ios.svg
+SHA1-Digest: ZPDNrxZC1rTmu1R6usjPIim4v9g=
+
+Name: res/anim/appwidget_fadein.xml
+SHA1-Digest: +1PN6oroxhwQH6oDJYUB6DPA5So=
+
+Name: assets/www/images/mobile-icon-toolbar-close-white~ios.svg
+SHA1-Digest: pRAKRvKBuCe3H9Hxt/JhVDEzFpg=
+
+Name: assets/www/fonts/GuardianTextEgypApp-Reg.ttf
+SHA1-Digest: jH1E5kCEr9i9DTcz8Bt/aS51Sqg=
+
+Name: assets/www/images/mobile-icon-tooltip-arrow.png
+SHA1-Digest: zIvYK21FvkCKg1w9mheplQ3ltJY=
+
+Name: assets/www/images/mobile-library-following.png
+SHA1-Digest: yW9FW2qm3KHpXpxoi895eyAXn/o=
+
+Name: assets/www/images/mobile-icon-toolbar-saved@2x.png
+SHA1-Digest: NZVjBjYA8kKf9XI4ry2wuDiM/Cs=
+
+Name: res/layout/appwidget_article_noimage_exit.xml
+SHA1-Digest: kn+svbgaHVDOpCxaK2JS+mOXMgQ=
+
+Name: res/drawable-xhdpi/com_facebook_tooltip_black_topnub.png
+SHA1-Digest: JB+k/ISnz/BtiQLV3cvLHx0rNTs=
+
+Name: assets/www/images/mobile-icon-searchbox-white~android.svg
+SHA1-Digest: S6EoG2+LkYaVsUBvNYGtLys0Jrw=
+
+Name: assets/www/images/mobile-action-poster~ios.svg
+SHA1-Digest: RXmrKyAJJn9dZjTB3TbX6JatLP4=
+
+Name: assets/www/fonts/GuardianTextEgyp-RegularIt-Web.woff
+SHA1-Digest: YVFNBu3cRPEPSHy0QeLxgjACbPQ=
+
+Name: assets/www/fonts/560117e1-0054-4925-801c-2bded8015590.svg
+SHA1-Digest: 66rkDTlZyPRPkDYI/vFlF8qo360=
+
+Name: res/drawable-mdpi/shortcut_feed.png
+SHA1-Digest: gHBkpZT900YKeUs32uJgl0aVw04=
+
+Name: res/drawable-mdpi/common_signin_btn_text_focus_dark.9.png
+SHA1-Digest: dF5oQhWFz2szuye4UCQeGH4CFRk=
+
+Name: assets/www/images/mobile-login-evernote.svg
+SHA1-Digest: CHD6RZlcUiR6AUfATohNZdjsZ4M=
+
+Name: assets/www/images/mobile-action-list@2x.png
+SHA1-Digest: DGfZx5xW4Rx7P7crGeIojheqJ6A=
+
+Name: assets/www/images/mobile-library-add@2x.png
+SHA1-Digest: oqKbzc7mWf3YxI/P2ZIpYGGKcoM=
+
+Name: assets/www/fonts/GuardianTextEgyp-RegularIt-Web.ttf
+SHA1-Digest: cJroYXAi/vT4Zoqsq0f9x0GfMpI=
+
+Name: assets/www/images/mobile-icon-toolbar-twitter-white.png
+SHA1-Digest: AzVOcojkUuJwiXVUzbY8Z+hLzGk=
+
+Name: assets/www/images/mobile-rating-4out10.svg
+SHA1-Digest: A0FfMSP8TkXwzdEsNfoVGvjLIwc=
+
+Name: assets/www/images/mobile-icon-toolbar-feedly-black~ios.svg
+SHA1-Digest: 5lvTElAVoHtkhYWsjClWPHMmAtA=
+
+Name: res/drawable-hdpi/shortcut_category.png
+SHA1-Digest: /W0xwgwv43fcpF4FSW8cC/8iZM4=
+
+Name: res/drawable/action_mail.png
+SHA1-Digest: hPsNj0/4H+irFM7AV+ZL1CJkQhI=
+
+Name: res/drawable-mdpi/shortcut_latest.png
+SHA1-Digest: PXucGAfw7lwd9rykVDJyk3/wgd4=
+
+Name: assets/www/images/mobile-selector-favorite-white~ios.svg
+SHA1-Digest: zjLllf9WS+a9bCO7ClLE3wYBQts=
+
+Name: res/drawable-xhdpi/com_facebook_picker_magnifier.png
+SHA1-Digest: VqEt89wuwGEqEtvuU36zIvHS4VY=
+
+Name: assets/www/images/mobile-icon-toolbar-email-white~android.svg
+SHA1-Digest: ztw7uh9O65lsGGSOIvPHwgMJuKU=
+
+Name: res/drawable-hdpi/com_facebook_tooltip_black_xout.png
+SHA1-Digest: gidiAUAJjJias1MRTuSOr4/2dvI=
+
+Name: assets/www/images/mobile-icon-toolbar-tag.png
+SHA1-Digest: FfxXR1jVb7SBMbioALldr2YeHGY=
+
+Name: assets/www/images/mobile-library-mobile-icon-collection.png
+SHA1-Digest: tYjZPnbIcZBT4ygDwCY+phJ+TwA=
+
+Name: assets/www/images/mobile-icon-search-black.png
+SHA1-Digest: aE53Axi3MGTdqvvLoArwDozkMdc=
+
+Name: res/layout/appwidget_error_enter.xml
+SHA1-Digest: xaYR9UxXCJ4VMM4+ENenqcMuv0c=
+
+Name: assets/www/fonts/bdf503b8-ec71-40c3-b755-65270cf48a71.woff
+SHA1-Digest: VS5wOiT3IwOVGnakNWIq/oqwjgU=
+
+Name: assets/www/images/mobile-icon-toolbar-feedly.saved~android.svg
+SHA1-Digest: Wqcvo7sUSh6dPYaUOiOzmKj1J94=
+
+Name: res/drawable-hdpi/com_facebook_tooltip_black_bottomnub.png
+SHA1-Digest: YfzZzYX620Rtn0aFBjHnwGCCEXw=
+
+Name: assets/www/images/mobile-visual-explore.svg
+SHA1-Digest: tlU4NaOwsewfariSabPEPBlGwz8=
+
+Name: res/drawable-hdpi/ic_launcher.png
+SHA1-Digest: IdMG7yGmHL9Fbclw2qy2J8cjyac=
+
+Name: assets/www/images/mobile-icon-toolbar-save-black.png
+SHA1-Digest: Hanf6rmZ7IuaB7vvThNn/qFZsDo=
+
+Name: assets/www/images/mobile-icon-toolbar-back-white.png
+SHA1-Digest: Duyk5KHlUrW9GaZEWiI9pzEmnow=
+
+Name: res/layout/appwidget_promo.xml
+SHA1-Digest: Tl+zqhgpOjbf9GvOS7PC0ivqCIM=
+
+Name: assets/www/images/mobile-action-titleonly.png
+SHA1-Digest: 5QGccZS5jXHHxrSbXloCIni7I0U=
+
+Name: res/drawable-mdpi/common_signin_btn_text_normal_dark.9.png
+SHA1-Digest: AT9w5rSAMWW0uoROEE4O/DyXQj4=
+
+Name: assets/www/images/mobile-icon-toolbar-feedly.png
+SHA1-Digest: re4bNY1oxirLdMw2g+8Xyr7ZCko=
+
+Name: assets/www/images/mobile-icon-toolbar-onenoted-white~android.svg
+SHA1-Digest: +FtFJAJ8XF4eegelzBWGjMn/6ok=
+
+Name: assets/www/images/mobile-selector-latest-white~android.svg
+SHA1-Digest: Jnht1ATeUxve3t3Pbbn1xtXnxgs=
+
+Name: assets/www/images/mobile-icon-clear-tag.png
+SHA1-Digest: UeYS9/qdE6TfUDGBEJEowXvyTY4=
+
+Name: res/drawable-ldpi/shortcut_search.png
+SHA1-Digest: HXkGFrt42dDmSs+VRGTLyo+u4jA=
+
+Name: assets/www/images/mobile-selector-right-arrow-black@2x.png
+SHA1-Digest: P6s6+abMN4f+crRKwdhSoUG7gwM=
+
+Name: res/anim/to_left.xml
+SHA1-Digest: IiZfsWCJiLo5Zfi/huR75xphjjA=
+
+Name: assets/www/images/mobile-icon-toolbar-gplus-white~android.svg
+SHA1-Digest: vW6w58qQabTwJLVvMUXAoG4RHFU=
+
+Name: res/drawable/appwidget_site_icon.png
+SHA1-Digest: BLfixpdlXhg7c93spq1PGUM+F+4=
+
+Name: res/drawable/action_save_for_later.png
+SHA1-Digest: KxdmjQxx0Qv+qdUn1/bNSpw4SBc=
+
+Name: assets/www/images/mobile-icon-clear.png
+SHA1-Digest: /lnIcSrgT2L8UnN8UHoSkp+a9o8=
+
+Name: res/drawable-ldpi/shortcut_essentials.png
+SHA1-Digest: miGguuQMElB/sfDxy9g/NXiJ/3E=
+
+Name: assets/www/images/mobile-visual-explore-white@2x.png
+SHA1-Digest: xjjM8+dsTrxxIC7/wj1tuEqcNSo=
+
+Name: res/layout/appwidget_article_noimage_4_3_enter.xml
+SHA1-Digest: uo9gMBJxSnffHajkSY+jByNvDuE=
+
+Name: res/drawable-ldpi/com_facebook_close.png
+SHA1-Digest: lg0izCnB1flsd2QqLisbxkcuGyU=
+
+Name: assets/www/fonts/Roboto-BoldCondensed.ttf
+SHA1-Digest: VcFzXkCFCJ4uo7A+mAn7kzw7Xbc=
+
+Name: assets/www/images/mobile-selector-right-arrow-black~ios.svg
+SHA1-Digest: bsbHAivWUyrDUmhUBv1A5qTMluk=
+
+Name: assets/www/mobile/templates.mobile.activity.store.js
+SHA1-Digest: KPDGYJJg2MUe82w4Bcl7WT4Zkik=
+
+Name: assets/www/images/mobile-icon-tag.png
+SHA1-Digest: CpvXaXBO/Q0WoGrmWZLC/9OgA2s=
+
+Name: assets/www/images/mobile-action-refresh~ios.svg
+SHA1-Digest: 3VvLuxOddxgfEC/CL8s7Unv+6Zc=
+
+Name: assets/www/fonts/e8db32e1-5400-4e3f-8bfe-2ed3492d71fa.eot
+SHA1-Digest: QckxWomPQu6tiBdfwbmValcj7WQ=
+
+Name: res/drawable-xxhdpi/common_signin_btn_text_focus_light.9.png
+SHA1-Digest: f0EJjdbMj9zLfOj/d3UbE5N6BjA=
+
+Name: res/drawable/controls_next.png
+SHA1-Digest: DwzWZWH7Gw9hDZOleKbDJBDusio=
+
+Name: assets/www/images/mobile-icon-toolbar-kindle-black.svg
+SHA1-Digest: VwR1CYM31TdAYOk9TzaR+RvLLvo=
+
+Name: assets/www/images/mobile-icon-toolbar-feedly.saved-white@2x.png
+SHA1-Digest: NZVjBjYA8kKf9XI4ry2wuDiM/Cs=
+
+Name: assets/www/images/mobile-icon-toolbar-unread~ios.svg
+SHA1-Digest: vzlN55NCyz9uQNfjWIEhIpwzvUk=
+
+Name: assets/www/images/mobile-icon-saved-h11-white.png
+SHA1-Digest: re+dVW9YGDonDSkIQNBTkXcOolw=
+
+Name: res/layout/article_actions.xml
+SHA1-Digest: m2vYuLKhGW6NQzxMbhGylpm/6Ro=
+
+Name: assets/www/images/mobile-icon-toolbar-close-black~ios.svg
+SHA1-Digest: UOLqQOzE9uwIoyC/89AIUfvSG1s=
+
+Name: assets/www/images/mobile-icon-toolbar-messenger-white~ios.svg
+SHA1-Digest: 9PHIW77jdv8Mx13IN7LyuGx/9bo=
+
+Name: assets/www/images/mobile-icon-toolbar-onenote-black~android.svg
+SHA1-Digest: +0wyXP9jBdo/CY8SyDeGBQkGw+o=
+
+Name: assets/www/images/mobile-icon-hot-vignette~ios.svg
+SHA1-Digest: dqGkGCP1oPFjRhS8W6ob9ST0mzI=
+
+Name: res/drawable-xhdpi/ic_launcher.png
+SHA1-Digest: u3XoCwdZ8svmTb8bp/4i8ANFcJo=
+
+Name: res/drawable/com_facebook_profile_picture_blank_square.png
+SHA1-Digest: ii3g4mqHjQXtghNZE1cibJA1Jbs=
+
+Name: res/xml/preferences.xml
+SHA1-Digest: XASqH45DoDAPg/q3JL1PamKpSZA=
+
+Name: res/drawable-mdpi/ic_plusone_standard_off_client.png
+SHA1-Digest: xWYT0qzRVNaGybBaBeMKbeGgkgE=
+
+Name: assets/www/images/mobile-icon-collection-black~android.svg
+SHA1-Digest: +48l6iqFhHqTXtn48pBtny7HlBw=
+
+Name: assets/www/images/mobile-library-mobile-popup-cross.png
+SHA1-Digest: hx7Fx4qvuRgQumlPdkfeFO5gFdE=
+
+Name: assets/www/images/mobile-icon-toolbar-store-white~android.svg
+SHA1-Digest: B4Sff8z6Q6sI4JviQbPMQdQ5PGs=
+
+Name: res/anim/appwidget_fromright_animation.xml
+SHA1-Digest: uzQpIHYjPfa44MksdpXNNvs/yAs=
+
+Name: res/drawable-mdpi/common_signin_btn_text_disabled_dark.9.png
+SHA1-Digest: vgTn+pEQhSLa5buaCqjDd3w3UWU=
+
+Name: res/drawable-xhdpi/common_signin_btn_text_normal_light.9.png
+SHA1-Digest: rk4+RrLhcP6lThhrsLhux6sOaW0=
+
+Name: res/drawable-mdpi/com_facebook_tooltip_black_topnub.png
+SHA1-Digest: yY8/t0s+QXhpJiUSW/BkWQiYs6A=
+
+Name: assets/www/fonts/1817a192-2d3b-41fa-a0fb-578497bd05c0.ttf
+SHA1-Digest: vLC6RUbqoVE7KYzp8QEjd9eVsvw=
+
+Name: res/drawable-ldpi/icon.png
+SHA1-Digest: Z2h5HmEq1+gSmbdJKxuRenWaeyQ=
+
+Name: res/layout/home_widget_prev.xml
+SHA1-Digest: 2e/VIgjdR6pM7+qlDICftfqh2+w=
+
+Name: assets/www/images/mobile-icon-overflow-black@2x.png
+SHA1-Digest: DZI+u/j7iOL30WEcTUbr60nV01c=
+
+Name: res/menu/share.xml
+SHA1-Digest: nd4MeRZ43VoLkVZ0UdLMG+1vtSU=
+
+Name: assets/www/images/mobile-icon-toolbar-feedly.saved-black~android
+ .svg
+SHA1-Digest: jiAdKYCmfb1y/Hl0BGzVeCado8g=
+
+Name: assets/www/images/mobile-icon-home-black@2x.png
+SHA1-Digest: VNHoyLKQ/e3hASkftYLlQY4g6gY=
+
+Name: res/drawable/com_facebook_picker_list_focused.9.png
+SHA1-Digest: wq1XBihYEP7fT9hT55vx2S7+KDQ=
+
+Name: assets/www/images/mobile-checkbox-unchecked-white~android.svg
+SHA1-Digest: SQmt82VzYutqIN5ERdhMEagcJqQ=
+
+Name: assets/www/images/mobile-icon-toolbar-gplus-white@2x.png
+SHA1-Digest: TlDGY3GrNYCNVvoe1Nvu9HR8cEc=
+
+Name: assets/www/images/mobile-icon-toolbar-onenoted@2x.png
+SHA1-Digest: FJkcA4Vh3eFdFc2gLiNmjv/1Kto=
+
+Name: res/anim/appwidget_fadeout.xml
+SHA1-Digest: XSvaxfDQAtoH78FnJbfLfwbyhVI=
+
+Name: assets/www/images/mobile-icon-customize-white~android.svg
+SHA1-Digest: 7Cm9BH8srlqNsqeKzkxPSbJrCao=
+
+Name: res/drawable/tv.png
+SHA1-Digest: G8fBJv6xs3VxhTkq6mDEPMRPcVQ=
+
+Name: res/anim/appwidget_toleft_animation.xml
+SHA1-Digest: HwjBf0hWjJv6G2gguW4TDH+b3+k=
+
+Name: assets/www/images/mobile-icon-saved-h10-black@2x.png
+SHA1-Digest: G5lL0gvpQztx/vrlGDg6O9gZZ5g=
+
+Name: assets/www/images/mobile-icon-refresh-black~android.svg
+SHA1-Digest: m3y/eumjx1N1e9V35vNQ4i+Nb6E=
+
+Name: assets/www/images/mobile-icon-toolbar-messenger@2x.png
+SHA1-Digest: QhdcAtyNE2cU/8TGjxZGj5EiRdQ=
+
+Name: res/layout-xlarge/twitter.xml
+SHA1-Digest: B1pqC/Ab5fcKiuP+F3UTiX6Qzf8=
+
+Name: assets/www/images/mobile-icon-toolbar-back-black~android.svg
+SHA1-Digest: ADqhzXSWjeQpFve2T4TBh9gWZVM=
+
+Name: res/drawable-xxhdpi/common_signin_btn_icon_focus_dark.9.png
+SHA1-Digest: nvg7KMKsHZx5cXiXMrsOUZ1pQs8=
+
+Name: assets/www/images/mobile-icon-home-white.svg
+SHA1-Digest: WfeQ7/sIotV1Tzvq/OSCtfc/4Sw=
+
+Name: assets/www/images/mobile-visual-search.png
+SHA1-Digest: KIQ4dr1b8R3gegTdJMQYc8u8LTM=
+
+Name: assets/www/images/mobile-selector-tag-black~ios.svg
+SHA1-Digest: IlyZebfth/iy7sYbZB5YdTu4gQk=
+
+Name: assets/www/images/mobile-icon-toolbar-previous-white.png
+SHA1-Digest: /X8yYzg0fkLzR2x9aO6vxTCHHKc=
+
+Name: res/layout/appwidget_article_noimage_meta.xml
+SHA1-Digest: ZkHTI7/GuHEBDgvjNvEe9dBqpiM=
+
+Name: assets/www/images/mobile-icon-toolbar-feedly~android.svg
+SHA1-Digest: E1ILRQOniLlfX7myrxBqNXI+H1w=
+
+Name: assets/www/images/mobile-icon-hot-vignette~android.svg
+SHA1-Digest: dqGkGCP1oPFjRhS8W6ob9ST0mzI=
+
+Name: assets/www/fonts/4a3ef5d8-cfd9-4b96-bd67-90215512f1e5.ttf
+SHA1-Digest: /NQ5IViNZthcCOSJTaloRcndFko=
+
+Name: res/xml/searchable.xml
+SHA1-Digest: D+d8iaNV/+U56KlKxwGralV+o0g=
+
+Name: assets/www/images/mobile-icon-toolbar-pinterest-white.png
+SHA1-Digest: QagQ3ulk4b4gpjjuLgwlI5ySuCo=
+
+Name: assets/www/images/mobile-icon-toolbar-safari-black@2x.png
+SHA1-Digest: da3tgQTDIdbemZwTncMT6liBGas=
+
+Name: assets/www/index.html
+SHA1-Digest: yVclTXGkvHV9ubKPeJ4Y/iVrIZA=
+
+Name: assets/www/fonts/95e9b167-72f4-4e05-8337-e993a249b8b5.svg
+SHA1-Digest: PIDbNl76i/da3BpLLEpDbapWp+s=
+
+Name: assets/www/images/mobile-icon-toolbar-onenoted-black~ios.svg
+SHA1-Digest: P+bQTv8nIctrP0TMgvZ7lvuSQ8I=
+
+Name: assets/www/images/mobile-icon-toolbar-previous-white@2x.png
+SHA1-Digest: znlqCadl4DlAVFbvgaymLOCJdRM=
+
+Name: res/layout-xlarge/article_topbar.xml
+SHA1-Digest: x9bBRewAsyMbDvRALusSZWp/TIo=
+
+Name: assets/www/images/mobile-selector-tag-black.png
+SHA1-Digest: OTZWObxBOSle9zuKP9tkkj/HMPo=
+
+Name: assets/www/images/mobile-icon-toolbar-onenote-white~android.svg
+SHA1-Digest: 6AwvEVp5U9dtyFUlELPiMlHlwFg=
+
+Name: assets/www/images/mobile-icon-toolbar-feedly-white@2x.png
+SHA1-Digest: 2YcjW9DMqvQGmuGlyJQzrqR177o=
+
+Name: res/drawable-hdpi/common_signin_btn_text_disabled_focus_light.9.
+ png
+SHA1-Digest: YmWnuLFTsxsuwRBtvQiQ6Y6KnsI=
+
+Name: res/drawable-hdpi/common_signin_btn_icon_disabled_focus_light.9.
+ png
+SHA1-Digest: 0ky7hJW6fNsa6m2tmjhllqHXHfg=
+
+Name: assets/www/images/mobile-icon-toolbar-twitter-black~ios.svg
+SHA1-Digest: nwWZljNk9/hf3dW1/1gXYPpG2U0=
+
+Name: assets/www/images/mobile-selector-down-arrow-white~ios.svg
+SHA1-Digest: oL+EEuogjNiY8+TMKc4pSf4W2AQ=
+
+Name: assets/www/images/mobile-icon-toolbar-evernote.saved.png
+SHA1-Digest: Qi3G3/xmGwDjecMhB5LMR4sLXEU=
+
+Name: assets/www/images/mobile-icon-toolbar-follow-white~android.svg
+SHA1-Digest: hAMtKh+JUKiJ/YH//yKkBNDXwFE=
+
+Name: assets/www/images/mobile-icon-library-collection-white~android.s
+ vg
+SHA1-Digest: hlkF38HahNR0omAonQ9u2q+mczk=
+
+Name: res/drawable-xhdpi/common_signin_btn_icon_pressed_dark.9.png
+SHA1-Digest: VuHJWuT/6iilvSab3F78/jbS8VQ=
+
+Name: assets/www/images/mobile-icon-searchbox-black.png
+SHA1-Digest: aE53Axi3MGTdqvvLoArwDozkMdc=
+
+Name: assets/www/images/mobile-icon-toolbar-back-black@2x.png
+SHA1-Digest: 7fCKFd7746p9nRqKfYXwodS6t2Y=
+
+Name: assets/www/images/mobile-visual-explore.png
+SHA1-Digest: d3kPwX/gpECDETjfQsN4/AZz5r0=
+
+Name: assets/www/images/mobile-action-magazine~ios.svg
+SHA1-Digest: iC3DUtNbGYMxXiXIHKrT5BUVCLs=
+
+Name: assets/www/images/mobile-icon-toolbar-evernote-white~ios.svg
+SHA1-Digest: uUtaT6AYSnu/naOd8o13lYUkgU8=
+
+Name: res/drawable-xhdpi/icon.png
+SHA1-Digest: olbCx4X3OKaPR3uNAkgZniOOTVw=
+
+Name: res/drawable-hdpi/common_signin_btn_icon_focus_dark.9.png
+SHA1-Digest: vo5IER5aYP04fs9WVhNf8ZG8h6g=
+
+Name: res/layout/appwidget_refresh_enter.xml
+SHA1-Digest: wP3iwPcotuX/+oYfFenn0DDSaf4=
+
+Name: assets/www/images/mobile-rating-9out10.png
+SHA1-Digest: 4bghYERGUc5JN9aPjnAdPZzpBTk=
+
+Name: assets/www/images/mobile-icon-markasread-white.svg
+SHA1-Digest: 1T/EZt9vEgKnK00Ow6ohsuuVUTU=
+
+Name: assets/www/images/mobile-icon-evernote-business~android.svg
+SHA1-Digest: uGLpU+qciFqwzwXXGvqcsZMuDCc=
+
+Name: res/drawable/appwidget_shares.png
+SHA1-Digest: LHNnqMhI7v6MiSBNF/SGm+KdVL8=
+
+Name: assets/www/images/mobile-icon-toolbar-gplus~android.svg
+SHA1-Digest: fooa69geQZauMB2pZG6kqoM6WwI=
+
+Name: assets/www/images/mobile-icon-toolbar-share-android-white.svg
+SHA1-Digest: rZR9whg6fWeiA+8lBpn3DekmX48=
+
+Name: assets/www/images/mobile-icon-toolbar-url-white.png
+SHA1-Digest: ltV4mieAbxxsnfThkgURNzvdA0E=
+
+Name: assets/www/images/mobile-rating-1out10@2x.png
+SHA1-Digest: fBIGXRUWJxtVIRlEkp5sHy9M+To=
+
+Name: res/drawable-ldpi/shortcut_home.png
+SHA1-Digest: VKdIFnxO0KeH8D5oUMqnmb+bTtY=
+
+Name: assets/www/images/mobile-icon-toolbar-evernote-white@2x.png
+SHA1-Digest: 85adJrq/gcbmU+lAkarSGp5eqbM=
+
+Name: res/layout/appwidget_article_image_enter.xml
+SHA1-Digest: lJk+Oo5X5sEXZ6VQHEF+M8MXRJs=
+
+Name: res/drawable/mobile_play_light_gray.png
+SHA1-Digest: 2k0lbPViJrPC7Yb38TYbbZi0LVI=
+
+Name: res/anim/to_top.xml
+SHA1-Digest: t2R7QcVIWXUlb2R1ylpAcvat2Jg=
+
+Name: assets/www/images/mobile-icon-toolbar-messenger~android.svg
+SHA1-Digest: aoNxdW6pucFXv8+SN/mcCbQ58bw=
+
+Name: res/layout-large/twitter.xml
+SHA1-Digest: 32ei94lZprTY9d4FMzAwDD+jG+w=
+
+Name: assets/www/images/mobile-checkbox-unchecked-black~ios.svg
+SHA1-Digest: cr9Z0O2dTSehDmENbXkKUSpzYEk=
+
+Name: assets/www/images/mobile-illustration-desktop.png
+SHA1-Digest: urRx8eW/RV75hWvSqHi23RJqAMs=
+
+Name: res/drawable-hdpi/com_facebook_tooltip_black_background.9.png
+SHA1-Digest: ztQIO1uL218tXt5Z5/kQajmtTzs=
+
+Name: res/drawable-xhdpi/common_signin_btn_text_pressed_light.9.png
+SHA1-Digest: zXl4gOYVm22pGbkGC4i82wLIMyg=
+
+Name: assets/www/images/mobile-icon-toolbar-feedly.saved-black~ios.svg
+SHA1-Digest: TW+zRaITNWk8Svc3O/EGmFf3BuU=
+
+Name: assets/www/mobile/templates.mobile.activity.categoryPicker.js
+SHA1-Digest: Zc2kjT/j338R90nYflx4VRjAUg4=
+
+Name: assets/www/images/mobile-icon-toolbar-buffer~android.svg
+SHA1-Digest: 0793jStAIL/YFISf/+pUGu4cRt0=
+
+Name: res/drawable/mobile_play.png
+SHA1-Digest: 07o1HWsy8nTvFfWMQPE/P9aFmMs=
+
+Name: assets/www/images/mobile-icon-toolbar-evernote@2x.png
+SHA1-Digest: w2l4OUT9T3JbYK/WTr23DHenn6U=
+
+Name: assets/www/images/mobile-icon-toolbar-unread-black@2x.png
+SHA1-Digest: rA9xigC/PWBlvvbqTU21TQNzKxY=
+
+Name: res/drawable-mdpi/common_signin_btn_icon_focus_dark.9.png
+SHA1-Digest: sa6MQEFa8whxq6hug+zvczJa8Ss=
+
+Name: assets/www/images/mobile-icon-toolbar-share-android.svg
+SHA1-Digest: x4PbhdnpAeq0t9Ey1Z/sZDqHnUc=
+
+Name: res/drawable/com_facebook_button_grey_focused.9.png
+SHA1-Digest: oegkN07TNc6Ko8z3qqCgUGgnvRw=
+
+Name: res/drawable/appwidget_promo_heart.png
+SHA1-Digest: jTaHySzPELwpEJ/3XqjUprEYYrs=
+
+Name: assets/www/images/mobile-icon-overflow-white@2x.png
+SHA1-Digest: 1A9cypy1evTthbZKMBMFuW934Ac=
+
+Name: assets/www/images/mobile-illustration-cloud.png
+SHA1-Digest: 3/4O/ZQc4cDBPIupBFqFO/J9Lkk=
+
+Name: res/layout/com_facebook_picker_image.xml
+SHA1-Digest: MUMpXGa1lob5t6+jmD7RSPKTFAQ=
+
+Name: assets/www/mobile/activity.explain.js
+SHA1-Digest: ewHgYDtXhP5Lo2iyqN+P1AFTCVM=
+
+Name: res/drawable/appwidget_preview.png
+SHA1-Digest: 0jzaIkPPIJfLsU+i63Q1HZvsdcI=
+
+Name: assets/www/images/mobile-selector-saved-black~android.svg
+SHA1-Digest: 6w5rTLdkNlRYfcVUSNIdwBL//FA=
+
+Name: assets/www/images/mobile-action-visit@2x.png
+SHA1-Digest: E81h/1NSQ1wi/smEoMbXthN+TxI=
+
+Name: res/drawable/com_facebook_profile_default_icon.png
+SHA1-Digest: hnc7R7K+VpzIWKki/iGEw6AlfPw=
+
+Name: assets/www/images/mobile-icon-toolbar-feedly.saved-black.png
+SHA1-Digest: VU6CCwB2rn0pehpLQqhgDKzBko8=
+
+Name: assets/www/images/mobile-action-magazine@2x.png
+SHA1-Digest: 0nMnXLNLQKdmCjJJlTVklom9MMI=
+
+Name: assets/www/images/mobile-hint-swipe-up@2x.png
+SHA1-Digest: cMFG8Ifh2aqVRhxnUiEYZzf6OVQ=
+
+Name: res/drawable-mdpi/common_signin_btn_icon_disabled_focus_dark.9.p
+ ng
+SHA1-Digest: IXqmYG4624bef7DnPxFG+Uwx1ak=
+
+Name: assets/www/images/mobile-icon-toolbar-share-ios-black.svg
+SHA1-Digest: PTVgPLodE/SXMJnoVoRai5XxkHM=
+
+Name: assets/www/images/mobile-icon-customize-white.png
+SHA1-Digest: 9/rAJ7UOdmFxDE83PVLwjINkVN4=
+
+Name: assets/www/images/mobile-action-mark-as-favorite~ios.svg
+SHA1-Digest: quwvZ8O3uJYT0HNNZHQCsCRhspU=
+
+Name: res/drawable-hdpi/common_signin_btn_icon_pressed_dark.9.png
+SHA1-Digest: 3+x2t/WZmDnWpRsGihxGb1wjfKk=
+
+Name: res/layout/appwidget_article_noimage_4_1.xml
+SHA1-Digest: 895Tv9NwStCIUeJIz1Ay5gXtAQE=
+
+Name: res/drawable/action_facebook.png
+SHA1-Digest: rnP86HzTGXnTovLyERqpVafurfU=
+
+Name: assets/www/images/mobile-action-list.png
+SHA1-Digest: XNMSEl/Bjco5QCmWGOg8kdxZgpg=
+
+Name: assets/www/images/mobile-icon-home-up-white.png
+SHA1-Digest: KtJWA7rfcH4U9Bo9Fi/ImXDh0Pk=
+
+Name: assets/www/images/mobile-icon-toolbar-facebook-black~ios.svg
+SHA1-Digest: 4GEE2ZS7Tmj+ynHJKUDy1wTJazY=
+
+Name: assets/www/images/mobile-icon-follow-black@2x.png
+SHA1-Digest: iDmSYN24SKALzA29tB/BHC5izTo=
+
+Name: res/drawable-xhdpi/ic_plusone_tall_off_client.png
+SHA1-Digest: znT4P8AI3xcWsBof3ElTFY2hDrk=
+
+Name: res/drawable/com_facebook_inverse_icon.png
+SHA1-Digest: F87dFjM8iCRCeWSfrxkG/jcMtZY=
+
+Name: res/drawable-mdpi/shortcut_essentials.png
+SHA1-Digest: UD8vCfx3yE+ZlU6Q2f3HfgmgTPc=
+
+Name: assets/www/images/mobile-icon-clear-black~android.svg
+SHA1-Digest: v1crJ0ynv6tRDgn33+StVm8eXag=
+
+Name: assets/www/fonts/11398868-5e58-467f-86d1-650e10dd998a.woff
+SHA1-Digest: D7HaudyGEez0rOu3lAif5orOnyo=
+
+Name: assets/www/images/mobile-rating-1out10.svg
+SHA1-Digest: gLliuZWOsdvNJUjFRU8SfSOqe6c=
+
+Name: assets/www/images/mobile-icon-toolbar-unread@2x.png
+SHA1-Digest: ovR1YV6RzJ7JP8BhcZKiMV6XgtU=
+
+Name: assets/www/images/mobile_play.png
+SHA1-Digest: 7IEUKtcZoTn75lJWGbByZQoVIHk=
+
+Name: com/devhd/nanohtml/xhtml-symbol.ent
+SHA1-Digest: 53SfmZieyKlgj2z71BpeXd3Biuw=
+
+Name: res/drawable/appwidget_promo_logo.png
+SHA1-Digest: 15rAbzQWf/xjhu3148X7mwPH4kY=
+
+Name: assets/www/fonts/PT_Serif-Web-Regular.ttf
+SHA1-Digest: zEcJrg0xlbx2uE0vwGGfv1vIhy8=
+
+Name: res/drawable-mdpi/shortcut_saved.png
+SHA1-Digest: nMgcOP5drOa9NWCUtUWeeNolgIE=
+
+Name: assets/www/images/mobile-icon-toolbar-buffer~ios.svg
+SHA1-Digest: Gt6+Lan7YL6vbiUtS1Iyi9qyyNs=
+
+Name: assets/www/images/mobile-icon-toolbar-messenger-black~android.sv
+ g
+SHA1-Digest: aoNxdW6pucFXv8+SN/mcCbQ58bw=
+
+Name: res/layout/article.xml
+SHA1-Digest: 3R1Sun3sVwIEoQbg4b+HoGTXTiM=
+
+Name: res/layout/appwidget_promo_4_1_exit.xml
+SHA1-Digest: 5KLJoug9j6tGq1eV5+pUp6RPCHY=
+
+Name: res/layout/appwidget_promo_exit.xml
+SHA1-Digest: xxOOSOpsmCO1vG05/rbV/mR+fL4=
+
+Name: assets/www/images/mobile-visual-explore-white.png
+SHA1-Digest: xr7NVSlA5gK2x5szZoP6IBc9XwI=
+
+Name: assets/www/images/mobile-icon-toolbar-messenger-white~android.sv
+ g
+SHA1-Digest: tE/YlfmQ+STodjMnyBpfwIvK2Ow=
+
+Name: assets/www/images/mobile-icon-toolbar-email-white@2x.png
+SHA1-Digest: fCSTNipTDrS9RxyEXKCy+eBEPGg=
+
+Name: res/drawable-hdpi/com_facebook_tooltip_blue_topnub.png
+SHA1-Digest: ptIIZ0pQGG0f3x+uMhzCqFOYu1s=
+
+Name: assets/www/images/mobile-action-visit~android.svg
+SHA1-Digest: rJ5Po8jCnfxnH7alj/u5k4C40fQ=
+
+Name: assets/www/images/mobile-icon-saved-h10-white@2x.png
+SHA1-Digest: d0qHoWMTHIsobQPG2IyEfDumzvo=
+
+Name: assets/www/images/mobile-icon-toolbar-feedly-white.png
+SHA1-Digest: IUsihzUvT4X5Om+XIURHv8NR0nk=
+
+Name: assets/www/images/mobile-login-twitter.png
+SHA1-Digest: +xn/lnmUhPEQrchpIuwQc8bxo+A=
+
+Name: assets/www/images/mobile-icon-toolbar-feedly.saved~ios.svg
+SHA1-Digest: Xh24bmkLCv+n3PsCKbSHDCYYvtY=
+
+Name: assets/www/images/mobile-icon-toolbar-tag-black~ios.svg
+SHA1-Digest: inN4WFU379jeknAnXogWUEnqwpU=
+
+Name: assets/www/images/mobile-unpack-explore-arrow@2x.png
+SHA1-Digest: BzJYcwIcUQDKNNJ0V9JVs08VMmU=
+
+Name: assets/www/images/mobile-action-oldest-first~ios.svg
+SHA1-Digest: TDF0rtjR7JP/Tl/OxHAw2q9U9G0=
+
+Name: assets/www/images/mobile-monster-markasread-white@2x.png
+SHA1-Digest: 4ihda3GVlZdH19WaOIHJa7d0ZEw=
+
+Name: res/layout/appwidget_refresh_exit.xml
+SHA1-Digest: x4CsHscG22TM9uF8RlZY+Fyb89I=
+
+Name: res/drawable/shortcut.png
+SHA1-Digest: J5r+OJtOnCd6/mjncyitIpJ6A2g=
+
+Name: assets/www/images/mobile-icon-saved-h10-white.png
+SHA1-Digest: Dz9pUxyunszamSkpChsmw5IDIs4=
+
+Name: assets/www/images/mobile-login-facebook.png
+SHA1-Digest: A05iJs6Q0N1QnZ/TWJpaPDn64II=
+
+Name: assets/www/images/mobile-action-list~ios.svg
+SHA1-Digest: b4i0ctT6TpPXTO36yDcnHhxy+Uw=
+
+Name: assets/www/images/mobile-monster-markasread-white.png
+SHA1-Digest: fSSv7snU0LvtJ+hdj1O3YA2Zg54=
+
+Name: res/layout/com_facebook_picker_activity_circle_row.xml
+SHA1-Digest: zYiBde0dmh/cpDaC15SgWWjLP3g=
+
+Name: assets/www/images/mobile-action-poster@2x.png
+SHA1-Digest: KQFDjloM09FY5O0jdD9Vn3KiAo8=
+
+Name: res/drawable/secondary.xml
+SHA1-Digest: 0fqOZ4HdLa0yM57NzQtX3pho5F8=
+
+Name: assets/www/images/mobile-icon-searchbox-white@2x.png
+SHA1-Digest: 6FGwWGF9slzRgOEu9lEPHX4kIbo=
+
+Name: res/drawable-xhdpi/com_facebook_tooltip_blue_xout.png
+SHA1-Digest: WjFm0tp4nyOULhL2U3mNcNv66H0=
+
+Name: res/layout-xlarge/twitter_auth.xml
+SHA1-Digest: LRYxS497Jj3BjsxTvvR2JbMD1Rc=
+
+Name: assets/www/images/mobile-action-mark-as-read~ios.svg
+SHA1-Digest: 7TKUjaYfCYADqcdJiUGms8UN5HE=
+
+Name: assets/www/images/mobile-hint-swipe-left@2x.png
+SHA1-Digest: 7sX45Jm/+Pa/zfush9isyhr7NHM=
+
+Name: assets/www/images/mobile-rating-6out10.svg
+SHA1-Digest: 5fKr/FZaqDvgSbhrdFqFDlH3WoU=
+
+Name: assets/www/mobile/activity.next.js
+SHA1-Digest: gBUBeQ0G7oPN/5ijWWxRC3VXugE=
+
+Name: assets/www/fonts/14592b50-bbca-41da-910c-e487f7bbbcd9.svg
+SHA1-Digest: T8LrGg5MYTwNzo8/E4zW8KvlfjY=
+
+Name: assets/www/images/mobile-icon-toolbar-instapaper-black@2x.png
+SHA1-Digest: Y2qGyYRRE0E9lGBbbDF7Qoex2fI=
+
+Name: assets/www/fonts/c1c13213-ef8f-456a-8b41-61e277c46294.woff
+SHA1-Digest: EZYhHLaCT4YAFSokHknw7bd/cho=
+
+Name: assets/www/fonts/5d57dec1-2820-4448-a2a6-1328afa4f511.ttf
+SHA1-Digest: kQeWuOiVXuDgdAmC2q06xxJAYUA=
+
+Name: assets/www/images/mobile-icon-toolbar-store-black~android.svg
+SHA1-Digest: M6lVqkFDtMXAvpwSduQFa7hb8MI=
+
+Name: assets/www/images/mobile-icon-toolbar-instapaper~ios.svg
+SHA1-Digest: Pod9QNlvd2hdvT3YLU9jwmYT22Y=
+
+Name: res/drawable-mdpi/common_signin_btn_text_pressed_dark.9.png
+SHA1-Digest: MQsj73rqoxGdFvNYEPkKJZPqXBU=
+
+Name: res/drawable-mdpi/common_signin_btn_icon_focus_light.9.png
+SHA1-Digest: KUWcrP9v7FORu4ojRjzVSn0JZio=
+
+Name: com/devhd/nanohttp/build.properties
+SHA1-Digest: cNyEgka57yqztJ5e+kqIddwDohQ=
+
+Name: res/drawable-xhdpi/common_signin_btn_icon_disabled_focus_dark.9.
+ png
+SHA1-Digest: 5te3wznPBVYtZMjVj49FYN5YlRA=
+
+Name: assets/www/images/mobile-play.svg
+SHA1-Digest: +pPUOPPWhgJk+0KaTgf9I84canM=
+
+Name: assets/www/images/mobile-icon-toolbar-email.png
+SHA1-Digest: tIFj1yG5Yr+m1o38ywYgTncLfg0=
+
+Name: assets/www/images/mobile-icon-tag@2x.png
+SHA1-Digest: 5ioN9rV7ZGQc58mCAd2gXVus85g=
+
+Name: assets/www/images/mobile-icon-collection-black.png
+SHA1-Digest: UqsBXAP4Wa5XgD0YEVzHa7kpn5A=
+
+Name: assets/www/images/mobile-selector-right-arrow-white~ios.svg
+SHA1-Digest: V5mZ8JiN5PyDOn4j7o51mpl2mB0=
+
+Name: res/drawable-xhdpi/com_facebook_button_grey_normal.9.png
+SHA1-Digest: ObpXSA4NH1YwVj8ZgzYz74kaDfE=
+
+Name: assets/www/images/mobile-action-titleonly@2x.png
+SHA1-Digest: SxH694JsXAWK2r1riuEaa70uEn8=
+
+Name: assets/www/images/mobile-visual-search~ios.svg
+SHA1-Digest: XY+6p6N7extGW3ZTzpr4IE4t834=
+
+Name: assets/www/images/mobile-icon-toolbar-onenote-white.png
+SHA1-Digest: Z/2+rfy0C9wzdSXIDL/fwgohbkk=
+
+Name: assets/www/fonts/855d17db-09a2-446d-a7ea-17c0b527a35d.ttf
+SHA1-Digest: L7ANeJziioGegqk4JD9sg3Hpi9E=
+
+Name: assets/www/images/mobile-icon-follow-white.png
+SHA1-Digest: 7jVOPf4Jpdyk5Nc1UxToXQwk/c0=
+
+Name: assets/www/fonts/Lora-Bold.ttf
+SHA1-Digest: EIABmDzUbq6Rrajud960qR5Aqao=
+
+Name: res/drawable-hdpi/common_signin_btn_icon_normal_dark.9.png
+SHA1-Digest: uRAyDpH07H9tazGPj+pquxEo+4U=
+
+Name: assets/www/images/mobile-explain-back.png
+SHA1-Digest: /szG1FUsNQcM+iNWjMBCvt02cKo=
+
+Name: res/drawable-hdpi/ic_plusone_medium_off_client.png
+SHA1-Digest: NHqkBfIL0tvXQGsGHO91mUCAPyI=
+
+Name: res/layout/com_facebook_picker_list_section_header.xml
+SHA1-Digest: K0IF5deVvo5Wc4KS0Te7HXhJz84=
+
+Name: res/anim/to_bottom.xml
+SHA1-Digest: gg0Olvvkmv+T9dQg8l0A/4y/ONA=
+
+Name: res/drawable-hdpi/com_facebook_tooltip_blue_background.9.png
+SHA1-Digest: DeL3PB83RoQM/i3fDhFKt05Z8U4=
+
+Name: assets/www/images/mobile-icon-toolbar-chrome-black@2x.png
+SHA1-Digest: sFOq082tgcX13DXPMEtxWgjktg0=
+
+Name: assets/www/images/mobile-icon-toolbar-chrome~android.svg
+SHA1-Digest: i1XtZ+PeiiX4+bhkff0+re7ypYU=
+
+Name: res/drawable-hdpi/common_signin_btn_text_disabled_light.9.png
+SHA1-Digest: 1nB29gilkMG21U2c1UzWz5vtjpc=
+
+Name: res/drawable-hdpi/com_facebook_picker_magnifier.png
+SHA1-Digest: IRytpOlTJ0L0tqrpIfR65gTRRSo=
+
+Name: assets/www/images/mobile-icon-toolbar-pinterest-black@2x.png
+SHA1-Digest: nb/XNAj9ek6tNtaEqwXzN558pHE=
+
+Name: assets/www/images/mobile-icon-toolbar-feedly.saved.png
+SHA1-Digest: qxgFKWsaX9REtdBjrrCOct5oRt0=
+
+Name: assets/www/images/mobile-selector-favorite-black@2x.png
+SHA1-Digest: oIX3/VkVm8La7H7Q23QnsBVsOhQ=
+
+Name: res/drawable-xxhdpi/common_signin_btn_icon_normal_dark.9.png
+SHA1-Digest: Bdyi8PRk2107rc0T/q6Ek8orFjU=
+
+Name: res/layout/com_facebook_picker_title_bar.xml
+SHA1-Digest: oLWDAfyFpSQf/Xgu99t9o92fRH0=
+
+Name: assets/www/images/mobile-icon-hot.svg
+SHA1-Digest: DJQA9fwMrKs98exNu1fGD26lrz0=
+
+Name: assets/www/images/mobile-icon-overflow-white.png
+SHA1-Digest: 4UlJ/3/wyU1AQ1Qa/A2pjN54/mY=
+
+Name: res/drawable-xhdpi/com_facebook_button_blue_normal.9.png
+SHA1-Digest: nqGHiPOhSaIXmMVgJ9Ux7JqUxEk=
+
+Name: assets/www/images/mobile-icon-collection-black@2x.png
+SHA1-Digest: pDliCnzdGVm4Is4uXbdMIZW9mtQ=
+
+Name: assets/www/fonts/86cb1ec7-4b3b-477d-bc6b-47578f0c0c5e.ttf
+SHA1-Digest: r9ZhzzcoA6orrA3R2gYjvM75gYQ=
+
+Name: assets/www/images/mobile-loading-102-black-android.gif
+SHA1-Digest: ltPD2A7/UIejQaJot1FIMuy80dA=
+
+Name: assets/www/js/10101_mobile_all_ad1_2114.js
+SHA1-Digest: p+/0uBGAN11nRgxsOehARzFlGrU=
+
+Name: assets/www/images/mobile-icon-customize-black~android.svg
+SHA1-Digest: WndUL/zW5YgaVh9JvAzVW8r4VDw=
+
+Name: res/layout-large/article_topbar.xml
+SHA1-Digest: VzkvhPrWEfrpqUvc1Qp2XIlob7o=
+
+Name: assets/www/images/mobile-icon-toolbar-unread.png
+SHA1-Digest: xJdLknhA0MyLExF/1VgPjDSIQGw=
+
+Name: res/drawable-hdpi/ic_plusone_tall_off_client.png
+SHA1-Digest: mKmFlpzPqO2eN1UQWWTrY/HvgmA=
+
+Name: assets/www/images/mobile-visual-google@2x.png
+SHA1-Digest: +X4rbhGDKz+/r+xQs7NXia8+Nn0=
+
+Name: res/drawable-hdpi/com_facebook_button_grey_normal.9.png
+SHA1-Digest: BvNuj0JM4dW1M5X/qZOU04aa9aQ=
+
+Name: assets/www/images/mobile-checkbox-unchecked-black~android.svg
+SHA1-Digest: SLdPyRWMpcdE7geOUgtQzaMpuW8=
+
+Name: assets/www/images/mobile-action-poster~android.svg
+SHA1-Digest: TexAwI6wLWiuNq0zYSEdIHgNkLk=
+
+Name: assets/www/fonts/GuardianTextEgyp-Bold-Web.woff
+SHA1-Digest: 3kAd/D6gmk1ei6RlEq8TAZ5DK8Q=
+
+Name: assets/www/images/mobile-icon-android-home-white.png
+SHA1-Digest: ctzt7sUDL8QDxCuhNTokzkyTmAo=
+
+Name: assets/www/images/mobile-icon-toolbar-onenote-black.png
+SHA1-Digest: kSy4dJTTaq/93a5ctDKJlsNF2Lc=
+
+Name: assets/json/tinyurl_include.json
+SHA1-Digest: L2BM0aiXlC1iaV6AvY/I3OY2oI4=
+
+Name: assets/www/images/mobile-selector-down-arrow-black~ios.svg
+SHA1-Digest: exM23wCqXuIRQUVHm2JLhUYL95I=
+
+Name: res/drawable-mdpi/powered_by_google_dark.png
+SHA1-Digest: SYwxuihJgUaoyjHCQQvZHUzSvgw=
+
+Name: assets/www/images/mobile-selector-favorite-black~android.svg
+SHA1-Digest: xkCm8IOO3bgqk6hiJ3ljZMHIWMo=
+
+Name: assets/www/images/mobile-icon-toolbar-twitter.png
+SHA1-Digest: B3mu3OcZeTtHNwiCc7nlEhsbfLU=
+
+Name: res/layout/home_widget_main.xml
+SHA1-Digest: R5V5WOeTJZ+MOYYOR3G29mtjTkI=
+
+Name: assets/www/images/mobile-checkbox-unchecked-white@2x.png
+SHA1-Digest: mgCyfarsYy3n18I5/SljSWQxXyU=
+
+Name: assets/www/images/mobile-icon-toolbar-email-black~ios.svg
+SHA1-Digest: h+nqjZD5znbHdOrHhk2XYU0fjLk=
+
+Name: res/layout/appwidget_promo_4_1.xml
+SHA1-Digest: F+Vo2pALnJ4tfA3c6ydjNB2ROz8=
+
+Name: assets/www/images/mobile-icon-toolbar-chrome~ios.svg
+SHA1-Digest: lnCjp+RqJh9ftz9gvSM1FE8DQZg=
+
+Name: assets/www/images/mobile-selector-right-arrow-white.png
+SHA1-Digest: +Fw2RBELM8ebMj0XZ4Az1ZI7dxw=
+
+Name: assets/www/images/mobile-icon-toolbar-buffer-black~ios.svg
+SHA1-Digest: 5B8dWNBXl9Rg4KLT5OGB0w96H3I=
+
+Name: assets/www/images/mobile-rating-7out10@2x.png
+SHA1-Digest: neJYyL5mcYbIaSatIE9+SztnhBk=
+
+Name: assets/www/mobile/activity.store.js
+SHA1-Digest: oGBsxDR8JHXJmEVxRp8vVQwxGmg=
+
+Name: assets/www/images/mobile-icon-toolbar-twitter~ios.svg
+SHA1-Digest: IX5EY93GNHAg6yM7xOqWiAm7rP0=
+
+Name: assets/www/images/mobile-icon-toolbar-unread-white.png
+SHA1-Digest: QaVcLWP0OOE1M3jb8bsh405jtsI=
+
+Name: res/drawable-mdpi/common_signin_btn_icon_normal_light.9.png
+SHA1-Digest: he0SlIYzLlZChBg6d38hheLzBns=
+
+Name: assets/www/images/mobile-icon-toolbar-onenote.png
+SHA1-Digest: BvgpR+HPpifgxJmatY9L1/43Y1c=
+
+Name: res/drawable-mdpi/com_facebook_tooltip_black_xout.png
+SHA1-Digest: +NOQmfBahK9wgyl14UEHXrBM1lQ=
+
+Name: assets/www/images/mobile-rating-7out10.svg
+SHA1-Digest: 7G1kmGSN6DIakoSpmNqVC3HIYX4=
+
+Name: assets/www/images/mobile-icon-toolbar-messenger~ios.svg
+SHA1-Digest: 55EHeSrjGC+tBpX6in/PvhoUA8U=
+
+Name: res/drawable/com_facebook_picker_item_background.xml
+SHA1-Digest: coGop5eQTgNSVMJTvsZaN47jpjQ=
+
+Name: assets/www/images/mobile-icon-toolbar-chrome-black~android.svg
+SHA1-Digest: OZMDxXeQDUR6Yg3bKQkR95MeE/4=
+
+Name: assets/www/images/mobile-icon-library-collection-black.png
+SHA1-Digest: lvMinSIAJo6AwTQyc27Z8UrJSXs=
+
+Name: assets/www/images/mobile-play-small@2x.png
+SHA1-Digest: 8LNq5A7TFVAFs1xc0yw4XtG4QQk=
+
+Name: res/drawable-mdpi/ic_plusone_small_off_client.png
+SHA1-Digest: lOwgiwPxI8R2+0EZBBOzp3VD+bg=
+
+Name: assets/www/images/mobile-icon-toolbar-pinterest-white@2x.png
+SHA1-Digest: CPjpJh2g7WBsuDX9Ep7XjkFM+wg=
+
+Name: assets/www/images/mobile-login-devices.png
+SHA1-Digest: zEgYGA1EY4PW7UwXNwXqVrYiMI4=
+
+Name: assets/www/images/mobile-icon-saved-h11-black~ios.svg
+SHA1-Digest: S0ImJdGZgq/GhKGMOgl/NDMRI8I=
+
+Name: res/drawable-mdpi/com_facebook_tooltip_blue_xout.png
+SHA1-Digest: VpSoMW/6yLkYe65/CO1eWu25/vg=
+
+Name: assets/www/images/mobile_play_gray.png
+SHA1-Digest: 6vbj1CxwylZZv71AOU/JFbsJ36E=
+
+Name: res/drawable/mobile_play_gray.png
+SHA1-Digest: HN89VASvvbd0lkVWPPlgCviEV4k=
+
+Name: res/drawable-xhdpi/com_facebook_tooltip_black_bottomnub.png
+SHA1-Digest: TNBUU/+Kiv9UtYIEGLvK+KY7TPA=
+
+Name: assets/www/fonts/Lora-BoldItalic.ttf
+SHA1-Digest: Bzyhg7KDX5ZR0s26yjlNHPMtJ1E=
+
+Name: res/layout/appwidget_initial_layout.xml
+SHA1-Digest: iZtxOG48+ToDbTtFhfOrW1Wvbgs=
+
+Name: res/layout/splash.xml
+SHA1-Digest: cbTzd7QL2bq/sF0Vo/EztoL6Ok8=
+
+Name: assets/www/images/mobile-icon-toolbar-url-black~android.svg
+SHA1-Digest: rWce+AzHVpx8Bf05Ug0/7SHJZTo=
+
+Name: res/anim/still.xml
+SHA1-Digest: ipES8B7h2VKd/k5BLdJDYBsAte8=
+
+Name: assets/www/images/mobile-visual-explore@2x.png
+SHA1-Digest: CQ4lzr0BXWKDFN9DuvSpmwhoI/0=
+
+Name: assets/www/mobile/templates.mobile.activity.more.js
+SHA1-Digest: ejAhbBTPD30eTfb984JiWz40BCk=
+
+Name: assets/www/mobile/activity.toolbar.js
+SHA1-Digest: mrzzCQ8Hp5B1H2YYw527I0uQDLI=
+
+Name: assets/www/images/mobile-icon-collection-white~android.svg
+SHA1-Digest: EKM1Zv5IrVaNFHqtfK797ElrOWg=
+
+Name: assets/www/fonts/76766dbf-be05-4eca-8a2f-27d2bcec3ba8.woff
+SHA1-Digest: IhR7gnTG+tQFzk52eIdszCtx5NM=
+
+Name: assets/www/images/mobile-icon-toolbar-pocket-white~android.svg
+SHA1-Digest: 8xOU0xftvkJfun802D5cyO9lAlw=
+
+Name: res/drawable-mdpi/shortcut_category.png
+SHA1-Digest: 6OsVIp1aG0Z8nB657DLKPdoQKOE=
+
+Name: assets/www/images/mobile-selector-latest-white@2x.png
+SHA1-Digest: t0hGndsaeuFtiN5ODLnJrT53IZw=
+
+Name: assets/www/images/mobile-icon-toolbar-tag-black@2x.png
+SHA1-Digest: N11eYxkZwXzwLhzDU8Fn1zujYLk=
+
+Name: assets/www/images/mobile-icon-toolbar-share-ios.svg
+SHA1-Digest: bO0WSep/312Ii0Zqe9s7L/VD10E=
+
+Name: assets/www/images/mobile-rating-8out10.png
+SHA1-Digest: X/R5i/g8femYQm5wYOIrEQTr2GE=
+
+Name: res/layout/com_facebook_picker_title_bar_stub.xml
+SHA1-Digest: FW51DyEXKc/QMP5eS4UY3Ukf9fM=
+
+Name: assets/www/images/mobile-icon-toolbar-evernote.saved~android.svg
+SHA1-Digest: 6lYgr5Qpi1cCRNky5XL8VZcn004=
+
+Name: assets/www/images/mobile-icon-search-white@2x.png
+SHA1-Digest: NGLkepL1nuopQP1gBnZ0I8Cv1/U=
+
+Name: assets/www/fonts/285f76f1-9aeb-40f3-8df6-f87eb061df28.ttf
+SHA1-Digest: FtU5Jj+DfmgEbJWCZCKibYj7K74=
+
+Name: assets/www/images/mobile-icon-toolbar-evernote-black~ios.svg
+SHA1-Digest: ZdhlLZ0Vhg5v2eKzd17E8WJm46I=
+
+Name: assets/www/images/mobile-icon-searchbox-white.png
+SHA1-Digest: lx9WbJmLBAh7078y/guGCjOo39c=
+
+Name: res/drawable-hdpi/com_facebook_button_blue_focused.9.png
+SHA1-Digest: f6ffxUARnD4OE2WatPT59yDgeJ8=
+
+Name: assets/www/images/mobile-icon-toolbar-url-white~ios.svg
+SHA1-Digest: 1QvzLnJY/7l8UO4x7Y4KgZd5tm0=
+
+Name: assets/www/images/mobile-icon-toolbar-unread-white@2x.png
+SHA1-Digest: VUh+lBmmKnOuK3RISXhPIhJzyq8=
+
+Name: assets/www/images/mobile-icon-clear-white.png
+SHA1-Digest: 2XGn2tqDZKIvAWYn9m/CjhCdpTA=
+
+Name: res/drawable-mdpi/common_signin_btn_text_focus_light.9.png
+SHA1-Digest: 7vLApczB6mEex3xCchwoPVizP8w=
+
+Name: assets/www/images/mobile-icon-home-white@2x.png
+SHA1-Digest: VSTWI1Im6pxL5K93IX+CrL9dDgI=
+
+Name: assets/www/images/mobile-icon-clear~ios.svg
+SHA1-Digest: OGlP+MLYO3wCSr2xtxo5cRCiFi8=
+
+Name: res/layout/appwidget_promo_4_3_exit.xml
+SHA1-Digest: /92Zz4Qsz3dnqoF9K4XgEApSQ0o=
+
+Name: assets/www/images/mobile-selector-down-arrow-black@2x.png
+SHA1-Digest: b1i+09Uqku+39bdSgDKccmKMjjE=
+
+Name: assets/www/images/mobile-icon-toolbar-previous-black@2x.png
+SHA1-Digest: 80/vGZbmqT5nJdOvDDNYHC0mAGA=
+
+Name: assets/www/bridge.js
+SHA1-Digest: pO07ZbdePy7w7fw2A4X1KiineCA=
+
+Name: res/drawable/appwidget_arrow.png
+SHA1-Digest: kY1mEKvCA2OS/9xYVfKf7fu19xc=
+
+Name: assets/www/images/mobile-icon-home-black.png
+SHA1-Digest: EWdmq58yTOC8cs9UF0MTfltWg8Y=
+
+Name: assets/www/images/mobile-icon-collection-black~ios.svg
+SHA1-Digest: PLg/CBLnaQtYe5mRqTrvhjDEBoQ=
+
+Name: assets/www/images/mobile-icon-toolbar-url.png
+SHA1-Digest: tFcfCQLP0o25GkmoiXrXmIAYnAw=
+
+Name: assets/www/images/mobile-library-mobile-feedlylogo-color.png
+SHA1-Digest: QEC0pZF1dOSqeE+T4HYk5L/wYbo=
+
+Name: com/devhd/nanohttp/help.txt
+SHA1-Digest: xri9Tu52hXLQDlp5ZQj3By7ghnc=
+
+Name: assets/www/images/mobile-icon-toolbar-gplus@2x.png
+SHA1-Digest: yhyxaNbar0TrgpOrWwcY9C/PFCw=
+
+Name: assets/www/images/mobile-play-small.png
+SHA1-Digest: S69WDriEr6D7CjiPN/ucUwJD9RA=
+
+Name: assets/www/images/mobile-icon-collection-white@2x.png
+SHA1-Digest: hUtTik4W/YkNrA3c1G9BW1Hw+OE=
+
+Name: res/drawable-mdpi/com_facebook_tooltip_blue_background.9.png
+SHA1-Digest: pJb+i/zRVYfgMCRkdrZMsi0qfFo=
+
+Name: assets/www/images/mobile-icon-clear-tag~android.svg
+SHA1-Digest: /LWqtcr75HR7waUGj1ewel1VhyQ=
+
+Name: assets/www/images/mobile-icon-toolbar-google.png
+SHA1-Digest: vv8u8Rvg9vztqPOmOdl6VgMJJzE=
+
+Name: assets/www/images/mobile-selector-saved-white.png
+SHA1-Digest: fDdgQTmsMny6Z/Jrh5vbCSAPpHg=
+
+Name: res/drawable-hdpi/common_signin_btn_text_pressed_dark.9.png
+SHA1-Digest: VBdIt82ioiZO0Qmr7/J+8sPnop8=
+
+Name: assets/www/images/mobile-icon-store-white@2x.png
+SHA1-Digest: 6FGwWGF9slzRgOEu9lEPHX4kIbo=
+
+Name: assets/www/images/mobile-icon-library-collection-black~android.s
+ vg
+SHA1-Digest: RgdKhpHABqSaNckfSs789GtRYeM=
+
+Name: res/drawable/btn_secondary.xml
+SHA1-Digest: OaQKBgCWOHMIL1iy2y8mPfA73Yo=
+
+Name: assets/www/images/mobile-icon-saved-h11-vignette~ios.svg
+SHA1-Digest: RJLNRM8RhhmkwiPtAWTOFqK2SOw=
+
+Name: assets/www/images/mobile-action-refresh@2x.png
+SHA1-Digest: qbXhwQX7VkX778PuL/Wy9EpBS28=
+
+Name: assets/www/images/mobile-play@2x.png
+SHA1-Digest: mkQWTmLV173oUvGwktoQ8arQo3Q=
+
+Name: res/drawable/appwidget_splash.png
+SHA1-Digest: X0U+zOhpi5pUM3wNzbArHUe3JYU=
+
+Name: assets/www/images/mobile-login-windows.svg
+SHA1-Digest: fIj/V+/HvnH8MuPzDPykdggUStc=
+
+Name: res/drawable-xhdpi/common_signin_btn_text_disabled_light.9.png
+SHA1-Digest: UbXqMwM30HBljuHn+la04UPzB1Y=
+
+Name: assets/www/images/mobile-icon-toolbar-gplus-black.png
+SHA1-Digest: vlh6tq+oIxqYXs+Y03KfbqDy+Ic=
+
+Name: assets/www/fonts/6e02de49-c4bb-4abd-8354-88f5c5bdb329.ttf
+SHA1-Digest: zGczM5KB1BN5N+9JvB6y3O4D0Z8=
+
+Name: res/anim/from_top.xml
+SHA1-Digest: bM8V2BrEJoCFJRfajBfnv7yUOhw=
+
+Name: assets/www/images/mobile-icon-markasread-black@2x.png
+SHA1-Digest: IFYi4YsDYz69bonND0IKg3LLbsU=
+
+Name: res/drawable/com_facebook_picker_list_selector_disabled.9.png
+SHA1-Digest: cKGQg8jgT0IkOi1RPo5Y+TSnQb4=
+
+Name: assets/www/images/mobile-icon-refresh-black~ios.svg
+SHA1-Digest: LcubYNQKJ0nGaURxfNAEI4v/OFI=
+
+Name: assets/www/mobile/activity.more.js
+SHA1-Digest: pNjjLa9ArOOIv1sOgUAgdWU2k8I=
+
+Name: assets/www/images/mobile-icon-toolbar-onenoted-themed~android.sv
+ g
+SHA1-Digest: 7uCLb6fIVvV/Pi/k6RvY1Cu9Ok4=
+
+Name: assets/www/images/mobile-icon-toolbar-onenoted.png
+SHA1-Digest: DgkGOBuwXpMil0vt9ctYFIHc+sU=
+
+Name: res/drawable-xxhdpi/common_signin_btn_icon_disabled_focus_light.
+ 9.png
+SHA1-Digest: HzOQHYhhJxxzbZqK40hTgOfRhlo=
+
+Name: assets/www/images/mobile-icon-toolbar-reader-black~ios.svg
+SHA1-Digest: gL7lUxf3at5zQQJ5In4OBfy0kqI=
+
+Name: assets/www/images/mobile-icon-toolbar-save-black@2x.png
+SHA1-Digest: CP9PFGcUjjce5bYARpjkk3gxyn8=
+
+Name: res/drawable-xhdpi/common_signin_btn_icon_disabled_dark.9.png
+SHA1-Digest: 1Hnpvj2UzKDvPZv175SFBfp0Gn8=
+
+Name: res/anim/fadein.xml
+SHA1-Digest: hRAmkSGbx0N/j2itLfycUFNY97k=
+
+Name: res/anim/to_right.xml
+SHA1-Digest: 4IhJigoqGl4PIrZWmI0Z2ZfOFo8=
+
+Name: res/drawable-xhdpi/common_signin_btn_text_disabled_focus_dark.9.
+ png
+SHA1-Digest: /ps9lLPOdDdwDt2YyGRRyGkRCMw=
+
+Name: assets/www/images/mobile-icon-follow-black.png
+SHA1-Digest: ho+pp2gk73orSpt/XaexxelIQ2o=
+
+Name: assets/www/images/mobile-icon-store-white~android.svg
+SHA1-Digest: ZxafHtRlL1BkCabyEFnv3nslyY0=
+
+Name: res/drawable-mdpi/common_signin_btn_icon_pressed_dark.9.png
+SHA1-Digest: IkOjI29UDeEmriO620NWQRYQBQM=
+
+Name: assets/www/images/mobile-icon-toolbar-overflow-white@2x.png
+SHA1-Digest: UCsk1Agu9GajTJxqtcJtMZBZ6ic=
+
+Name: assets/www/images/mobile-library-add-white@2x.png
+SHA1-Digest: LbhKXIy0gtNJ/cn1BO+Fvgeqc7I=
+
+Name: assets/www/images/mobile-icon-toolbar-messenger-black@2x.png
+SHA1-Digest: oHomU1kN9+VRRO19Zwn6GxBRTeY=
+
+Name: assets/www/images/mobile-selector-down-arrow-black.png
+SHA1-Digest: f9uDhfo2rFVEJ35PYwRPai6brdA=
+
+Name: res/drawable-xhdpi/com_facebook_tooltip_blue_bottomnub.png
+SHA1-Digest: ehz+LMacu3qtWaa9iLQRwMqZIgo=
+
+Name: assets/www/images/mobile-library-banner-feedlyicon.png
+SHA1-Digest: YsMm6X1wL8y/GMKhVuIEeJ4xYhs=
+
+Name: res/xml/appwidget_info_4_1.xml
+SHA1-Digest: f2Tz2SZ5xRD5BE9mNSgSfoKA3KA=
+
+Name: assets/www/fonts/caede52a-6883-46d8-9f68-b58623ee3864.eot
+SHA1-Digest: sut0B/YieV8eCWzJQepKBHsijbY=
+
+Name: res/drawable-mdpi/com_facebook_button_blue_focused.9.png
+SHA1-Digest: rZf/vriiPguZZUS/3ww/w7LJ8fo=
+
+Name: assets/www/fonts/55f60419-09c3-42bd-b81f-1983ff093852.eot
+SHA1-Digest: u3HULkO+/U2c3ZrkaRPxG3b6IHM=
+
+Name: assets/www/images/mobile-icon-customize-white~ios.svg
+SHA1-Digest: YvS6+GvkhIElbWb7RGfzddyCKUY=
+
+Name: assets/www/images/mobile-icon-toolbar-pocket-black.png
+SHA1-Digest: 2f3z3LwaUi9r58d33MWHHsesmS8=
+
+Name: assets/www/fonts/GuardianTextEgypApp-BoldIt.ttf
+SHA1-Digest: Rgo1MOPuRVemJsaHc8SmEs7fNn4=
+
+Name: res/drawable-xxhdpi/common_signin_btn_icon_disabled_dark.9.png
+SHA1-Digest: 2Zfa+F80lrkHKDHQCM2OErZr3Cg=
+
+Name: res/drawable/action_mobilize.png
+SHA1-Digest: pMZF/eRsL/vdKAJYFWSFxIO4BEQ=
+
+Name: res/layout/com_facebook_placepickerfragment_list_row.xml
+SHA1-Digest: ZqHikVW3owRfFs1pOeoGQGQHT7w=
+
+Name: assets/www/images/mobile-icon-toolbar-evernote-white.png
+SHA1-Digest: ORMp/bRn0XyN+Dxv6a6buEfNrPc=
+
+Name: assets/www/images/mobile-icon-refresh-white~android.svg
+SHA1-Digest: L5WDSUN6qd5nh7s31zE9GDHu5uQ=
+
+Name: assets/www/images/mobile-icon-toolbar-onenoted-black~android.svg
+SHA1-Digest: +FtFJAJ8XF4eegelzBWGjMn/6ok=
+
+Name: assets/www/images/mobile-icon-saved-h10-black~ios.svg
+SHA1-Digest: mrCXSpKrCBclAK2gFhijhv35aiM=
+
+Name: res/drawable-xhdpi/ic_plusone_medium_off_client.png
+SHA1-Digest: pxNZ8SkEfPjyfAiSKNlW4SZk60Q=
+
+Name: res/xml-v16/appwidget_info.xml
+SHA1-Digest: iTLxpBs5YzSBjIW4liCI5oLhbGQ=
+
+Name: assets/www/images/mobile-login-evernote.png
+SHA1-Digest: VX65Xk9lIp0u8aV/enMtLvonmPs=
+
+Name: assets/www/images/mobile-icon-toolbar-close-black@2x.png
+SHA1-Digest: /O2PzL6JVuY02XTavq6icb9rack=
+
+Name: res/drawable-xhdpi/common_signin_btn_text_focus_light.9.png
+SHA1-Digest: re+zLFhPUMSpBod/+8AnbiOF95E=
+
+Name: res/drawable/btn_primary.xml
+SHA1-Digest: sOSvE2/iRS02Wr7ED4iWmNnw1Bg=
+
+Name: assets/www/fonts/PT_Serif-Web-Bold.ttf
+SHA1-Digest: S9FWr1BKxjbAnvbKWhDcf6DScuw=
+
+Name: assets/www/images/mobile-icon-library-collection-white@2x.png
+SHA1-Digest: nhW3IarDXojVIhOo5pplC3HvRvk=
+
+Name: assets/www/images/mobile-icon-toolbar-sms-black~ios.svg
+SHA1-Digest: ttwG2nCnFAAiNGjcErzWqu2QBtw=
+
+Name: assets/www/images/mobile-icon-toolbar-safari.png
+SHA1-Digest: KJ902TDD997+5+f9zum/yR3Imcs=
+
+Name: assets/www/images/mobile-icon-toolbar-tag-black~android.svg
+SHA1-Digest: fVJaIVfiiRyxeIo4Y0rT6Cq75js=
+
+Name: res/drawable-hdpi/com_facebook_button_blue_normal.9.png
+SHA1-Digest: t/q1ll8cIcWlFuKff/cUYYaKKw0=
+
+Name: assets/www/images/mobile-icon-home-up-black@2x.png
+SHA1-Digest: Gu5Dx8dK5b4CT9xBDR8D1p7tM0I=
+
+Name: assets/www/images/mobile-rating-2out10.png
+SHA1-Digest: VqxbBNwtgSBmW6rfZhgNzB86z6A=
+
+Name: assets/www/images/mobile-icon-toolbar-url~ios.svg
+SHA1-Digest: NmH/kAo6059ZhaqkJQEd85l5mRE=
+
+Name: res/drawable-ldpi/home_widget_background.xml
+SHA1-Digest: S52Jz3LipDYwz2U44hto5SwjT9U=
+
+Name: res/drawable-hdpi/shortcut_buzz.png
+SHA1-Digest: 6Hee7ULsE1BwnYMVouixBknxNh0=
+
+Name: assets/www/images/mobile-visual-google.png
+SHA1-Digest: ROTocImzgy83a+xRSggacQLy04Q=
+
+Name: com/devhd/nanohtml/xhtml-lat1.ent
+SHA1-Digest: LF0p6imBzHWcxfWyfPfFNtTqk4Q=
+
+Name: assets/www/images/mobile-icon-toolbar-evernote-white~android.svg
+SHA1-Digest: Brt5B8uZhg3lK57l3qgFEXc80tU=
+
+Name: assets/www/images/mobile-icon-toolbar-share-android-white@2x.png
+SHA1-Digest: Pm7HbpC8dsN/wK0qzAFl1GSwVyo=
+
+Name: res/drawable/appwidget_text_background.xml
+SHA1-Digest: kUu/+S9QxB0INN4E4xY9Kl43DRk=
+
+Name: assets/www/images/mobile-icon-toolbar-onenoted-white~ios.svg
+SHA1-Digest: P+bQTv8nIctrP0TMgvZ7lvuSQ8I=
+
+Name: assets/www/images/mobile-icon-android-home-black@2x.png
+SHA1-Digest: lttSOCNPOg/7fvLp6xL7jo8T6pI=
+
+Name: assets/www/images/mobile-selector-favorite-white@2x.png
+SHA1-Digest: V1nUXtpurQotnB6NpofFm2z+wv0=
+
+Name: assets/www/images/mobile-icon-hot@2x.png
+SHA1-Digest: yvst885cZm0XbKuF6VMelaqd6n4=
+
+Name: res/drawable-mdpi/ic_launcher.png
+SHA1-Digest: x/6Ayersrqb/q4KkItYM1khYaOM=
+
+Name: assets/www/fonts/Lora-Italic.ttf
+SHA1-Digest: 5o7kbJF8bHQGqRg5bHkaN4xw5WE=
+
+Name: res/layout/appwidget_promo_4_3_enter.xml
+SHA1-Digest: hx8UegnKpXmiK663Pa1yo9gNImM=
+
+Name: assets/www/images/mobile-icon-toolbar-tag-white.png
+SHA1-Digest: +zo0oyrNTYNA9CHDhr2/cpAsjqM=
+
+Name: assets/www/images/mobile-selector-latest-black~android.svg
+SHA1-Digest: oepbor/OKWr4OvCQeOMmyX1uW0c=
+
+Name: res/drawable-hdpi/com_facebook_close.png
+SHA1-Digest: vzoVwUXnEtJQCL4582EeDreqvIA=
+
+Name: assets/www/images/mobile-icon-follow-black~ios.svg
+SHA1-Digest: Xd6xUzIm8l08sNdL6xpfKCPUy7I=
+
+Name: assets/www/images/mobile-icon-store-black.png
+SHA1-Digest: aE53Axi3MGTdqvvLoArwDozkMdc=
+
+Name: assets/www/images/mobile-icon-toolbar-refresh-white~android.svg
+SHA1-Digest: L5WDSUN6qd5nh7s31zE9GDHu5uQ=
+
+Name: res/drawable/dashclock_extension_feedly.png
+SHA1-Digest: /cpoG6/GVd7/ZqwxPPmCEOKgDHo=
+
+Name: assets/www/images/mobile-icon-toolbar-overflow-black.png
+SHA1-Digest: Ahy2jU5zYqIDirjy6H9WPBKN4Vc=
+
+Name: assets/www/fonts/PT_Serif-Web-BoldItalic.ttf
+SHA1-Digest: BpzXUyyDFo/ddAJNtMZjcTx6Qkw=
+
+Name: assets/www/images/mobile-icon-toolbar-instapaper-white~android.s
+ vg
+SHA1-Digest: yvaa5QAWIj2nfQhspZiG36rDjaQ=
+
+Name: assets/www/images/mobile-icon-evernote-business@2x.png
+SHA1-Digest: f8PEvAKnKmkTRyxr4Wd8qNG3V4c=
+
+Name: assets/www/images/mobile-icon-home-white.png
+SHA1-Digest: me2lj9/CEeA8FGQyIS/6+qwTP98=
+
+Name: res/drawable-mdpi/ic_plusone_medium_off_client.png
+SHA1-Digest: HHc+sqWu5XtWgMQhN1F5cAwzeew=
+
+Name: assets/www/images/mobile-rating-8out10.svg
+SHA1-Digest: AC73NlgtbhC4D/fmAwkGUjZAkmg=
+
+Name: assets/www/fonts/9d9ee017-87d4-49a2-aaa9-98291a48063e.woff
+SHA1-Digest: L0W3gMosq124tcvCkNamXCJPSyE=
+
+Name: res/drawable-hdpi/com_facebook_tooltip_blue_xout.png
+SHA1-Digest: TC+NkOcwahA1AJHprbLOuITSC8s=
+
+Name: res/drawable/splash.png
+SHA1-Digest: thl1Y7bg3xr8YISUNXX84qNuh54=
+
+Name: assets/www/images/mobile-action-mosaic.png
+SHA1-Digest: PLPcwA3ct3SASWplrTsvUf/aE6w=
+
+Name: assets/www/images/mobile-icon-toolbar-url-black@2x.png
+SHA1-Digest: P1ZtHliqxkCsTUcWrYbuUzD+2nc=
+
+Name: assets/www/images/mobile-icon-toolbar-chrome.png
+SHA1-Digest: 036GeTEAwmCNwILrJ5aeRyefr78=
+
+Name: assets/www/images/mobile-icon-store-black~android.svg
+SHA1-Digest: AUolwfgtvF2bxSiNny4kqe8ZWGA=
+
+Name: assets/www/images/mobile-checkbox-unchecked-black.png
+SHA1-Digest: LlNKqKtARUECRHFdG2rRoM3OYYk=
+
+Name: assets/www/images/mobile-visual-search-white@2x.png
+SHA1-Digest: f6CkNnLbyBkxpwUbhDCfGhDIX6k=
+
+Name: res/drawable-hdpi/shortcut_home.png
+SHA1-Digest: JSIhHxLyP55FtRaVnSiN3d2Ah2g=
+
+Name: res/drawable-hdpi/com_facebook_logo.png
+SHA1-Digest: +F9i6TennSQx3Unl/q4mPr3itE8=
+
+Name: res/drawable/action_tweet.png
+SHA1-Digest: HtNKGX30oMHv7OyXKJxM4fEQhNA=
+
+Name: assets/www/images/mobile-icon-toolbar-chrome-black.png
+SHA1-Digest: 2CMQHd0dkh04bNba7Uykiy8IP5o=
+
+Name: assets/www/images/mobile-icon-toolbar-evernote.saved-themed~andr
+ oid.svg
+SHA1-Digest: 6lYgr5Qpi1cCRNky5XL8VZcn004=
+
+Name: assets/www/images/mobile-icon-toolbar-sms@2x.png
+SHA1-Digest: sKoRUjJzuC760gi3b+IV5h67K+Q=
+
+Name: assets/www/images/mobile-icon-toolbar-messenger.png
+SHA1-Digest: mU6R2mABVlQ++j5HLPNjbx0UvR8=
+
+Name: assets/www/images/mobile-library-mobile-feedlylogo-white@2x.png
+SHA1-Digest: X4UmkiBc9KBLhLfrJyvOduRhU6o=
+
+Name: assets/www/images/mobile-login-feedly-logo.svg
+SHA1-Digest: gtbOuU7skebwHkJzvohbRJLCwL8=
+
+Name: assets/www/images/mobile-icon-saved-h11-vignette~android.svg
+SHA1-Digest: GEfbJ5297JBufwGvXzy9/GmHmlc=
+
+Name: res/anim/widget_fadein_animation.xml
+SHA1-Digest: es9+JrcSNuctdWGB3zDlkGAgetE=
+
+Name: res/anim/appwidget_toleft.xml
+SHA1-Digest: U8Iyl6I1fEFOxFDG+mAImADMNGQ=
+
+Name: assets/www/images/mobile-icon-toolbar-facebook-white~ios.svg
+SHA1-Digest: SIEENgyQRY7lZdDByt0fRULJ+/U=
+
+Name: res/drawable/appwidget_promo_star.png
+SHA1-Digest: sNSCuAGyJ+PJ2mxqxoB6DHq7xPI=
+
+Name: assets/www/images/mobile-selector-saved-white~ios.svg
+SHA1-Digest: Hq0gQBXc0GOYiSFaHCMMGxPwFwo=
+
+Name: res/drawable-hdpi/shortcut_search.png
+SHA1-Digest: KRXtH9BF6vyy4dMl71U7yiGAfuw=
+
+Name: res/drawable/action_more.png
+SHA1-Digest: Vq2ByGqaFpfitFy5Qs4iivDtp1c=
+
+Name: assets/www/images/mobile-action-mark-as-favorite.png
+SHA1-Digest: /w/cJUzMQufmKIZ/LKJsKVQOlYY=
+
+Name: assets/www/images/mobile-selector-feedly-white.png
+SHA1-Digest: yKmDaJjl9L+oB4PbT9Ovd0fAtDw=
+
+Name: res/drawable-hdpi/com_facebook_tooltip_blue_bottomnub.png
+SHA1-Digest: vj/tS9CFJlS6NBgJlB/ZKTibdII=
+
+Name: assets/www/images/mobile-icon-toolbar-safari-white~android.svg
+SHA1-Digest: 0Z6jVn/AnHXYy5Gd+ZfOA0ByZbw=
+
+Name: assets/www/images/mobile-icon-toolbar-onenote-black~ios.svg
+SHA1-Digest: o1wI9tLOK1JetKLJQTeUo2gNotc=
+
+Name: res/anim/from_bottom.xml
+SHA1-Digest: /SRbXi5jI4YNhReuOebs7f+KXjM=
+
+Name: assets/www/images/mobile-icon-toolbar-feedly-white~android.svg
+SHA1-Digest: GjrTNOH9NpDhdJ+LcuhnCyTd79k=
+
+Name: assets/www/images/mobile-icon-toolbar-share-android@2x.png
+SHA1-Digest: BUqlvRey9/eijQLPaf4lGXumksY=
+
+Name: res/drawable/common_signin_btn_text_light.xml
+SHA1-Digest: NuazK7iZDDFQ+D4vTsNj8VNKSbM=
+
+Name: res/anim/empty.xml
+SHA1-Digest: FYn6U5FwPXhOQB1BTH95QMI5GZU=
+
+Name: assets/www/images/mobile-icon-toolbar-markasread-black~android.s
+ vg
+SHA1-Digest: 2XcVpqvut+rbz2lASnC4VPE/Mrc=
+
+Name: assets/www/images/mobile-icon-clear-white@2x.png
+SHA1-Digest: WXUEv2Sh6oU+4pA2Q1TLFVVFLbE=
+
+Name: assets/www/fonts/ebc91d92-26bc-4055-b4bf-dfe311adf1d4.svg
+SHA1-Digest: LWQTvRE8CiFhprUz3ldfK2YmeZ0=
+
+Name: assets/www/images/mobile-icon-toolbar-gplus-white~ios.svg
+SHA1-Digest: i32I1m1yMbe+n2xOEkIAZR92c3k=
+
+Name: assets/www/images/mobile-icon-toolbar-gplus~ios.svg
+SHA1-Digest: 2B1qefEI0F2ug/Jtp6h1fPUCHjk=
+
+Name: res/drawable-hdpi/common_signin_btn_text_disabled_dark.9.png
+SHA1-Digest: 1nB29gilkMG21U2c1UzWz5vtjpc=
+
+Name: res/drawable/pressed.xml
+SHA1-Digest: 2Sdj1ch5KexiE6H90tQ8MDCC9JY=
+
+Name: assets/www/images/mobile-icon-toolbar-safari-white~ios.svg
+SHA1-Digest: 03PV0gUTC/FxVak6QoQrLbKmjd4=
+
+Name: res/drawable-xhdpi/ic_plusone_standard_off_client.png
+SHA1-Digest: NEAofQuoLcRt99gbmL+/kRTDnUE=
+
+Name: res/drawable-mdpi/com_facebook_picker_magnifier.png
+SHA1-Digest: yotnhVn7HzOwvsA1iVxnQdW+R6Y=
+
+Name: res/layout/com_facebook_search_bar_layout.xml
+SHA1-Digest: 7j0cLiZWaaDfUPbxRc3FgTTZF6Q=
+
+Name: res/drawable-xhdpi/common_signin_btn_icon_disabled_focus_light.9
+ .png
+SHA1-Digest: 5te3wznPBVYtZMjVj49FYN5YlRA=
+
+Name: res/drawable-mdpi/common_signin_btn_icon_pressed_light.9.png
+SHA1-Digest: ppRAUb4e8AfMY+hiTgUxYeX8bDw=
+
+Name: assets/www/fonts/9f1b7e50-8980-4084-aa21-1c4f2f214923.eot
+SHA1-Digest: IEm0ZMS2NzjuxKKu8nO/AV3XxJ0=
+
+Name: assets/www/images/mobile-selector-favorite-black~ios.svg
+SHA1-Digest: NY/gIM7LaBiosseGlqbTqd/FpZA=
+
+Name: assets/www/images/mobile-icon-toolbar-buffer-black.png
+SHA1-Digest: q8Uai9mIT1fao0DIajP1D4oFVp4=
+
+Name: res/drawable-mdpi/common_signin_btn_text_normal_light.9.png
+SHA1-Digest: CFcKGCNCXdElgRyG3GU1cR7Lpck=
+
+Name: assets/www/images/mobile-icon-toolbar-gplus-white.png
+SHA1-Digest: UadKcip2rlETAaKekRQlYYnHYUw=
+
+Name: assets/www/images/mobile-icon-tag~android.svg
+SHA1-Digest: 3Jh+Uxg0nmARoxIWCl1VOjsLsWI=
+
+Name: assets/www/images/mobile-icon-toolbar-share-android-white.png
+SHA1-Digest: 4+HvEjOI0Uum0yvGJQFwsQB59hM=
+
+Name: res/drawable/com_facebook_logo.png
+SHA1-Digest: COOFdQDqXjvNdi+5TMPa3bPhaEQ=
+
+Name: assets/www/images/mobile-icon-toolbar-feedly-black~android.svg
+SHA1-Digest: AHbFd0n4DqcCBKP3B2FRWv3YNk0=
+
+Name: assets/www/images/mobile-icon-toolbar-evernote~ios.svg
+SHA1-Digest: fIuk+B7/EMkClUIrC44fW95Chsw=
+
+Name: assets/www/images/mobile-icon-toolbar-reader-white@2x.png
+SHA1-Digest: eq7mOxqWZSmIbyuaEDcYUoR23dM=
+
+Name: res/layout/home_widget_configure_li.xml
+SHA1-Digest: ZGIRrZc2E+fA2zCsWIRM6ijjsPk=
+
+Name: res/drawable-hdpi/common_signin_btn_text_focus_light.9.png
+SHA1-Digest: cyroPBwNNxlz5xXq1uSZsOxhnH0=
+
+Name: res/layout/appwidget_error_exit.xml
+SHA1-Digest: HgPORFP1ToGxM3xEsQIr2uvmFK0=
+
+Name: res/layout/appwidget_article_noimage_long_enter.xml
+SHA1-Digest: nBD7DpZu0k5zK+k9OQblh32CAtg=
+
+Name: assets/www/images/mobile-icon-toolbar-facebook-black~android.svg
+SHA1-Digest: GreKEGNOgJp9hzyeg2sIdLHxNYg=
+
+Name: assets/www/images/mobile-icon-toolbar-twitter~android.svg
+SHA1-Digest: rddrnzOgl4CnkilmdI6aYJ0SX8M=
+
+Name: res/drawable/com_facebook_button_blue.xml
+SHA1-Digest: okwOlPcgvI2k7iCzB7QkMG4qN/Y=
+
+Name: assets/www/images/mobile-icon-toolbar-twitter-white@2x.png
+SHA1-Digest: MftDO1crzKE3d28FUlUUFdA2Bg4=
+
+Name: res/drawable-xxhdpi/common_signin_btn_text_normal_dark.9.png
+SHA1-Digest: qeM5rd2iODmcmiwbxvt0gCvbkog=
+
+Name: assets/www/images/mobile-icon-search-black@2x.png
+SHA1-Digest: SYhyln6ukH/wI9GN2B3LkrSwFUI=
+
+Name: assets/www/mobile/activity.article.js
+SHA1-Digest: bgxAasbjurBn3XTuxZLqVtzFIxA=
+
+Name: res/drawable-hdpi/ic_plusone_small_off_client.png
+SHA1-Digest: MDqgTVve/ECWdg1RF1Xo/IJ49zo=
+
+Name: assets/www/images/mobile-action-mosaic@2x.png
+SHA1-Digest: +yge6omEgwTHtI9IleEQJXKwXvU=
+
+Name: res/drawable-xhdpi/ic_plusone_small_off_client.png
+SHA1-Digest: LtV8CfoAmgWuTGWNZXeWeNDR1hY=
+
+Name: assets/www/images/mobile-pixel.png
+SHA1-Digest: 3jgLlWwqSYi+KLcpIUZz1kztQ0Q=
+
+Name: res/drawable-xhdpi/common_signin_btn_icon_focus_light.9.png
+SHA1-Digest: THnQ9r/oTuPB60ajOYXvK1GrUsE=
+
+Name: assets/json/tinyurl_exclude.json
+SHA1-Digest: 3YacsVl1KZ8tUPp2NdSHS5YqB4c=
+
+Name: assets/www/images/mobile-visual-explore-white~ios.svg
+SHA1-Digest: /qG4DZkFS3n7Qn9z7hqpGWsuFTw=
+
+Name: res/drawable-mdpi/com_facebook_tooltip_black_background.9.png
+SHA1-Digest: b+2tYjxJbZnWtjs3KhJuZyu1EN4=
+
+Name: res/drawable/com_facebook_picker_list_selector_background_transi
+ tion.xml
+SHA1-Digest: wJawd5fEmdlYTJCw72WOw7eJBb4=
+
+Name: assets/www/images/mobile-icon-toolbar-url-white@2x.png
+SHA1-Digest: NyAJG+2I/b2s9DSWgru1p85UQuw=
+
+Name: assets/www/images/mobile-selector-feedly-black~android.svg
+SHA1-Digest: v+OeB3iO0VRMs5lA67VCjLPHp64=
+
+Name: assets/www/images/mobile-rating-4out10.png
+SHA1-Digest: oGOQQcLGeinyiohAhK+MgzQhQaU=
+
+Name: assets/www/images/mobile-icon-follow-white~ios.svg
+SHA1-Digest: hAMtKh+JUKiJ/YH//yKkBNDXwFE=
+
+Name: assets/www/images/mobile-icon-toolbar-evernote.saved-white~andro
+ id.svg
+SHA1-Digest: JbyWF5NaTbiOGQsXIqvM1ocRtbs=
+
+Name: res/drawable-mdpi/com_facebook_button_blue_pressed.9.png
+SHA1-Digest: +tjTExmZ1lk9Ox0aZm5rNcUPoFY=
+
+Name: assets/www/mobile/templates.mobile.activity.prompt.js
+SHA1-Digest: sOORoI0NlMKr71PaunkdnGtqw8w=
+
+Name: assets/www/images/mobile-rating-6out10@2x.png
+SHA1-Digest: BgpsVIvGmDfxgm9P2OjcQMXlFak=
+
+Name: assets/www/images/mobile-icon-toolbar-overflow-white.png
+SHA1-Digest: r/5QlcBR1w0TdYfz5ttUmmuDLYo=
+
+Name: assets/www/images/mobile-icon-toolbar-facebook-black.png
+SHA1-Digest: lsDUFIQ5nClf575k2dwECDtpSFQ=
+
+Name: assets/www/images/mobile-icon-toolbar-gplus.png
+SHA1-Digest: qXqKfL8n2o1mIxdDenU8VTsPUlo=
+
+Name: assets/www/images/mobile-rating-8out10@2x.png
+SHA1-Digest: kVQ+7RAXU8BectCmiMO7q9h1L8Q=
+
+Name: assets/www/images/mobile-icon-toolbar-instapaper-black.png
+SHA1-Digest: bAHcMISthl5v4OZyKQ/NhkSm1jQ=
+
+Name: assets/www/images/mobile-icon-markasread-black.png
+SHA1-Digest: cBN8ksePg/OdUNrbgjpaoDPmNO8=
+
+Name: res/drawable-mdpi/common_signin_btn_text_disabled_focus_dark.9.p
+ ng
+SHA1-Digest: 29jlpwaYo8yADFvg53lRNdVbvt0=
+
+Name: assets/www/images/mobile-visual-youtube@2x.png
+SHA1-Digest: 8EE7hnrUpMGgQKfsF6YM75+bU5o=
+
+Name: assets/www/images/mobile-selector-right-arrow-black.png
+SHA1-Digest: 3Nz7mW2hv7sRj+v5eyjq8ySOuXE=
+
+Name: assets/www/images/mobile-icon-customize-white@2x.png
+SHA1-Digest: /5LXJX+Q2zWgB+lYeakpQoS+k50=
+
+Name: res/drawable-xxhdpi/ic_plusone_tall_off_client.png
+SHA1-Digest: nnQrYOSge8+DJ/aZ1dVTUztprv8=
+
+Name: res/drawable-xxhdpi/common_signin_btn_icon_disabled_light.9.png
+SHA1-Digest: 2Zfa+F80lrkHKDHQCM2OErZr3Cg=
+
+Name: assets/www/images/mobile-icon-toolbar-back-white~android.svg
+SHA1-Digest: Bzy1l3ZSbhlxmhIXlrwpbsaTqfU=
+
+Name: assets/www/images/mobile-icon-toolbar-url-black~ios.svg
+SHA1-Digest: vPYJLTNDSmm9Yxkv5FdUzH3zcVI=
+
+Name: res/drawable-hdpi/common_signin_btn_icon_normal_light.9.png
+SHA1-Digest: WqQF3y/vDvl0c3tlpCQMUlAGR90=
+
+Name: res/anim/from_right.xml
+SHA1-Digest: ABsDpTRYu7IjTsm2EGn8EaTFvLg=
+
+Name: assets/www/images/mobile-icon-saved-h10-vignette~ios.svg
+SHA1-Digest: v574esEpvDEOtzTDIQKHeCV4+2U=
+
+Name: res/drawable-xhdpi/com_facebook_close.png
+SHA1-Digest: 0IaTuYpHdwNgyn8PrCfM4P1LSUM=
+
+Name: assets/www/images/mobile-icon-toolbar-sms-black@2x.png
+SHA1-Digest: jmERFgjIGL10RcHLonKceMkGvEk=
+
+Name: assets/www/images/mobile-visual-youtube.png
+SHA1-Digest: /4U97BvYY68QztcywuOvY5EsTqc=
+
+Name: res/drawable/primary.xml
+SHA1-Digest: jYTVa3KyRWvvWA4nr1gBQr7XEh0=
+
+Name: assets/www/images/mobile-library-mobile-popup-cross@2x.png
+SHA1-Digest: jYtd3K85m2ZxhUkA7w++PCwS1+4=
+
+Name: assets/www/images/mobile-icon-toolbar-share-android-black.png
+SHA1-Digest: w3Snp42Ro2Vx7K6AS71Rok730lQ=
+
+Name: assets/www/images/mobile-icon-markasread-white.png
+SHA1-Digest: 03BGAxPPlXStK7Y9Y2vdLNFKdlU=
+
+Name: assets/www/images/mobile-icon-toolbar-tag~ios.svg
+SHA1-Digest: CgHrIt6LWVXbi834CP4TwjRuGuo=
+
+Name: res/drawable-ldpi/ic_launcher.png
+SHA1-Digest: Q5+PZSSgTdx5dY/SJxQ8ozJAxpc=
+
+Name: res/drawable-xxhdpi/common_signin_btn_icon_focus_light.9.png
+SHA1-Digest: DS5PrTsz70UomI8fFnGBLzl5gOc=
+
+Name: res/xml-v16/appwidget_info_4_1.xml
+SHA1-Digest: ACfWfOVkmpfBlBEiCgtjyb5nlSM=
+
+Name: assets/www/images/mobile-icon-toolbar-email~ios.svg
+SHA1-Digest: foLfZoMQWz2izOHKQg8hhsQLmVA=
+
+Name: assets/www/fonts/4c6bed95-28cb-46fb-ab41-b7b77dc312ff.svg
+SHA1-Digest: U800KQyXYHbS89E4ApZkey4OjBA=
+
+Name: assets/www/images/mobile-icon-toolbar-twitter-black~android.svg
+SHA1-Digest: Bu4yP2Mz4Yv9EvmW+w6vRj6aksY=
+
+Name: res/drawable/btn_black.9.png
+SHA1-Digest: KWLGqZ3SUGEtxSO3dS4NciXq5tY=
+
+Name: assets/www/fonts/3cf3e566-7fc6-488f-8058-e5eb7ac5dc23.svg
+SHA1-Digest: P/tb+m8DS9hx6qlbaPrZuksCs7Y=
+
+Name: assets/www/images/mobile-icon-toolbar-kindle-white.png
+SHA1-Digest: 7XKe2z3Rv3BkScmFriQ6uSJ2IAQ=
+
+Name: res/drawable-mdpi/shortcut_search.png
+SHA1-Digest: RXDJgCcb0BNlZ7EseXcOsOEED7g=
+
+Name: res/anim/fadeout.xml
+SHA1-Digest: LvyWO1DQ0QFL6soV09/dqrTOOqo=
+
+Name: assets/www/images/mobile-icon-clear-black~ios.svg
+SHA1-Digest: Ljax5LJOhdV9NxBzfxLJeqYvKSA=
+
+Name: assets/www/fonts/58ab5075-53ea-46e6-9783-cbb335665f88.svg
+SHA1-Digest: u7tacm/R2hr4+6NSvzZbUuaC/9s=
+
+Name: assets/www/images/mobile-library-mobile-icon-collection@2x.png
+SHA1-Digest: nhW3IarDXojVIhOo5pplC3HvRvk=
+
+Name: assets/www/images/mobile-icon-toolbar-close-white@2x.png
+SHA1-Digest: 1ZBQ3qIjdDbgsDWVwDDAe27fLBw=
+
+Name: res/drawable-mdpi/com_facebook_tooltip_blue_topnub.png
+SHA1-Digest: qCzczdvFGchW12Y01pB9ovTV9bQ=
+
+Name: assets/www/images/mobile-icon-follow-white@2x.png
+SHA1-Digest: cSFpjbmT5msagSRTk+Hwk41OsaM=
+
+Name: assets/www/images/mobile-icon-toolbar-reader-white.png
+SHA1-Digest: 81JjJ2EKsDYaBk1rYaO/6z6aY1c=
+
+Name: assets/www/images/mobile-selector-tag-white~android.svg
+SHA1-Digest: VEtzUXvw57D99rhZmFeir1zbmdo=
+
+Name: assets/www/images/mobile-icon-clear-black.png
+SHA1-Digest: 1qlFHJWLtiemIwrl6jzwRiE2Yzw=
+
+Name: res/drawable-hdpi/common_signin_btn_icon_disabled_dark.9.png
+SHA1-Digest: ZDogSdlgVekmFIAbKguvig7+XGg=
+
+Name: assets/www/images/mobile-icon-toolbar-back-white@2x.png
+SHA1-Digest: sKBEKwKFF3od40U1xnNTnSaGNxA=
+
+Name: res/drawable-hdpi/com_facebook_button_grey_pressed.9.png
+SHA1-Digest: tWUWjtTo3HxE/8a02qZ5QsaeyfM=
+
+Name: assets/www/images/mobile-icon-toolbar-close-black.png
+SHA1-Digest: goAz1v95PhhVmbZYldz+cYADPbQ=
+
+Name: assets/www/images/mobile-icon-toolbar-safari-white@2x.png
+SHA1-Digest: 31q3FdENoZ+zuHJw5rEJ3hHU29I=
+
+Name: assets/www/fonts/362056bf-0840-47f5-9d9d-bbf09611acef.svg
+SHA1-Digest: JiWkrdIwH63VH+oOuUwu6c0tI+w=
+
+Name: res/drawable-hdpi/icon.png
+SHA1-Digest: e9KNbwjLZlAd/mSXdoId8lhW/wI=
+
+Name: res/anim/appwidget_stackenter_animation.xml
+SHA1-Digest: a5bd3eTGRQaKWgcDa4yhqgtdZO0=
+
+Name: res/drawable/action_pressed_back.png
+SHA1-Digest: o7l++sqziN2wHpT5SjW/+8W4fW0=
+
+Name: assets/www/images/mobile-icon-toolbar-pocket~ios.svg
+SHA1-Digest: cMpwkyA2mMFpEdnhNykwNcWvFbM=
+
+Name: res/layout/com_facebook_friendpickerfragment.xml
+SHA1-Digest: KTe5a769NBjLLcox2u+momzrJzQ=
+
+Name: assets/www/images/mobile-icon-saved-h10-vignette~android.svg
+SHA1-Digest: WxfOkjsXoErTXuX0MnvdrpfvRLY=
+
+Name: assets/www/mobile/templates.mobile.activity.selector.js
+SHA1-Digest: iDMxlLjMoY9WIXRx+aJwCdqFcgI=
+
+Name: assets/www/images/mobile-icon-home-up-black.svg
+SHA1-Digest: hzdeTkMVyP+pgV6MQOTjuHvGJhw=
+
+Name: assets/www/images/mobile-illustration-community@2x.png
+SHA1-Digest: s7R8sDUSwnQMjTuuFWM0WKLj7wE=
+
+Name: assets/www/images/mobile-icon-toolbar-evernote.png
+SHA1-Digest: GlK0hh38BHGYFPgzzaedbZhTpjs=
+
+Name: assets/www/images/mobile-action-titleonly~android.svg
+SHA1-Digest: l2h8EDtCkvSBZthvT+nsBaiCJCY=
+
+Name: assets/www/images/mobile-icon-toolbar-email-black~android.svg
+SHA1-Digest: HFDxE7YQON7/ZYgOH5DiTlGefTM=
+
+Name: assets/www/images/mobile-action-refresh.png
+SHA1-Digest: ZR40zDGjSlKG8z88g/kVjbGKtXQ=
+
+Name: assets/www/images/mobile-icon-toolbar-feedly~ios.svg
+SHA1-Digest: wAwzYXx78U952+V2m2ouYxpR36w=
+
+Name: assets/www/images/mobile-icon-toolbar-twitter-black@2x.png
+SHA1-Digest: f5o3l/zmhvpILrAorPn/e2mJFU4=
+
+Name: assets/www/images/mobile-icon-refresh-white.png
+SHA1-Digest: juFeMufZ3pe9h/JHsrQrHXVSIhE=
+
+Name: res/drawable-xhdpi/com_facebook_button_grey_focused.9.png
+SHA1-Digest: wx0FTcs+RGcIb3fC9wYKpWawDgI=
+
+Name: assets/www/images/mobile-action-mark-as-favorite~android.svg
+SHA1-Digest: ez8nDWB7vjrWV+PtJXWYCm4kCZI=
+
+Name: assets/www/images/mobile-icon-saved-h11-white@2x.png
+SHA1-Digest: zYQeAMyEfFJhXWavnCrRSWSkCZA=
+
+Name: assets/www/fonts/76a54b9e-10ad-4a6a-97e1-241e2111ed48.ttf
+SHA1-Digest: zK4NYUbmquqKEK3ZoxqyYBVncy8=
+
+Name: assets/www/images/mobile-icon-toolbar-overflow-white~ios.svg
+SHA1-Digest: 5eYWhYL9RKWZ2tkPmpvowwPTr2E=
+
+Name: res/layout/account_item.xml
+SHA1-Digest: ILG75dmovT6w08yvX3AR44arAiw=
+
+Name: assets/www/images/mobile-icon-saved-h11-vignette.png
+SHA1-Digest: lBhb7mCHkwZm3folbM6lzd64S8g=
+
+Name: assets/www/images/mobile-icon-hot.png
+SHA1-Digest: dNYLdTYfPQVgjKqIervGVwddcak=
+
+Name: assets/www/images/mobile-icon-toolbar-unread~android.svg
+SHA1-Digest: BEFx/jSHuTaiPSacYGwhWju/xGY=
+
+Name: assets/www/images/mobile-icon-markasread-white@2x.png
+SHA1-Digest: r7Bie5jhQK5QDeODux+V1RKAcaY=
+
+Name: assets/www/images/mobile-selector-feedly-white~ios.svg
+SHA1-Digest: zY+3c9LH9pHRxsq9WGZobvb4LPA=
+
+Name: assets/www/images/mobile-icon-toolbar-share-android.png
+SHA1-Digest: lvs4yMCwfaN19J9jEprd9afD9DE=
+
+Name: assets/www/images/mobile-login-devices@2x.png
+SHA1-Digest: mbuDi3KG0XBblZ2UdjK1iaMHcQU=
+
+Name: assets/www/images/mobile-icon-toolbar-follow-black~android.svg
+SHA1-Digest: Xd6xUzIm8l08sNdL6xpfKCPUy7I=
+
+Name: assets/www/images/mobile-rating-9out10@2x.png
+SHA1-Digest: 6m5Z3vWNQYHfyRZBeV6krLj3rjg=
+
+Name: assets/www/images/mobile-library-mobile-feedlylogo-color@2x.png
+SHA1-Digest: NOFzyDWX8jURH33/PfeyPHypuYs=
+
+Name: res/layout/com_facebook_picker_list_row.xml
+SHA1-Digest: P55nHiulJMjWlH4MsFdiEfWUTYk=
+
+Name: assets/www/images/mobile-icon-toolbar-buffer-white~android.svg
+SHA1-Digest: Zp7HW2PrZFbJd2iy5LU0cWL1SLw=
+
+Name: res/drawable-mdpi/common_signin_btn_text_disabled_focus_light.9.
+ png
+SHA1-Digest: 29jlpwaYo8yADFvg53lRNdVbvt0=
+
+Name: assets/www/images/mobile-icon-evernote-business~ios.svg
+SHA1-Digest: uGLpU+qciFqwzwXXGvqcsZMuDCc=
+
+Name: assets/www/images/mobile-selector-right-black~android.svg
+SHA1-Digest: VtXvZGREhAEdFgdBTADJ4jexeQI=
+
+Name: assets/www/images/mobile-login-windows@2x.png
+SHA1-Digest: yFnEOOje14Ms2dsiJ6sHmkEi7UQ=
+
+Name: res/drawable-xxhdpi/common_signin_btn_text_pressed_dark.9.png
+SHA1-Digest: xU1/PAMBwttiSnTFn14OqOMMcm0=
+
+Name: assets/www/images/mobile-icon-toolbar-home-white~android.svg
+SHA1-Digest: +ixTtSbZzmNmjVX8wqsdCXvCAYg=
+
+Name: assets/www/images/mobile-selector-right-arrow-white@2x.png
+SHA1-Digest: 5UDAgHVMh6mmEyQsFU41tCaQAaM=
+
+Name: assets/www/images/mobile-icon-clear-tag@2x.png
+SHA1-Digest: kbKhfdYi17Rw8cxtrhQQk2TURTw=
+
+Name: res/drawable/com_facebook_place_default_icon.png
+SHA1-Digest: T6PfkzvzoTErI9HPUHhPTzYuaOw=
+
+Name: assets/www/images/mobile-icon-toolbar-instapaper@2x.png
+SHA1-Digest: UQXDqSvjbE9AHvrJED68Rok0JEo=
+
+Name: assets/www/images/mobile-icon-toolbar-windows.png
+SHA1-Digest: h4GMiaXytw/ZBZqcnbeA+WHWRlM=
+
+Name: assets/www/fonts/GuardianTextEgyp-BoldIt-Web.ttf
+SHA1-Digest: tNpk+gi5Qt/Q+zwkIKo5ojdiQeQ=
+
+Name: assets/www/fonts/GuardianTextEgyp-Regular-Web.ttf
+SHA1-Digest: SVTNMTgg2uahxpoNnZ93EU96Ltc=
+
+Name: assets/www/images/mobile-icon-toolbar-onenote@2x.png
+SHA1-Digest: QVIMKNoiQzwNqf8jvLdtBU1/QeI=
+
+Name: res/layout/article_topbar.xml
+SHA1-Digest: LigOpdsfAGdOcMMIxMYgsj7x84c=
+
+Name: assets/www/images/mobile-icon-toolbar-onenote~android.svg
+SHA1-Digest: i2wsL42GbhsCp2bKYlimv73i0b4=
+
+Name: assets/www/images/mobile-icon-searchbox-black~ios.svg
+SHA1-Digest: 80u1bVqZgljtG4VmUfc7n+t7xXw=
+
+Name: AndroidManifest.xml
+SHA1-Digest: IpduoClFAjGjKtmMV7JqK/rKTAo=
+
+Name: res/color/common_signin_btn_text_light.xml
+SHA1-Digest: sogkwPIuxCB8PbcNS4dvReJsVLs=
+
+Name: assets/www/images/mobile-icon-toolbar-tag-white@2x.png
+SHA1-Digest: rtq33sLcReqP58mIRpw0eqiI+PE=
+
+Name: res/layout/com_facebook_picker_search_box.xml
+SHA1-Digest: Csiv+1fJ4mz4I9uWHJ3+aL+kz04=
+
+Name: assets/www/fonts/9319e3b3-8e6b-422e-85b9-a35076e3f8da.ttf
+SHA1-Digest: NuDTPun6r+93dAcqTOMXFbbLcqw=
+
+Name: assets/www/mobile/templates.mobile.activity.boot.js
+SHA1-Digest: rJHPzol4M0Hb1IenMgkxdgyMWIg=
+
+Name: assets/www/images/mobile-action-unread.svg
+SHA1-Digest: UH3Xbbnu7vFtGl9JlWUsuzvIFgI=
+
+Name: assets/www/images/mobile-icon-toolbar-tag-black.png
+SHA1-Digest: ojlCG4euvSViH/Q0Of+rA+40FOk=
+
+Name: assets/www/images/mobile-icon-toolbar-kindle.png
+SHA1-Digest: 5P/zWfKUV7znxKUwQ2j+mJeAqXA=
+
+Name: assets/www/images/mobile-icon-home-up-white@2x.png
+SHA1-Digest: 10Q3/6EuSO6gdpdnrEnc1lfPiPs=
+
+Name: assets/www/mobile/activity.searchBox.js
+SHA1-Digest: ThqZ7R+w2E/YUQRjs973HmYr/s0=
+
+Name: assets/www/images/mobile-selector-feedly-white~android.svg
+SHA1-Digest: U/37jwe6ppOjZMronq2ptjbQa5k=
+
+Name: assets/www/images/mobile-icon-android-home-black.png
+SHA1-Digest: Vx0XAkbi1sIJMkI0Nn7uCnTFhTo=
+
+Name: assets/www/images/mobile-icon-toolbar-reader-black~android.svg
+SHA1-Digest: 1uSEG6RkKAgoBT4OUal9PnCLTAA=
+
+Name: classes.dex
+SHA1-Digest: OE16ff6ZQfi5TmypDAvY5KeNJvE=
+
+Name: res/layout/appwidget_article_image.xml
+SHA1-Digest: ctZWq94QfMix7Kpvq/Xr2Hjmum8=
+
+Name: assets/www/images/mobile-icon-toolbar-unread-black.png
+SHA1-Digest: 5U3AxUWu32fazsNFpKEhfq0FT/M=
+
+Name: res/drawable-mdpi/com_facebook_tooltip_black_bottomnub.png
+SHA1-Digest: vEyQx3dA5fSnJ/B3v4CD0PtpWjg=
+
+Name: res/drawable-xxhdpi/powered_by_google_dark.png
+SHA1-Digest: gfHaH8EPI7tPXVeskcJGZH2tiRQ=
+
+Name: res/drawable-hdpi/common_signin_btn_text_normal_dark.9.png
+SHA1-Digest: /w/b5Ahd692RhVH4wOIahCMTR9s=
+
+Name: res/drawable/action_readitlater.png
+SHA1-Digest: Cdezzj2lIYiIf8JvJ6+eT9Bd8Zc=
+
+Name: assets/www/images/mobile-icon-saved-h11-black@2x.png
+SHA1-Digest: 8TTALGuvdEQD0Rvw+LXlsOTQVyI=
+
+Name: res/drawable-xhdpi/com_facebook_logo.png
+SHA1-Digest: 94ZTspodsrcPndjRFwq4Cqz6Wc4=
+
+Name: assets/www/images/mobile-visual-search-white.png
+SHA1-Digest: ck0AkVn5x5Em9OcKzgaFsD7o9UU=
+
+Name: res/drawable-hdpi/com_facebook_tooltip_black_topnub.png
+SHA1-Digest: J/BOF9KyvDLYLBxyNtb5AsrOIls=
+
+Name: res/layout-land/home_widget.xml
+SHA1-Digest: Wd8nYCrLHVXHE+zvd1HdAdLySMM=
+
+Name: res/drawable/appwidget_shares_noimage.png
+SHA1-Digest: Yw0iNTRG44NSYvkIQeXHlcGSmwo=
+
+Name: res/layout/twitter_auth.xml
+SHA1-Digest: 75DiccDFB1hB2YEZFgLXaD2vPs8=
+
+Name: assets/www/images/mobile-icon-refresh-white@2x.png
+SHA1-Digest: zjjgO7om2CWg+leiF21lg0L+krQ=
+
+Name: assets/www/images/mobile-icon-toolbar-facebook~ios.svg
+SHA1-Digest: g0fvENk+rqgcvnE3FG1dabkIEXE=
+
+Name: assets/www/images/mobile-rating-9out10.svg
+SHA1-Digest: ZbHYNJOCRlvSAFxSTU1vuAaWk44=
+
+Name: LICENSE.txt
+SHA1-Digest: dTF36wNXk3NZRvp51lzE8FW7KYQ=
+
+Name: assets/www/images/mobile-action-visit~ios.svg
+SHA1-Digest: kyJELixPsOqbJ44fCzVfKTpOt/s=
+
+Name: assets/www/images/mobile-icon-toolbar-onenoted~android.svg
+SHA1-Digest: 7uCLb6fIVvV/Pi/k6RvY1Cu9Ok4=
+
+Name: res/drawable-mdpi/shortcut_home.png
+SHA1-Digest: /FiUMw8nOcGU//JArA2FfeN61p8=
+
+Name: assets/www/images/mobile-icon-toolbar-sms-white@2x.png
+SHA1-Digest: fvpnp1ufx9aIyOp1nKHq1PH1rBc=
+
+Name: res/drawable-mdpi/ic_plusone_tall_off_client.png
+SHA1-Digest: AD2aFw6TcqHuDE1AdYky7h+et9s=
+
+Name: res/layout/appwidget_configure.xml
+SHA1-Digest: dJXtGGoedwx3xdONkMPHukQY4UI=
+
+Name: res/drawable-mdpi/shortcut_buzz.png
+SHA1-Digest: N6bP06JJwYIxRWmcsKgHyyLL+ig=
+
+Name: assets/www/images/mobile-icon-toolbar-tag-white~android.svg
+SHA1-Digest: btGtUDgw8W5nzZOL9GJT3ugNTbc=
+
+Name: assets/www/images/mobile-login-google.svg
+SHA1-Digest: Sns+VrSUeqOb0bTDfGDJRJ1emyM=
+
+Name: res/layout/home_widget_loading.xml
+SHA1-Digest: vgKxf/sZodkwxXr0uWbmPHNj3vc=
+
+Name: assets/www/images/mobile-action-remove~ios.svg
+SHA1-Digest: z29+XgjJ+gitRW+5Bv9Y5jXXzT4=
+
+Name: assets/www/images/mobile-icon-toolbar-safari@2x.png
+SHA1-Digest: kbSsvY8HhXqiIf2frb3UPshjElU=
+
+Name: assets/www/images/mobile-selector-saved-black~ios.svg
+SHA1-Digest: N/zue3mFebzrU9/QphUwwNZyuFs=
+
+Name: assets/www/mobile/templates.mobile.activity.explain.js
+SHA1-Digest: 4+zRehyRq8rZSgkZlSBb6q8Fiks=
+
+Name: assets/www/images/mobile-icon-toolbar-kindle@2x.png
+SHA1-Digest: R9UGqiVMBj0rP3vKj/+HqFNpwH4=
+
+Name: assets/www/images/mobile-logo.png
+SHA1-Digest: toRra8NYZSTjufJUy0CX5lsX7XM=
+
+Name: assets/www/images/mobile-icon-toolbar-chrome-white.png
+SHA1-Digest: 0L+8YKYUxqhyl92vmg6SUzVZbbY=
+
+Name: assets/www/images/mobile-icon-store-black~ios.svg
+SHA1-Digest: DOghBKvrdxR2/oWzEOiCPjOeHiM=
+
+Name: com/devhd/nanohtml/xhtml-special.ent
+SHA1-Digest: xloUCwrGqqJ4zA4smk6MDAivbUo=
+
+Name: res/layout/appwidget_refresh.xml
+SHA1-Digest: ZzHMDQoQBDevtpYENdfOnlcb+e0=
+
+Name: res/drawable-ldpi/shortcut_category.png
+SHA1-Digest: z1PjStsHGVLASh6Mb5pqUapk+Wg=
+
+Name: res/drawable/com_facebook_button_check.xml
+SHA1-Digest: qE7vY0312DK1xZTZnn+f91ETktI=
+
+Name: res/drawable-xhdpi/com_facebook_button_blue_focused.9.png
+SHA1-Digest: 0mL9bvBnguGGZdnft4TaGoEw08Q=
+
+Name: assets/www/images/mobile-icon-toolbar-evernote.saved-black~andro
+ id.svg
+SHA1-Digest: JbyWF5NaTbiOGQsXIqvM1ocRtbs=
+
+Name: assets/www/fonts/5b4a262e-3342-44e2-8ad7-719998a68134.woff
+SHA1-Digest: guRJ2h4GjLKXPysO1Pyzrex2WOg=
+
+Name: assets/www/images/mobile-visual-search.svg
+SHA1-Digest: P71aljJKTkdvtZ0SSrU0xA2s7MM=
+
+Name: assets/www/images/mobile-library-following@2x.png
+SHA1-Digest: aGfadtrVUFt4hQR9iPpT9aTvxeI=
+
+Name: assets/www/images/mobile-icon-toolbar-feedly.saved-white~android
+ .svg
+SHA1-Digest: jiAdKYCmfb1y/Hl0BGzVeCado8g=
+
+Name: assets/www/images/mobile-selector-tag-black~android.svg
+SHA1-Digest: I/gaUy5k+Z6XpRFqRANdatub3EM=
+
+Name: res/drawable-xhdpi/common_signin_btn_icon_disabled_light.9.png
+SHA1-Digest: 1Hnpvj2UzKDvPZv175SFBfp0Gn8=
+
+Name: res/drawable-xhdpi/common_signin_btn_text_disabled_focus_light.9
+ .png
+SHA1-Digest: /ps9lLPOdDdwDt2YyGRRyGkRCMw=
+
+Name: assets/www/mobile/activity.categoryPicker.js
+SHA1-Digest: 8HAsLP+6MdAbFrGF7rxcMb0cTNs=
+
+Name: assets/www/fonts/PT_Serif-Web-Italic.ttf
+SHA1-Digest: yCe22BJJhkDoXv+S4MuIOs7tZa0=
+
+Name: assets/www/images/mobile-icon-customize-black.png
+SHA1-Digest: Kv4ZvvjE2cvJ15WCjzjh3QCgu44=
+
+Name: assets/www/images/mobile-visual-explore~ios.svg
+SHA1-Digest: S/NSDtZI9+I9Gv3QdlScTKUNkBE=
+
+Name: assets/www/images/mobile-action-mark-as-favorite@2x.png
+SHA1-Digest: XWoMFQJo06ssMIc+dtXCKmmHK3U=
+
+Name: res/drawable-xxhdpi/common_signin_btn_text_pressed_light.9.png
+SHA1-Digest: 3McbND4RRGV4vpt6LNxDafkdK4A=
+
+Name: assets/www/images/mobile_play_light_gray.png
+SHA1-Digest: mwMS7TXHzDtycgLpDmGCUiCwjjI=
+
+Name: assets/www/images/mobile-icon-saved-h10-white~ios.svg
+SHA1-Digest: j2gSpkqqqcqSKUtgxjHr8hdfFgs=
+
+Name: res/drawable-hdpi/common_signin_btn_icon_pressed_light.9.png
+SHA1-Digest: w/L+nKDDWadDlwiDybC+JmpbqaI=
+
+Name: assets/www/mobile/templates.mobile.activity.searchBox.js
+SHA1-Digest: fU1KDqjABcWPm/slUggt2qHMbk8=
+
+Name: res/drawable-hdpi/shortcut_saved.png
+SHA1-Digest: qYjW3ap+wejB27mNhMLzKCtvFjc=
+
+Name: assets/www/images/mobile-icon-toolbar-chrome@2x.png
+SHA1-Digest: mO8i3V3b3LcLKq+J4cvI8Z7zaH4=
+
+Name: res/drawable/com_facebook_picker_top_button.xml
+SHA1-Digest: FpCN68q2eV+3WjoqLCPZ0C/7pGQ=
+
+Name: assets/www/images/mobile-icon-toolbar-share-ios-white.svg
+SHA1-Digest: c5t8xSui3Z+XUAOctxiWD6HaWPE=
+
+Name: assets/www/images/mobile-checkbox-checked~android.svg
+SHA1-Digest: SnN+JnAqjmhhmIhxPEwU7YtY3ew=
+
+Name: assets/www/images/mobile-rating-1out10.png
+SHA1-Digest: 2u5tIquPMlZAmx9Ll5d7xVGkFAk=
+
+Name: assets/www/images/mobile-selector-latest-white~ios.svg
+SHA1-Digest: 1PAG4/wiwcqDRiK4xgAki5efdz8=
+
+Name: res/drawable/com_facebook_top_background.xml
+SHA1-Digest: 2jGeRfgb5Xm7OmXOYRKQWRbaaUw=
+
+Name: assets/www/images/mobile-library-add.png
+SHA1-Digest: /uzzjz+cJZMZrka8/Ff+JLXuVT8=
+
+Name: assets/json/VisualExcludes.json
+SHA1-Digest: PKdvFSQFdC+X7WymwRswEVrOnRE=
+
+Name: res/anim/appwidget_fromright.xml
+SHA1-Digest: 7P+CV5hkMZuhAz/RfdwIAgmoFWw=
+
+Name: assets/www/images/mobile-selector-favorite-white~android.svg
+SHA1-Digest: 9gk8yEzp6o+xWwetKgoqDuVm6aE=
+
+Name: assets/www/images/mobile-visual-search-white~ios.svg
+SHA1-Digest: 9wOdbtaAUKxo9YSqCOgc00bhmTg=
+
+Name: assets/www/images/mobile-icon-toolbar-safari-black~android.svg
+SHA1-Digest: fht84vou6VEGKtrAo6dQqzvYgZ0=
+
+Name: assets/www/fonts/4f9a2cd5-fa1e-4459-bfe8-dd1493b9ed98.ttf
+SHA1-Digest: jYQYCA3qZiNfTdwV3LE2hK9+UtY=
+
+Name: res/drawable-mdpi/common_signin_btn_icon_disabled_focus_light.9.
+ png
+SHA1-Digest: IXqmYG4624bef7DnPxFG+Uwx1ak=
+
+Name: assets/www/images/mobile-action-mark-as-read~android.svg
+SHA1-Digest: gDGeCM9RgjyyFYRJm9XiBD18k/c=
+
+Name: assets/www/images/mobile-icon-refresh-black.png
+SHA1-Digest: xHS5L2urFvz7EWv1rGfxwlJzMgE=
+
+Name: assets/www/images/mobile-icon-toolbar-reader-white~ios.svg
+SHA1-Digest: bfbHNRVdT15Twae4flnGQEr53hc=
+
+Name: assets/www/images/mobile-action-unread~ios.svg
+SHA1-Digest: 0AeC0xK58iXAchrI6QcWLGr6N0s=
+
+Name: assets/www/images/mobile-icon-toolbar-email-black.png
+SHA1-Digest: yEeVjdNjU28AW3J1Z4p0Nas5be0=
+
+Name: assets/www/fonts/GuardianTextEgyp-BoldIt-Web.woff
+SHA1-Digest: J63p2cXNwjgFSBG+V3AieY2GKLg=
+
+Name: assets/www/images/mobile-icon-search-white.png
+SHA1-Digest: 7owOis6P6pL6DCM3vBVyCGb13t0=
+
+Name: assets/www/fonts/d89b873e-b4ab-46bb-b668-0e7357fa1127.ttf
+SHA1-Digest: Xs8SxNas482FwMBLl8KRVYgWEVA=
+
+Name: res/drawable-hdpi/common_signin_btn_icon_disabled_focus_dark.9.p
+ ng
+SHA1-Digest: 0ky7hJW6fNsa6m2tmjhllqHXHfg=
+
+Name: res/drawable-xhdpi/com_facebook_button_blue_pressed.9.png
+SHA1-Digest: q04LLz2eNuM6e8D8RaRhm1e3WbQ=
+
+Name: assets/www/images/mobile-selector-down-arrow-white.png
+SHA1-Digest: IpUQBxIK3mXpdHvNyS9/4kbqQPU=
+
+Name: assets/www/mobile/templates.mobile.activity.article.js
+SHA1-Digest: bEoDRWQIp6IMOjds5OWFCyzi67U=
+
+Name: assets/www/images/mobile-icon-toolbar-feedly.saved@2x.png
+SHA1-Digest: NZVjBjYA8kKf9XI4ry2wuDiM/Cs=
+
+Name: assets/www/images/mobile-icon-home-white~ios.svg
+SHA1-Digest: kwOVtszVJfwaFc+awAYDhJCm16M=
+
+Name: assets/www/images/mobile-icon-toolbar-url~android.svg
+SHA1-Digest: rWce+AzHVpx8Bf05Ug0/7SHJZTo=
+
+Name: res/drawable/com_facebook_profile_picture_blank_portrait.png
+SHA1-Digest: 9kGOeq/tVClWE7Lz9AgjtukRZnQ=
+
+Name: assets/www/images/mobile-icon-toolbar-reader-black.png
+SHA1-Digest: AWogrj6b1yoC5HmNLeV7MsAcaIQ=
+
+Name: res/drawable-xxhdpi/common_signin_btn_icon_disabled_focus_dark.9
+ .png
+SHA1-Digest: HzOQHYhhJxxzbZqK40hTgOfRhlo=
+
+Name: res/drawable-xhdpi/common_signin_btn_icon_normal_light.9.png
+SHA1-Digest: FkxxTiMZkZMXGXmeMfd02TtKL64=
+
+Name: assets/www/images/mobile-icon-toolbar-buffer-white@2x.png
+SHA1-Digest: 9sevsNx7XEYsmql7A4QYYqieRMo=
+
+Name: res/layout/video.xml
+SHA1-Digest: VE/n+m0Vh6c9jvfxHkKqtiFm2R8=
+
+Name: res/drawable/com_facebook_picker_list_selector.xml
+SHA1-Digest: 3vmlIV0OLQjHMlz36o9TEr497V0=
+
+Name: res/layout/twitter_auth_content.xml
+SHA1-Digest: SFHf6u1kZvwFCJiPnT1+KDhSb88=
+
+Name: assets/www/images/mobile-icon-saved-h10-black.png
+SHA1-Digest: lOqRlwedRgyhQdv6+3byd8/3M/8=
+
+Name: assets/www/images/mobile-icon-home-up-black.png
+SHA1-Digest: 9MDBXPIqxqkJqRnfWfH6+K8VRUE=
+
+Name: assets/www/images/mobile-action-unread~android.svg
+SHA1-Digest: MRIDNENYgEKE0rW8VNvZ3X9c7/s=
+
+Name: assets/www/images/mobile-icon-clear-tag~ios.svg
+SHA1-Digest: hTJ4JaaFH8emtpaDc8IyVU+bqhY=
+
+Name: res/drawable/com_facebook_list_divider.9.png
+SHA1-Digest: 45BAgKtOkC0fHYqIunSXrQ8YubM=
+
+Name: assets/www/images/mobile-icon-collection-white.png
+SHA1-Digest: pHESuvLnFVitxPcXomVkDPS1m6k=
+
+Name: assets/www/images/mobile-icon-toolbar-messenger-black~ios.svg
+SHA1-Digest: g58LwIVqezw3WE+lw2kmvPfY//E=
+
+Name: res/layout/youtube.xml
+SHA1-Digest: FUAvpA5eDdwU4W06Xn9YgzDGg7U=
+
+Name: res/drawable/com_facebook_close.png
+SHA1-Digest: FDOOYcRoxfXB5QdY1YikzqT7kx8=
+
+Name: assets/www/images/mobile-icon-toolbar-feedly@2x.png
+SHA1-Digest: SHK3pwKlDmenSKgGsZxYiISGTGU=
+
+Name: assets/www/images/mobile-icon-toolbar-facebook~android.svg
+SHA1-Digest: qqcwyuVjFtYV1n5zvAfbbhdByDU=
+
+Name: assets/www/images/mobile-action-remove~android.svg
+SHA1-Digest: TxoBOvg9SUzr6WbtLU8JYBq1XU0=
+
+Name: assets/www/images/mobile-icon-toolbar-facebook@2x.png
+SHA1-Digest: Mbi3MzW7uJMTAUwo+YXGh8FP2Js=
+
+Name: assets/www/images/mobile-icon-toolbar-save-white.png
+SHA1-Digest: IUsihzUvT4X5Om+XIURHv8NR0nk=
+
+Name: assets/www/images/mobile-library-add-white.png
+SHA1-Digest: rJ8rQAQYXhEEFyIuc383iK6XdiQ=
+
+Name: res/layout/twitter_content.xml
+SHA1-Digest: 1DbK610FAzGvrAKV8+aDeKma7VU=
+
+Name: res/anim/appwidget_fadein_animation.xml
+SHA1-Digest: fw/S/0/HKPNwY+6NbXC0Y2v38Eo=
+
+Name: assets/www/images/mobile-icon-saved-h11-white~android.svg
+SHA1-Digest: uvLzoHmxfD97pq7HrzM0jCHH/1E=
+
+Name: res/drawable/p2r_loading.png
+SHA1-Digest: 7/zDdpzC+W2sAbVK2TQq6aMAtFE=
+
+Name: res/drawable/com_facebook_loginbutton_silver.xml
+SHA1-Digest: WUUCDtlsf4l/XFcPq2ofhxb++TQ=
+
+Name: assets/www/images/mobile-icon-customize-black@2x.png
+SHA1-Digest: ft/t7pU8JuJNq4vE+Q/1L3r+nmM=
+
+Name: assets/www/images/mobile-icon-toolbar-reader-white~android.svg
+SHA1-Digest: GreBSHvZ5g9XBxjkBigLhPGU/MA=
+
+Name: assets/www/images/mobile-icon-toolbar-back-white~ios.svg
+SHA1-Digest: HWrcS3svImFgUb2AAjUYt+CThFw=
+
+Name: assets/www/images/mobile-icon-toolbar-back-black.png
+SHA1-Digest: AlCZVbsvmelEXVmkhbRyHnZRYQM=
+
+Name: assets/www/images/mobile-rating-7out10.png
+SHA1-Digest: AbzJ5xlazjVHwf6ne9HRVOSb4dI=
+
+Name: assets/www/images/mobile-illustration-cloud.svg
+SHA1-Digest: sew+uf7y8RynP7d15CkXaU3k8mM=
+
+Name: assets/www/images/mobile-action-remove@2x.png
+SHA1-Digest: lhbPTnsnj5cHZEBeA1TCwkPbxOg=
+
+Name: assets/www/images/mobile-icon-toolbar-safari~android.svg
+SHA1-Digest: 8qfzPgJGYhIQ7jOhWR5mqEElRnY=
+
+Name: assets/www/images/mobile-icon-toolbar-safari-black.png
+SHA1-Digest: t8PmGPjtWPojxsM7VMdOuU5Ou1k=
+
+Name: assets/www/images/mobile-selector-latest-black.png
+SHA1-Digest: vTSTEqrkBx5ZOapKvTDrh3DRHTk=
+
+Name: assets/www/images/mobile-icon-toolbar-kindle-black.png
+SHA1-Digest: ckWGmQ6RTCh+OQNRvGC0CtgqagA=
+
+Name: res/drawable-xxhdpi/powered_by_google_light.png
+SHA1-Digest: i1ZTqep+pgKdIhB18Xwu3c7KrFI=
+
+Name: res/drawable-mdpi/common_signin_btn_text_disabled_light.9.png
+SHA1-Digest: vgTn+pEQhSLa5buaCqjDd3w3UWU=
+
+Name: res/anim/hyper.xml
+SHA1-Digest: 98/oemSgf/V5dIpYbJs8dEo0GLA=
+
+Name: assets/www/images/mobile-illustration-cloud@2x.png
+SHA1-Digest: i/AHuwDQUAM2lAYhthglE2PYsAg=
+
+Name: assets/www/images/mobile-icon-toolbar-instapaper-white~ios.svg
+SHA1-Digest: U3jEW+6ghubreimcxYEDLlV6DBs=
+
+Name: assets/www/images/mobile-selector-latest-black@2x.png
+SHA1-Digest: bsqhKvrZBHTCmVd7S47tth0QYgY=
+
+Name: assets/www/images/mobile-selector-favorite-white.png
+SHA1-Digest: dwoff9Pln1x60YrC2Z5L91oJo9k=
+
+Name: res/drawable/btn_icon.xml
+SHA1-Digest: TpzADQUsXvtdWR118p/pa5RffAo=
+
+Name: res/drawable-mdpi/com_facebook_tooltip_blue_bottomnub.png
+SHA1-Digest: nwY5X6Bv/3Ez85yyuwRVb3KkfWI=
+
+Name: assets/www/images/mobile-icon-toolbar-pocket-white~ios.svg
+SHA1-Digest: r0fH6Pk0j/Lxgrv3S6h7ED8WzqM=
+
+Name: assets/www/images/mobile-icon-toolbar-sms-white~ios.svg
+SHA1-Digest: JZLJJw3fkHR7XUO2hDaHPt3UPcg=
+
+Name: assets/www/images/mobile-icon-toolbar-evernote-black~android.svg
+SHA1-Digest: 4jl73sueRa65hBskoxERsRKsSmg=
+
+Name: assets/www/images/mobile-checkbox-checked-black~ios.svg
+SHA1-Digest: 0LXS5/5vyrqUkcst44zo3Z2wWCs=
+
+Name: assets/www/images/mobile-icon-toolbar-sms.png
+SHA1-Digest: DjCcnobVh5UoUKWhgLERuPDY50A=
+
+Name: res/layout/appwidget_article_noimage_4_3_exit.xml
+SHA1-Digest: pj1hjE37UIJblqNo4gS1YexeNPA=
+
+Name: assets/www/images/mobile-icon-saved-h10-vignette@2x.png
+SHA1-Digest: GXfls6nhKK9p5njXa9Lh13pyFlo=
+
+Name: assets/www/images/mobile-rating-10out10.png
+SHA1-Digest: Wgco9RGLXyCh1sh33yxu4GoA+Yc=
+
+Name: assets/www/images/mobile-icon-toolbar-feedly-black@2x.png
+SHA1-Digest: CP9PFGcUjjce5bYARpjkk3gxyn8=
+
+Name: res/layout/appwidget_article_image_4_1.xml
+SHA1-Digest: pMfPSdRLYWgCHlPVp9WMS93cRvs=
+
+Name: res/layout/appwidget_article_noimage_4_3.xml
+SHA1-Digest: GABK4lptVEOFnhfiA4BNg9El/xY=
+
+Name: assets/www/images/mobile-icon-searchbox-black@2x.png
+SHA1-Digest: SYhyln6ukH/wI9GN2B3LkrSwFUI=
+
+Name: assets/www/images/mobile-selector-favorite-black.png
+SHA1-Digest: IkRR59GTc8z9Hv+gnne9ged5FtQ=
+
+Name: assets/www/images/mobile-rating-10out10@2x.png
+SHA1-Digest: yZGZTHvSuMUJVFmMjliimz57JiA=
+
+Name: res/drawable-xhdpi/common_signin_btn_icon_normal_dark.9.png
+SHA1-Digest: vGictS/UYFmX8tbz7DG/BKWlA1A=
+
+Name: res/layout/ticker_text.xml
+SHA1-Digest: 0iGcRJGa1gWcU0/ulgsmWYr3u7E=
+
+Name: assets/www/images/mobile-library-mobile-feedlylogo-color.svg
+SHA1-Digest: Xr2Vgik9q5DM77QMTM92zEkCwIs=
+
+Name: assets/www/fonts/GuardianTextEgyp-Regular-Web.woff
+SHA1-Digest: 3vfe8We0iCuLiIzki1Z/pSZdB+M=
+
+Name: res/drawable-hdpi/ic_plusone_standard_off_client.png
+SHA1-Digest: 3M2Hwey0trjQpX8kpVoQgSeehjY=
+
+Name: res/anim/appwidget_stackexit_animation.xml
+SHA1-Digest: R46ZtmUxVxLg4vWSxdKnq8xDJTE=
+
+Name: assets/www/images/mobile-icon-saved-h11-black~android.svg
+SHA1-Digest: CSVVzoOH8aSDOke9BYiH24zN6uA=
+
+Name: assets/www/images/mobile-selector-down-arrow-white@2x.png
+SHA1-Digest: ChsuZjwrdV3gJDK1ncusYWbWqv8=
+
+Name: assets/www/fonts/e4089efc-1899-435d-afcc-f8fc1c730ae8.eot
+SHA1-Digest: cmAwVNE5fZDV9hAG2JB5a85bsyQ=
+
+Name: res/drawable-xhdpi/progressbar.9.png
+SHA1-Digest: kMTORJdUqzjLtfLKTdG3rXxt2iY=
+
+Name: res/drawable/p2r_arrow.png
+SHA1-Digest: TlDPZuigwKfwroJl20ecXum/zRo=
+
+Name: assets/www/images/mobile-icon-toolbar-chrome-white~android.svg
+SHA1-Digest: Kux1uGry8+ciL6JsJc5OpgD+VtA=
+
+Name: assets/www/images/mobile-rating-2out10.svg
+SHA1-Digest: NSH4KbDWGnMjiGIIZhcV5sEqpYg=
+
+Name: assets/www/images/mobile-action-oldest-first.png
+SHA1-Digest: ZQhlJWxZ6TTLOXgYZAQRO2+h7d4=
+
+Name: assets/www/images/mobile-icon-toolbar-gplus-black~android.svg
+SHA1-Digest: qpeJDi2ddf5vPukgIT35vPHJiuI=
+
+Name: assets/www/images/mobile-icon-toolbar-pinterest~android.svg
+SHA1-Digest: K5utbAgC+JSvc3lfLkqp29nC9/4=
+
+Name: assets/www/images/mobile-icon-library-collection-black@2x.png
+SHA1-Digest: DhJCb2eAZpZGqM82syOoWLj0pzI=
+
+Name: assets/www/images/mobile-icon-toolbar-pocket-white.png
+SHA1-Digest: /Tx5MYvNP0IZy0fZXOq40e9ZlgQ=
+
+Name: res/drawable/action_like.png
+SHA1-Digest: x7u3An0jMCZzTmn2wVlJWeA5bfs=
+
+Name: assets/www/images/mobile-icon-toolbar-facebook.png
+SHA1-Digest: +AtAqSj9/marI9mq+B6MPiGaB3I=
+
+Name: res/color/common_signin_btn_text_dark.xml
+SHA1-Digest: Yx3iaXUHtOD+0Df7CZUNzPDb72o=
+
+Name: assets/www/images/mobile-rating-2out10@2x.png
+SHA1-Digest: yZIacXBz/M5+07Z3DMc/Osi8Uyw=
+
+Name: assets/www/images/mobile-library-mobile-feedlylogo-white.png
+SHA1-Digest: BIhDXV3sfqWjkQRmlB9taCJGX9k=
+
+Name: assets/www/images/mobile-icon-toolbar-overflow-white~android.svg
+SHA1-Digest: PU+s9Jx/QvxK4R6822rwouO2A5M=
+
+Name: res/drawable-mdpi/powered_by_google_light.png
+SHA1-Digest: ZTHLPZe63ATwVGAlXju4hnecsME=
+
+Name: assets/www/mobile/templates.mobile.activity.picker.js
+SHA1-Digest: /BPpUNetCSiJVmjdXGGTH2Inzcs=
+
+Name: assets/www/images/mobile-icon-toolbar-home-black~android.svg
+SHA1-Digest: xZOeuM+YDiVNBM6/K86IkKYWJDk=
+
+Name: res/drawable-xhdpi/common_signin_btn_text_normal_dark.9.png
+SHA1-Digest: dV3F0Sz7MxTs+Trhe4uXp7Q7aSs=
+
+Name: assets/www/images/mobile-icon-toolbar-pinterest-white~ios.svg
+SHA1-Digest: rOdstzqjCVHohyShIIEawKPYxXM=
+
+Name: assets/www/images/mobile-icon-toolbar-email-white.png
+SHA1-Digest: pb3nxLRkmYxN/++L+mw84OSHJQs=
+
+Name: res/layout/com_facebook_login_activity_layout.xml
+SHA1-Digest: bfTe1R/IuS9l3Kg5/pt6mKsogGc=
+
+Name: assets/www/images/mobile-action-oldest-first~android.svg
+SHA1-Digest: GUvjg8zmru8v9FHpYo87JvhfHsA=
+
+Name: assets/www/images/mobile-icon-toolbar-kindle-white@2x.png
+SHA1-Digest: sz/cVZSCHz35HnJJ/YlWaQC20pU=
+
+Name: res/drawable-ldpi/shortcut_buzz.png
+SHA1-Digest: uEiE40RJ1psO7zUH1Smux3Dg6qQ=
+
+Name: assets/www/images/mobile-icon-toolbar-instapaper-white@2x.png
+SHA1-Digest: g7Q6otaCC0H5qAP56gLPSNLQXCI=
+
+Name: res/drawable-xhdpi/common_signin_btn_text_disabled_dark.9.png
+SHA1-Digest: UbXqMwM30HBljuHn+la04UPzB1Y=
+
+Name: assets/www/images/mobile-icon-toolbar-facebook-black@2x.png
+SHA1-Digest: rE265/cl3O+KVFTDHTD/uCUDGs0=
+
+Name: assets/www/mobile/activity.picker.js
+SHA1-Digest: OCPGdNMcMjCK7UENzoiNJnMobKY=
+
+Name: assets/www/images/mobile-rating-5out10@2x.png
+SHA1-Digest: S98Rt3ZTE/mBolU4ilzm88KjabY=
+
+Name: assets/www/images/mobile-login-windows.png
+SHA1-Digest: TrrTeaubbu1decNUo5Zvsrxkb1I=
+
+Name: assets/www/images/mobile-icon-toolbar-refresh-black~android.svg
+SHA1-Digest: m3y/eumjx1N1e9V35vNQ4i+Nb6E=
+
+Name: res/drawable-mdpi/icon.png
+SHA1-Digest: l63jTzRFAUZ+dW5Dp5X+EoqEZoQ=
+
+Name: assets/www/images/mobile-icon-toolbar-safari-white.png
+SHA1-Digest: GgoLvcE+rsOpCXKEXoH9mQp5I50=
+
+Name: assets/www/images/mobile-icon-toolbar-evernote.saved@2x.png
+SHA1-Digest: PzRA+92FXmtqSz618+axULQjuaI=
+
+Name: assets/www/fonts/DINCompPro-MediumCondensed.ttf
+SHA1-Digest: qIWQzvuyFGO4/rf7UKxqv+lpddE=
+
+Name: assets/www/images/mobile-icon-toolbar-messenger-black.png
+SHA1-Digest: sSNc+sOcAIIbTCR20+UTAZqZwp0=
+
+Name: res/drawable-xxxhdpi/icon.png
+SHA1-Digest: qcgejBTP+YGJZf+a/K2LdBkn984=
+
+Name: assets/www/images/mobile-icon-toolbar-close-white.png
+SHA1-Digest: N+CKbJSLmCoHHudZtkAHJ5szzr4=
+
+Name: assets/www/images/mobile-login-twitter.svg
+SHA1-Digest: n2BDUwr6KD49X8zMU2/WXIcly8o=
+
+Name: assets/www/images/mobile-icon-searchbox-black~android.svg
+SHA1-Digest: VlB3VPVe2sC26/dPJId5qDLP7L0=
+
+Name: assets/www/images/mobile-icon-toolbar-twitter-black.png
+SHA1-Digest: gaadHrAGNIKjBaOXDeeE9gr4tPA=
+
+Name: assets/www/images/mobile-icon-toolbar-onenoted~ios.svg
+SHA1-Digest: m4LLoaV907X1rS5sHST4BramH6g=
+
+Name: res/drawable/com_facebook_button_check_off.png
+SHA1-Digest: NDLFyRfWjBjm9xCkOlx9fqTCMug=
+
+Name: assets/www/images/mobile-icon-toolbar-pinterest-black~ios.svg
+SHA1-Digest: VHDDE8749pb/I+1VPdyp2X75afs=
+
+Name: assets/www/images/mobile-login-twitter@2x.png
+SHA1-Digest: A+0behwHLyWnrwnxAJOtCUSOXig=
+
+Name: res/drawable-hdpi/shortcut_latest.png
+SHA1-Digest: LGYeSQi315yiSnvjaMbsNrzh1qU=
+
+Name: assets/www/images/mobile-library-banner-feedlyicon@2x.png
+SHA1-Digest: TKTwn3hYeP1e1BCpGfzvHVkbwHQ=
+
+Name: assets/www/images/mobile-icon-toolbar-pocket@2x.png
+SHA1-Digest: oNLJgMcAmMxDRkQ0BHSpqvEy6Wg=
+
+Name: assets/www/images/mobile-rating-4out10@2x.png
+SHA1-Digest: ZECCb+kwlvCiCMforGzLI8KErSk=
+
+Name: res/layout/twitter.xml
+SHA1-Digest: reDw+cGWltuZSTLTMPZIV7vanuQ=
+
+Name: assets/www/images/mobile-icon-refresh-white~ios.svg
+SHA1-Digest: GvjJKAiumRFMCgXq/VA+NSuLZ/c=
+
+Name: assets/www/images/mobile-icon-store-white~ios.svg
+SHA1-Digest: HgBDDmd5D3y1BU9vIv0ssx7qc0Q=
+
+Name: assets/www/images/mobile-selector-feedly-black~ios.svg
+SHA1-Digest: CO6aA2HFPYHCSjtEluA5GAvV20Q=
+
+Name: res/color/wallet_secondary_text_holo_dark.xml
+SHA1-Digest: Er4JQ9RJo5siHhnHsf8SURTN8JE=
+
+Name: res/drawable-xhdpi/com_facebook_inverse_icon.png
+SHA1-Digest: JlToIy/BS1SwLA3JoedKEQBE76E=
+
+Name: res/drawable-mdpi/common_signin_btn_text_pressed_light.9.png
+SHA1-Digest: VSw7l3gn6Xmrfp6USiW4t6QJmPw=
+
+Name: res/anim/from_left.xml
+SHA1-Digest: YsAZjp7ps/hQslFBNxmU4x3Et9M=
+
+Name: assets/www/images/mobile-icon-toolbar-instapaper~android.svg
+SHA1-Digest: my4Xl94vpIOKI2YXfcmIo7G6VtY=
+
+Name: res/drawable/drop.9.png
+SHA1-Digest: kZAmYTtxh6ccKEq4PwrxPE1AR7g=
+
+Name: assets/www/images/mobile-icon-markasread-black.svg
+SHA1-Digest: 9ycGsN5lXgERBZNzwfASMrvCpqw=
+
+Name: assets/www/images/mobile-icon-toolbar-chrome-white~ios.svg
+SHA1-Digest: jfME1mQcqLgDknnN7eNN12jva9k=
+
+Name: res/anim/widget_fadeout_animation.xml
+SHA1-Digest: FzcAOwlmu0p+jLIJ/bw/NWSLtyY=
+
+Name: res/layout/appwidget_article_image_meta.xml
+SHA1-Digest: /DTPwjAHMGcNq6GkeOS3AzIn03s=
+
+Name: res/layout/com_facebook_tooltip_bubble.xml
+SHA1-Digest: wxfpRWSQNpaXQxavA5F9Null1P8=
+
+Name: assets/www/images/mobile-monster-failed@2x.png
+SHA1-Digest: OGge6Cp5wmxLBx2duu/tnek0YKc=
+
+Name: assets/www/images/mobile-icon-toolbar-saved.png
+SHA1-Digest: qxgFKWsaX9REtdBjrrCOct5oRt0=
+
+Name: assets/www/images/mobile-icon-toolbar-sms-white.png
+SHA1-Digest: Y7okDVoLMNMtUYjE/yOhYBDglGg=
+
+Name: assets/www/images/mobile-icon-toolbar-chrome-white@2x.png
+SHA1-Digest: /Qju2vEI81fJcQOsMWJpAyj7ZMM=
+
+Name: res/drawable/com_facebook_list_section_header_background.9.png
+SHA1-Digest: UlppTzQMf0S8p04nUqt4qCBKRF0=
+
+Name: assets/www/images/mobile-action-poster.png
+SHA1-Digest: GbZi7Dds2rGmNdhqKu6DXOY+BLg=
+
+Name: res/layout/appwidget_configure_li.xml
+SHA1-Digest: ZGIRrZc2E+fA2zCsWIRM6ijjsPk=
+
+Name: res/drawable-hdpi/com_facebook_inverse_icon.png
+SHA1-Digest: 2IKuzG1QMycYYLdEWoHnQDoZ07E=
+
+Name: assets/www/images/mobile-icon-overflow-black.png
+SHA1-Digest: Ahy2jU5zYqIDirjy6H9WPBKN4Vc=
+
+Name: com/devhd/nanohttp/shell.txt
+SHA1-Digest: 7KrkH9f5bDtItDY7TLWxNKdGhDE=
+
+Name: assets/www/images/mobile-login-evernote@2x.png
+SHA1-Digest: I2qp5fzZKPAoK4dO8dWrvf2r01c=
+
+Name: assets/www/images/mobile-icon-toolbar-twitter@2x.png
+SHA1-Digest: YjDpgLw8ioUZ5eKHxprHR9XZjdQ=
+
+Name: assets/www/images/mobile-icon-customize-black~ios.svg
+SHA1-Digest: ScD+oQRmi8mHmEH+jWf0MYouFNc=
+
+Name: assets/www/images/mobile-icon-saved-h11-vignette@2x.png
+SHA1-Digest: oIb/tbJhrc6x3syp1lsnYpaTFBw=
+
+Name: assets/www/images/mobile-icon-library-collection-white.png
+SHA1-Digest: tYjZPnbIcZBT4ygDwCY+phJ+TwA=
+
+Name: res/drawable-hdpi/progressbar.9.png
+SHA1-Digest: wLvEV5oe18bp8VBSNAtJitEE80A=
+
+Name: assets/www/images/mobile-action-mosaic~ios.svg
+SHA1-Digest: ZfG6qsUjf8lg8MDgeDJfkNgXtlU=
+
+Name: assets/json/NativeOpenUrlPrefixes.json
+SHA1-Digest: vmKbPpV+MeG82v956JINaztwzTA=
+
+Name: res/drawable/controls_previous.png
+SHA1-Digest: ij5cmEK0KqQDTAr2J/6Y8eGCUo0=
+
+Name: res/layout/appwidget_article_noimage.xml
+SHA1-Digest: zpJjbyOQ13dZ+PicpRwiuI/iKJs=
+
+Name: assets/www/images/mobile-icon-toolbar-sms-black.png
+SHA1-Digest: 1IOyAt1hWnjJCLIm4c0IEhrDXHw=
+
+Name: assets/www/images/mobile-selector-tag-white~ios.svg
+SHA1-Digest: OzHKqqal8cyTDibVgUK2s4QHfRo=
+
+Name: assets/www/images/mobile-icon-toolbar-facebook-white~android.svg
+SHA1-Digest: PD3soAcJJpihqQ9uYE2xceSKltM=
+
+Name: res/layout/appwidget_article_noimage_long_exit.xml
+SHA1-Digest: ep+qBBAjNxkm+2Tgv5dq3fZIHUI=
+
+Name: assets/www/images/mobile-icon-toolbar-feedly.saved-themed~androi
+ d.svg
+SHA1-Digest: jVDoZurT8KWuAxVleXquwgHjucU=
+
+Name: assets/www/images/mobile-action-oldest-first@2x.png
+SHA1-Digest: PPKisFkuAcGgNzEKGDRuig3m01M=
+
+Name: assets/www/images/mobile-icon-toolbar-windows@2x.png
+SHA1-Digest: PO9fEGxEXu3yYbovAETzPx1FHHM=
+
+Name: assets/www/fonts/ad4223fb-9190-46d5-88ce-8c2467c2ab52.ttf
+SHA1-Digest: JNxT1CFipCnB78HNS9FEV9+VNxg=
+
+Name: assets/www/images/mobile-icon-searchbox-white~ios.svg
+SHA1-Digest: t6pb+B8xUueFt2SzXnK5+Qn1QdM=
+
+Name: assets/www/images/mobile-unpack-explore-arrow.png
+SHA1-Digest: PKzZkpFQARyX/VUGzuVspkIMMs0=
+
+Name: res/drawable-hdpi/powered_by_google_dark.png
+SHA1-Digest: I/G/mu9XuPJTzwp/WdZLjQ6xTfg=
+
+Name: res/anim/exit_article.xml
+SHA1-Digest: SskDTYMDtcIKb1CGVTox9Q9n4iY=
+
+Name: res/anim/enter_article.xml
+SHA1-Digest: 69W39Dh8eA+Kwe+nQR26rdX/JZA=
+
+Name: res/drawable/black_white_gradient.xml
+SHA1-Digest: KEigU71ZFsq/T5cECIPhkO7KzA8=
+
+Name: res/drawable/com_facebook_usersettingsfragment_background_gradie
+ nt.xml
+SHA1-Digest: UudkMujfDbVwQrl+1pBZ2WIJ8ro=
+
+Name: assets/www/images/mobile-icon-toolbar-google@2x.png
+SHA1-Digest: Ryi5fMVvVd3FVFFbvl1pk2/hH4Q=
+
+Name: res/layout/appwidget_promo_enter.xml
+SHA1-Digest: KOkk1iTGaAwBRbtJz8D4RpwTio8=
+
+Name: assets/www/images/mobile-icon-toolbar-evernote.saved-white~ios.s
+ vg
+SHA1-Digest: iYtp76SaqIwsWAb5hEQp39i58ZU=
+
+Name: assets/www/images/mobile-icon-toolbar-email~android.svg
+SHA1-Digest: HFDxE7YQON7/ZYgOH5DiTlGefTM=
+
+Name: assets/www/images/mobile-icon-toolbar-chrome-black~ios.svg
+SHA1-Digest: YzPj0Gqz9Ejm0/4btHgHJTeg158=
+
+Name: res/drawable-hdpi/common_signin_btn_text_disabled_focus_dark.9.p
+ ng
+SHA1-Digest: YmWnuLFTsxsuwRBtvQiQ6Y6KnsI=
+
+Name: res/layout/appwidget_article_image_4_1_enter.xml
+SHA1-Digest: 8tZgeoozByaWE0+/H1/2k6nEZLc=
+
+Name: assets/www/fonts/7db12efd-4757-4214-bead-13225550e76a.ttf
+SHA1-Digest: /AUYTNF9c9ZnE8ElPLfAElTIH7U=
+
+Name: assets/www/images/mobile-illustration-desktop.svg
+SHA1-Digest: UQVMLnd7jTOIg8D5/X+J5acCkwA=
+
+Name: res/xml/appwidget_info.xml
+SHA1-Digest: poy1dKfHNDS+WIYoRXFXqi1h4yk=
+
+Name: res/drawable-xxhdpi/common_signin_btn_text_normal_light.9.png
+SHA1-Digest: AvIKUupgrO+uCBiDS6ZrbT37poE=
+
+Name: assets/www/images/mobile-visual-search@2x.png
+SHA1-Digest: VHKcOHBMUYguV70BRMI7fJkx0T0=
+
+Name: assets/www/images/mobile-rating-3out10@2x.png
+SHA1-Digest: o5dmz25fCu5wJsbn4bi1qBIJmkQ=
+
+Name: assets/www/images/mobile-selector-feedly-black.png
+SHA1-Digest: BfFbPiDlAFFabDDZbn+/fewlCXU=
+
+Name: res/drawable-xhdpi/com_facebook_tooltip_blue_background.9.png
+SHA1-Digest: UxtR3fPuyJujOVvsGtNCp15qHok=
+
+Name: res/drawable/appwidget_icon.png
+SHA1-Digest: 2ohTPExwLWZyACVvEhB8L7MSyG4=
+
+Name: res/anim/appwidget_stackexit.xml
+SHA1-Digest: JA74O3uF+5COUvfP2fymex8+6LM=
+
+Name: assets/www/images/mobile-action-magazine.png
+SHA1-Digest: BRqwZUp/0gpMC01/GULRqfBVcnc=
+
+Name: assets/www/images/mobile-icon-toolbar-pinterest-black.png
+SHA1-Digest: YLgg81XfRLgYmwhG3YcDfgTeoiU=
+
+Name: assets/www/images/mobile-icon-toolbar-reader-black@2x.png
+SHA1-Digest: 45JdKlW2cnRE2Rnkk8qzhaVxf/w=
+
+Name: res/drawable-ldpi/shortcut_saved.png
+SHA1-Digest: 9D4VBSy/eRGQUBEJZePhyVK88bM=
+
+Name: res/drawable-hdpi/common_signin_btn_text_normal_light.9.png
+SHA1-Digest: BPO7rZUizcNQMnWeRsW2OCnWgH4=
+
+Name: assets/www/fonts/Lora-Regular.ttf
+SHA1-Digest: X6He1d5M6GRVbIYcK6b07Bnhoho=
+
+Name: assets/www/images/mobile-action-titleonly~ios.svg
+SHA1-Digest: uu9dSGuCRivVpDUKD/G80Rn6RZU=
+
+Name: resources.arsc
+SHA1-Digest: aSSlppn+lGBScPYPIlnRZnDOJIE=
+
+Name: res/layout/home_widget_curr.xml
+SHA1-Digest: GhD/PtoSWGRExetLeCvG0PRDz5Y=
+
+Name: assets/www/images/mobile-icon-clear-black@2x.png
+SHA1-Digest: s8TwqewcaoBkj+ECz0AZFteXcws=
+
+Name: res/drawable-hdpi/common_signin_btn_text_pressed_light.9.png
+SHA1-Digest: Wx/93xRl4fEGrkADqVPH6ShswfU=
+
+Name: assets/www/images/mobile-icon-toolbar-feedly.saved-white~ios.svg
+SHA1-Digest: TW+zRaITNWk8Svc3O/EGmFf3BuU=
+
+Name: res/drawable-xxhdpi/common_signin_btn_text_focus_dark.9.png
+SHA1-Digest: eAdVXtk/TEzSgB4P3wNlpGbfp5g=
+
+Name: assets/www/images/mobile-icon-home-black~ios.svg
+SHA1-Digest: VhnB7tJPxzA05MR32se8y/Ocy3I=
+
+Name: res/drawable/com_facebook_button_grey_normal.9.png
+SHA1-Digest: kZ9314YgSZHYcEuP+vXCuujxd48=
+
+Name: res/drawable-xxhdpi/icon.png
+SHA1-Digest: gKmX7J3XCAY7ta/B7+xfMOqegyQ=
+
+Name: assets/www/images/mobile-illustration-empty.png
+SHA1-Digest: K+DWwULfyXQgxQijJtGZxb91uZM=
+
+Name: res/drawable/feedly_small_icon.png
+SHA1-Digest: f/dr6ljJhS3PueHpfe5sYzlawZ4=
+
+Name: assets/www/images/mobile-icon-toolbar-evernote.saved-black~ios.s
+ vg
+SHA1-Digest: iYtp76SaqIwsWAb5hEQp39i58ZU=
+
+Name: assets/www/fonts/4d888997-2061-451b-8569-6cee195e9915.woff
+SHA1-Digest: v00cqsjQP2FNRiMA82uF7k5H9w0=
+
+Name: assets/www/images/mobile-icon-home-white~android.svg
+SHA1-Digest: I8Mmqg1tzIM91bfG6X37RHBEals=
+
+Name: assets/www/images/mobile-icon-toolbar-email-black@2x.png
+SHA1-Digest: Hp77ernbO+au31MLn4rvp1ffVtA=
+
+Name: assets/www/images/mobile-icon-toolbar-onenote-black@2x.png
+SHA1-Digest: BENuFo/ULU4HQLj7YKm405+ieJA=
+
+Name: assets/www/images/mobile-icon-toolbar-email@2x.png
+SHA1-Digest: SmghYD2Lx/Buw040t6FJyYyREn8=
+
+Name: assets/www/images/mobile-illustration-empty@2x.png
+SHA1-Digest: KqikcL9FW/+6fGYxTua2l5LtxnA=
+
+Name: assets/www/images/mobile-checkbox-checked-black@2x.png
+SHA1-Digest: LAczE1bF42Gt2DisVM8GuVxc2ew=
+
+Name: res/drawable-mdpi/com_facebook_button_blue_normal.9.png
+SHA1-Digest: plzlqLb7elFLaBIIHG8jVWFUnfU=
+
+Name: res/drawable-hdpi/common_signin_btn_icon_disabled_light.9.png
+SHA1-Digest: ZDogSdlgVekmFIAbKguvig7+XGg=
+
+Name: res/drawable/common_signin_btn_icon_light.xml
+SHA1-Digest: vr8JJvN7KaAKRPBfNk2x9HKjTnM=
+
+Name: assets/www/images/tv.png
+SHA1-Digest: pI6Fu3UuQ+q9CfGErIoHq9qAlKU=
+
+Name: assets/www/images/mobile-icon-toolbar-facebook-white@2x.png
+SHA1-Digest: JnEg4V83rF46B+UhYV8gX41ANdI=
+
+Name: assets/www/images/mobile-checkbox-unchecked-black@2x.png
+SHA1-Digest: IXHzmwF5ftNej/pie+6VosNbZ+Y=
+
+Name: res/drawable/com_facebook_top_button.xml
+SHA1-Digest: JNN12JtYW4zFnoPc08vmSpiNbK0=
+
+Name: assets/www/images/mobile-icon-refresh-black@2x.png
+SHA1-Digest: GEgaTiFT35YLKxaoDw6EbJ58M64=
+
+Name: res/drawable-xhdpi/powered_by_google_dark.png
+SHA1-Digest: psVwTFCoE8L/YbYPXiTtAelEWs8=
+
+Name: assets/www/images/mobile-selector-feedly-white@2x.png
+SHA1-Digest: imkloBtPp4wlfvse3moypOomeT0=
+
+Name: assets/www/images/mobile-selector-right-arrow-black~android.svg
+SHA1-Digest: VtXvZGREhAEdFgdBTADJ4jexeQI=
+
+Name: res/drawable/common_signin_btn_text_dark.xml
+SHA1-Digest: 8Kz1ECGukhvgKPQxFwVAoL7eVvY=
+
+Name: assets/www/images/mobile-icon-toolbar-url@2x.png
+SHA1-Digest: bNdE0VaZZhP+MzRjkFHK59cIYsM=
+
+Name: assets/www/images/mobile-rating-10out10.svg
+SHA1-Digest: GCOa7Ded/xZjF+n1Ot5n5rhHRQ4=
+
+Name: assets/www/images/mobile-icon-home-black~android.svg
+SHA1-Digest: m1LiO6VXMkzBe6IafxZTcgfZtsI=
+
+Name: res/drawable/com_facebook_button_blue_pressed.9.png
+SHA1-Digest: +tjTExmZ1lk9Ox0aZm5rNcUPoFY=
+
+Name: assets/www/images/mobile-icon-toolbar-overflow-black~ios.svg
+SHA1-Digest: JtL7pMb0w6kaLYCTkpDdUYBqxj4=
+
+Name: assets/www/images/mobile-icon-follow-white~android.svg
+SHA1-Digest: bbz2OZxfS98lh7rZLpq38cNqwVs=
+
+Name: assets/www/images/mobile-icon-collection-white~ios.svg
+SHA1-Digest: GNXX2y4yCFIq4XnBBVCh5hlUKfY=
+
+Name: assets/www/images/mobile-icon-home-up-white.svg
+SHA1-Digest: H4hS0iFbvj+lhs8u7qskKQHAwP8=
+
+Name: assets/www/images/mobile-icon-toolbar-sms-black~android.svg
+SHA1-Digest: CIHfr2Q5rVugKrWFOKoQ18R7HUk=
+
+Name: assets/www/images/mobile-icon-tag~ios.svg
+SHA1-Digest: 4Eonk0XvXnbNInWmwSajGcpdW5Q=
+
+Name: assets/www/images/mobile-action-list~android.svg
+SHA1-Digest: JswVmnUMpR8nx4pP/rCYYYU0S9o=
+
+Name: res/layout/home_widget.xml
+SHA1-Digest: dBzX2vnp6f7WhU4mi37FucxxcRA=
+
+Name: res/layout/appwidget_splash_exit.xml
+SHA1-Digest: 1n+Xd5NbcwzcxBtLaPqHZ3JURKM=
+
+Name: res/drawable-hdpi/shortcut_essentials.png
+SHA1-Digest: 1x104Q4WO12QRnRZJtjrC5itCb4=
+
+Name: assets/www/images/mobile-icon-toolbar-save-white@2x.png
+SHA1-Digest: 2YcjW9DMqvQGmuGlyJQzrqR177o=
+
+Name: assets/www/images/mobile-play.png
+SHA1-Digest: HYwLX0hCW35+jp3EKfihyAxsywQ=
+
+Name: res/layout/appwidget_transition.xml
+SHA1-Digest: JGE0YvqCBUnYbs3b5rQGmEIBwS8=
+
+Name: assets/www/images/mobile-icon-toolbar-evernote.saved~ios.svg
+SHA1-Digest: zQwT+oBRhhFE24n6MScY2Zxn1e0=
+
+Name: assets/www/images/mobile-icon-toolbar-evernote-black.png
+SHA1-Digest: 6WIjd65fIqrakokWfd0lMJ0ETqA=
+
+Name: res/drawable-xxhdpi/common_signin_btn_icon_pressed_light.9.png
+SHA1-Digest: HlSxw8q2TxVN28UussUGRFFbn8k=
+
+Name: res/drawable-xhdpi/common_signin_btn_icon_focus_dark.9.png
+SHA1-Digest: QvCsDHmHTCeFtKK23z0HRetpRJI=
+
+Name: assets/www/mobile/templates.mobile.activity.toolbar.js
+SHA1-Digest: oHTqbXJrW3Za03by1ZvZCtO0Zyw=
+
+Name: res/drawable-ldpi/shortcut_latest.png
+SHA1-Digest: iyZIN8JkUtsXL/GQFxciPUJ0zCE=
+
+Name: assets/www/images/mobile-icon-library-collection-black.svg
+SHA1-Digest: cKb8X5u1bSep0oWJPzvjOyYiYZ4=
+
+Name: res/layout/appwidget_article_noimage_enter.xml
+SHA1-Digest: UowIiF4q5O+wZwBVagEDxTQLfKQ=
+
+Name: assets/www/images/mobile-icon-toolbar-share-android-black@2x.png
+SHA1-Digest: 5pa0S8r2VZo6a0YbAEUsJ3tZHbE=
+
+Name: assets/www/images/mobile-action-refresh~android.svg
+SHA1-Digest: +80hoT7DAumyCeXqST/tap5kO0U=
+
+Name: assets/www/images/mobile-icon-toolbar-instapaper-black~android.s
+ vg
+SHA1-Digest: my4Xl94vpIOKI2YXfcmIo7G6VtY=
+
+Name: res/drawable-xhdpi/common_signin_btn_icon_pressed_light.9.png
+SHA1-Digest: UsY+c7jSRS1f1aEh0HgE8187rLI=
+
+Name: res/drawable/com_facebook_button_blue_focused.9.png
+SHA1-Digest: rZf/vriiPguZZUS/3ww/w7LJ8fo=
+
+Name: assets/www/images/mobile-icon-toolbar-safari~ios.svg
+SHA1-Digest: m5gL29z9eRMo/SjzU9ueX2YWksM=
+
+Name: assets/www/images/mobile-icon-toolbar-close-black~android.svg
+SHA1-Digest: Vdkz4/7TSkfLFoHwBKLPhGLII7g=
+
+Name: assets/www/images/mobile-icon-toolbar-sms~ios.svg
+SHA1-Digest: hS0q9+B++FdedEmSKkmkU7m1fGM=
+
+Name: assets/www/images/mobile-rating-3out10.svg
+SHA1-Digest: OQO4eYaUC3m5hgZefYiGQr1JJxk=
+
+Name: assets/www/images/mobile-rating-6out10.png
+SHA1-Digest: kc0479Vy046XbXZF4TB7dboEYAs=
+
+Name: assets/www/images/mobile-icon-toolbar-kindle-white.svg
+SHA1-Digest: PZW1Oc8wshVMS5hMjL4hookuvJg=
+
+Name: assets/www/images/mobile-icon-toolbar-instapaper.png
+SHA1-Digest: hlj01y+8xzeMc5CJuspuJUugNxo=
+
+Name: assets/www/images/mobile-action-visit.png
+SHA1-Digest: 5JMg+oGJjE/SG+MhkeOPN+TQa1k=
+
+Name: res/drawable-mdpi/com_facebook_inverse_icon.png
+SHA1-Digest: F87dFjM8iCRCeWSfrxkG/jcMtZY=
+
+Name: assets/www/images/mobile-video.png
+SHA1-Digest: 3WoJkLJflpAGkgA6kazSawExh2k=
+
+Name: assets/www/images/mobile-rating-5out10.svg
+SHA1-Digest: 7mqkjuHsim1PiJxViLheFE8G5EM=
+
+Name: res/drawable-xxhdpi/common_signin_btn_text_disabled_dark.9.png
+SHA1-Digest: dAIabshO7sf8DA0quqZILhJ5V4A=
+
+Name: assets/www/images/mobile-icon-saved-h10-black~android.svg
+SHA1-Digest: 2edCiAd0uvS+Nr3Hn/Kv6JOrzCI=
+
+Name: assets/www/images/mobile-unpack-explore-arrow.svg
+SHA1-Digest: SpvDA/TaW3TcNHccKQJaN2LKQmY=
+
+Name: assets/www/js/10101_mobile_all_ad4_2114.js
+SHA1-Digest: GnGYHaO0q71oBU6padn7VtXMMgM=
+
+Name: res/layout/appwidget_article_noimage_4_1_exit.xml
+SHA1-Digest: 9Bxejp2DyY3HHtzaJ6Ffm0CQvDg=
+
+Name: assets/www/images/mobile-icon-toolbar-markasread-white~android.s
+ vg
+SHA1-Digest: 74iV9HB4fu60g1R7AWkWIJgQVJI=
+
+Name: assets/www/images/mobile-icon-toolbar-facebook-white.png
+SHA1-Digest: COuZq9NL91arO+p5yOTN7FkgKEI=
+
+Name: res/layout/appwidget_article_noimage_4_1_enter.xml
+SHA1-Digest: pOvb/gOc8+4nl6eipUcyNxQqfFA=
+
+Name: res/drawable/rounded.xml
+SHA1-Digest: vYhHWdUicVJeKNONogh8JIl7MyE=
+
+Name: res/drawable/action_instapaper.png
+SHA1-Digest: nYPITkhaVWMqOfmaKik1JkbGy+E=
+
+Name: res/drawable/com_facebook_button_grey_pressed.9.png
+SHA1-Digest: P0wPjAW7g0+CwVv4YccsLFHlsh0=
+
+Name: assets/www/images/mobile-play-small.svg
+SHA1-Digest: UTqIrhWsTlYn0mZyF3HpoSy7YfY=
+
+Name: res/layout/appwidget_error.xml
+SHA1-Digest: GMqReDVGRbdEqhFhUn92eviGLiM=
+
+Name: assets/www/images/mobile-icon-saved-h10-white~android.svg
+SHA1-Digest: vYb/nmhICYAN2lteiZXBTEL3QeE=
+
+Name: assets/www/images/mobile-icon-toolbar-google.svg
+SHA1-Digest: hPq7ESVNpkK2s6V5PIliyoOltQM=
+
+Name: res/drawable-xhdpi/powered_by_google_light.png
+SHA1-Digest: 1PCeD4X7eVLdr2+EB4poVTq1PZw=
+
+Name: assets/www/images/mobile-icon-android-home-white@2x.png
+SHA1-Digest: wSOOXN6tn0G2WfX7Kzhs2iAGcYY=
+
+Name: assets/www/images/mobile-monster-markasread-black.png
+SHA1-Digest: l5oBxvePXkdDRZLaXK+mMEB+v6Y=
+
+Name: assets/www/images/mobile-rating-3out10.png
+SHA1-Digest: eNaM57spQelQxqyyHqrjwZmBZ0s=
+
+Name: assets/www/fonts/GuardianTextEgypApp-Bold.ttf
+SHA1-Digest: 0+ILGD6NlLe4MrnYtKtMc/u07gA=
+
+Name: assets/www/images/mobile-icon-toolbar-messenger-white@2x.png
+SHA1-Digest: 5cgg3j1dwvgmQMnJrN0aeMEUaHk=
+
+Name: assets/www/fonts/6b1b9ec9-0cb4-4122-bf9d-15f5aba175d8.ttf
+SHA1-Digest: OwyVjyeMGnEgX1omACWox9vfBAk=
+
+Name: assets/www/images/mobile-icon-toolbar-evernote-black@2x.png
+SHA1-Digest: EP2kmdiqQV2xNEnJLZg8RqqiJ2s=
+
+Name: assets/www/images/mobile-icon-toolbar-twitter-white~android.svg
+SHA1-Digest: q5L3Cv0I/cuSbcuHWDGBiHohTNY=
+
+Name: assets/www/images/mobile-icon-toolbar-kindle-black@2x.png
+SHA1-Digest: YqgtlGb5XCalikzmSZmFi4ke3Ws=
+
+Name: res/drawable/appwidget_preview_4_1.png
+SHA1-Digest: m65iQRRH3ktF7AjVKeU3OKh0LZk=
+
+Name: assets/www/fonts/bc71ac4a-9cc7-4120-a150-788ae80b91ec.ttf
+SHA1-Digest: IIZQy/ejnzmGTpJOR+xQioXc9fY=
+
+Name: res/drawable-xhdpi/com_facebook_tooltip_black_xout.png
+SHA1-Digest: GRVPhQjnqMlZsnYF1YFKphQHJm0=
+
+Name: assets/www/images/mobile-icon-saved-h11-white~ios.svg
+SHA1-Digest: /rabcjkPZjY8VxAg3acLGpYjE2U=
+
+Name: res/drawable-hdpi/common_signin_btn_text_focus_dark.9.png
+SHA1-Digest: CdS2JYcO2aYMRPs8uE6z0+hK3SA=
+
+Name: assets/www/images/mobile-visual-explore-white.svg
+SHA1-Digest: RG+u/m6fc9AKklmu+q8B0wNRNW0=
+
+Name: assets/www/fonts/b248ccfe-6706-49b4-b359-924abedf4dde.woff
+SHA1-Digest: 8d+cOkqhj3NwSM2nGFH5xzE2PbQ=
+
+Name: assets/www/images/mobile-selector-tag-white@2x.png
+SHA1-Digest: yXCzp9EjKQHHFX/isvqxUawSrqM=
+
+Name: res/layout/appwidget_splash.xml
+SHA1-Digest: JIXvORcn8iZboyRqi6YzCjzZNGA=
+
+Name: res/color/wallet_primary_text_holo_light.xml
+SHA1-Digest: NTpLcLJY0w4ERerPiTRZmNktjyk=
+
+Name: res/drawable-hdpi/shortcut_feed.png
+SHA1-Digest: rXffoSLZXsCVJxTYb9FFMzXNOTQ=
+
+Name: res/drawable-xhdpi/com_facebook_tooltip_blue_topnub.png
+SHA1-Digest: L9JqjqdpgNFaMjHf+kD+OSxZ8t4=
+
+Name: assets/www/images/mobile-icon-saved-h11-black.png
+SHA1-Digest: 6FvSUUVz7w+tDxccXLTupYZv79g=
+
+Name: assets/www/images/mobile-icon-toolbar-overflow-black@2x.png
+SHA1-Digest: DZI+u/j7iOL30WEcTUbr60nV01c=
+
+Name: res/drawable-hdpi/com_facebook_button_grey_focused.9.png
+SHA1-Digest: xw3C3hxhbAqRc7fZEiHwllptNuM=
+
